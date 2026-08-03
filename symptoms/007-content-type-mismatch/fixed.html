@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>パスは合っているのに出ない（fixed）</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+img { max-inline-size: 100%; block-size: auto; }
+</style>
+</head>
+<body>
+<main>
+<h1>ロゴ</h1>
+<!-- 中身に合った拡張子で置き直す。これで配信側が Content-Type: image/svg+xml を返す。
+     配信側の設定を触れる場合は、拡張子ではなく Content-Type を直接そろえてもよい -->
+<img src="images/logo.svg" alt="サンプルのロゴ" width="320" height="200">
+<p>Content-Type が image/svg+xml になっていれば表示されます。</p>
+</main>
+</body>
+</html>

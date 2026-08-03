@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D 実装: link rel="preload" で主役を先に取る</title>
+<!-- 「preload の方が確実」という通説の検証用。img には fetchpriority を付けない -->
+<link rel="preload" as="image" href="../images/hero.jpg" fetchpriority="high">
+<style>
+body { font-family: system-ui, sans-serif; margin: 0; line-height: 1.7; }
+main { max-inline-size: 60rem; margin-inline: auto; padding: 1rem; }
+img { max-inline-size: 100%; block-size: auto; display: block; }
+.below { margin-block-start: 120vh; }
+</style>
+</head>
+<body>
+<main>
+<h1>実装 D — link rel="preload"</h1>
+<img src="../images/hero.jpg" alt="主役の画像" width="1600" height="900">
+<div class="below">
+  <img src="../images/thumb-1.jpg" alt="画面外の画像 1" width="800" height="500">
+  <img src="../images/thumb-2.jpg" alt="画面外の画像 2" width="800" height="500">
+  <img src="../images/thumb-3.jpg" alt="画面外の画像 3" width="800" height="500">
+</div>
+</main>
+</body>
+</html>

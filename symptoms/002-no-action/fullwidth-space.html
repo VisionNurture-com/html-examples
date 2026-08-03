@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>タグの周りに全角スペースがあるページ</title>
+  </head>
+  <body>
+    <h1>検証用</h1>
+
+    <!-- 検証する主張:「a タグの周りに全角スペースが入るとリンクと判断されない」（競合が挙げる原因）
+         3 通りを並べて、リンクとして機能するかを個別に測る -->
+
+    <p>① 通常: <a id="plain" href="./target.html">お問い合わせ</a></p>
+
+    <p>② タグの前後に全角スペース: 　<a id="around" href="./target.html">お問い合わせ</a>　</p>
+
+    <p>③ リンクテキストの中に全角スペース: <a id="inside" href="./target.html">お　問い合わせ</a></p>
+
+    <p>④ 属性値の前に全角スペース（不正な記述）: <a id="attr" href="　./target.html">お問い合わせ</a></p>
+  </body>
+</html>

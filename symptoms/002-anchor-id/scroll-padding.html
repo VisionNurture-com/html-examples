@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>scroll-padding-top で余白を確保したページ</title>
+    <style>
+      /* fixed.html との違いはこの 1 行だけ。
+         飛び先の要素側（section[id]）ではなく、スクロールする側（html）に余白を指定する。 */
+      html { scroll-padding-top: 72px; }
+
+      header { position: fixed; top: 0; left: 0; right: 0; height: 64px; background: #e8e8e8; }
+      main { padding-top: 64px; }
+      section { min-height: 600px; }
+    </style>
+  </head>
+  <body>
+    <header>サイトの見出し</header>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="#plan-detail">料金プランの詳細</a></li>
+          <li><a href="#support">サポート</a></li>
+        </ul>
+      </nav>
+
+      <section id="plan-overview">
+        <h2>料金プランの概要</h2>
+        <p>この節は導入です。</p>
+      </section>
+
+      <section id="plan-detail">
+        <h2>料金プランの詳細</h2>
+        <p>ここへ飛びます。</p>
+      </section>
+
+      <section id="support">
+        <h2>サポート</h2>
+        <p>見出しがヘッダーの下に隠れません。</p>
+      </section>
+
+      <section id="company">
+        <h2>会社案内</h2>
+        <p>後続の内容です。</p>
+      </section>
+    </main>
+  </body>
+</html>

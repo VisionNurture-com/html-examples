@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>CSS が全部効かない（broken）</title>
+<!-- ここが原因: style.css は css/ の中にある。
+     HTML から見た相対パスは css/style.css で、この書き方では 404 になる -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>今週のお知らせ</h1>
+<p class="lead">見出しの色も余白も、ブラウザの既定のままです。</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>境界あり（mode: closed）</title>
+<style>
+  body { color: rebeccapurple; font-family: Georgia, serif }
+  .label { border-bottom: 4px solid green }
+  my-card::part(title) { text-decoration: underline }
+  my-card { --card-accent: green }
+</style>
+</head>
+<body>
+  <h1>mode を closed にする</h1>
+  <my-card id="target">お知らせ</my-card>
+
+<script>
+  class MyCard extends HTMLElement {
+    connectedCallback() {
+      // closed にすると host.shadowRoot が null になり、外からは中を取れない
+      const root = this.attachShadow({ mode: 'closed' });
+      root.innerHTML = `<span class="label" part="title" id="probe">${this.textContent}</span>`;
+
+      // 外から観測できないため、部品自身が中の計算値を報告する
+      requestAnimationFrame(() => {
+        const cs = getComputedStyle(root.getElementById('probe'));
+        this.dataset.observed = JSON.stringify({
+          color: cs.color,
+          fontFamily: cs.fontFamily,
+          borderBottomWidth: cs.borderBottomWidth,
+          borderBottomColor: cs.borderBottomColor,
+          textDecorationLine: cs.textDecorationLine,
+          customPropertyVisible: cs.getPropertyValue('--card-accent').trim(),
+        });
+        this.dataset.ready = '1';
+      });
+    }
+  }
+  customElements.define('my-card', MyCard);
+</script>
+</body>
+</html>

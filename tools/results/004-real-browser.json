@@ -1,0 +1,102 @@
+{
+  "measuredAt": "2026-08-02T00:22:41.972Z",
+  "root": "compare/004-close-control",
+  "tabLimit": 8,
+  "browsers": [
+    {
+      "browser": "Google Chrome",
+      "appleEventsJs": "2",
+      "pageLoadedClosedby": {
+        "ok": true,
+        "href": "http://127.0.0.1:8765/c-closedby-any.html",
+        "attempts": 1
+      },
+      "closedbySupported": "true",
+      "closedByValue": "any",
+      "closedbyAttrInDom": "any",
+      "openedForOutside": "true",
+      "pageOrigin": {
+        "x": 3622,
+        "y": 208
+      },
+      "outsideClickSent": true,
+      "outsideClickError": null,
+      "outsideClickLanded": "missing value",
+      "outsideClickCloses": null,
+      "pageLoadedTab": {
+        "ok": true,
+        "href": "http://127.0.0.1:8765/b-dialog.html",
+        "attempts": 1
+      },
+      "openedForTab": "true",
+      "focusAfterOpen": "ok",
+      "tabOrder": [
+        "ok",
+        "ng",
+        "body",
+        "body",
+        "ok",
+        "ng",
+        "body",
+        "body",
+        "ok"
+      ],
+      "tabMoved": true,
+      "tabMethod": "Tab",
+      "tabLeftPage": true
+    },
+    {
+      "browser": "Safari",
+      "appleEventsJs": "2.0",
+      "pageLoadedClosedby": {
+        "ok": true,
+        "href": "http://127.0.0.1:8765/c-closedby-any.html",
+        "attempts": 1
+      },
+      "closedbySupported": "false",
+      "closedByValue": "undefined",
+      "closedbyAttrInDom": "any",
+      "openedForOutside": "true",
+      "pageOrigin": {
+        "x": 2446,
+        "y": 324
+      },
+      "outsideClickSent": true,
+      "outsideClickError": null,
+      "outsideClickLanded": "",
+      "outsideClickCloses": null,
+      "pageLoadedTab": {
+        "ok": true,
+        "href": "http://127.0.0.1:8765/b-dialog.html",
+        "attempts": 1
+      },
+      "openedForTab": "true",
+      "focusAfterOpen": "ok",
+      "tabOrder": [
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok"
+      ],
+      "tabMoved": false,
+      "tabMethod": "Tab",
+      "tabOrderOptionTab": [
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok"
+      ],
+      "tabLeftPage": null
+    }
+  ]
+}

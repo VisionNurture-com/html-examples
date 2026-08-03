@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>手元では効くのにサーバで効かない（broken）</title>
+<!-- ここが原因: 実ファイル名は css/Main-Style.css。
+     macOS と Windows の既定は大文字小文字を区別しないため手元では効くが、
+     Linux のサーバでは別の名前として扱われ 404 になる -->
+<link rel="stylesheet" href="css/main-style.css">
+</head>
+<body>
+<main>
+<h1>今週のお知らせ</h1>
+<p class="lead">手元のブラウザでは効きます。同じ一式をサーバへ上げると効きません。</p>
+</main>
+</body>
+</html>

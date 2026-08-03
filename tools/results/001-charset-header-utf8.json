@@ -1,0 +1,265 @@
+{
+  "measuredAt": "2026-07-29T08:15:38.702Z",
+  "env": {
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "expectedH1": "日本語の見出し",
+  "headerCharset": "utf-8",
+  "note": "http 側は Content-Type: text/html; charset=utf-8 で返す。宣言・保存とヘッダが食い違ったときにどれが勝つかを測る経路（file:// はヘッダが存在しないため測らない）",
+  "records": [
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "file": "decl-no_save-euc-jp.html",
+      "declared": null,
+      "saved": "euc-jp",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���ܸ�θ��Ф�",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "file": "decl-no_save-shift_jis.html",
+      "declared": null,
+      "saved": "shift_jis",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���{��̌��o��",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "file": "decl-no_save-utf-8.html",
+      "declared": null,
+      "saved": "utf-8",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "file": "decl-yes_save-euc-jp.html",
+      "declared": "euc-jp",
+      "saved": "euc-jp",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���ܸ�θ��Ф�",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "file": "decl-yes_save-shift_jis.html",
+      "declared": "shift_jis",
+      "saved": "shift_jis",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���{��̌��o��",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "file": "decl-yes_save-utf-8.html",
+      "declared": "utf-8",
+      "saved": "utf-8",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "file": "decl-no_save-euc-jp.html",
+      "declared": null,
+      "saved": "euc-jp",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���ܸ�θ��Ф�",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "file": "decl-no_save-shift_jis.html",
+      "declared": null,
+      "saved": "shift_jis",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���{��̌��o��",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "file": "decl-no_save-utf-8.html",
+      "declared": null,
+      "saved": "utf-8",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "file": "decl-yes_save-euc-jp.html",
+      "declared": "euc-jp",
+      "saved": "euc-jp",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���ܸ�θ��Ф�",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "file": "decl-yes_save-shift_jis.html",
+      "declared": "shift_jis",
+      "saved": "shift_jis",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���{��̌��o��",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "file": "decl-yes_save-utf-8.html",
+      "declared": "utf-8",
+      "saved": "utf-8",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "file": "decl-no_save-euc-jp.html",
+      "declared": null,
+      "saved": "euc-jp",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���ܸ�θ��Ф�",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "file": "decl-no_save-shift_jis.html",
+      "declared": null,
+      "saved": "shift_jis",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���{��̌��o��",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "file": "decl-no_save-utf-8.html",
+      "declared": null,
+      "saved": "utf-8",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "file": "decl-yes_save-euc-jp.html",
+      "declared": "euc-jp",
+      "saved": "euc-jp",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���ܸ�θ��Ф�",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "file": "decl-yes_save-shift_jis.html",
+      "declared": "shift_jis",
+      "saved": "shift_jis",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "���{��̌��o��",
+        "readable": false
+      },
+      "headerCharset": "utf-8"
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "file": "decl-yes_save-utf-8.html",
+      "declared": "utf-8",
+      "saved": "utf-8",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      },
+      "headerCharset": "utf-8"
+    }
+  ]
+}

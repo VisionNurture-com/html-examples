@@ -1,0 +1,313 @@
+{
+  "measuredAt": "2026-07-26T08:21:26.614Z",
+  "env": {
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "note": "「表示できる」の判定は、テキストが取得できて領域が 0 でないこと。目視ではない",
+  "records": [
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "target": "broken",
+      "path": "symptoms/010-markup-errors/broken.html",
+      "observed": {
+        "title": "マークアップの誤りを含むページ",
+        "h1": {
+          "present": true,
+          "text": "お知らせ",
+          "width": 1264,
+          "height": 48,
+          "rendered": true
+        },
+        "firstParagraph": {
+          "present": true,
+          "text": "最新のお知らせです。",
+          "width": 1264,
+          "height": 24,
+          "rendered": true
+        },
+        "listItem": {
+          "present": true,
+          "text": "項目 1",
+          "width": 1224,
+          "height": 24,
+          "rendered": true
+        },
+        "link": {
+          "present": true,
+          "text": "",
+          "width": 0,
+          "height": 16,
+          "rendered": false
+        },
+        "idLeadCount": 2,
+        "paragraphCount": 2,
+        "imageCount": 1,
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "ul",
+          "img",
+          "a"
+        ]
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "target": "fixed",
+      "path": "symptoms/010-markup-errors/fixed.html",
+      "observed": {
+        "title": "マークアップの誤りを直したページ",
+        "h1": {
+          "present": true,
+          "text": "お知らせ",
+          "width": 1264,
+          "height": 48,
+          "rendered": true
+        },
+        "firstParagraph": {
+          "present": true,
+          "text": "最新のお知らせです。",
+          "width": 1264,
+          "height": 24,
+          "rendered": true
+        },
+        "listItem": {
+          "present": true,
+          "text": "ul の直下に置けるのは li だけ。",
+          "width": 1224,
+          "height": 24,
+          "rendered": true
+        },
+        "link": {
+          "present": true,
+          "text": "お問い合わせ",
+          "width": 96,
+          "height": 16,
+          "rendered": true
+        },
+        "idLeadCount": 1,
+        "paragraphCount": 2,
+        "imageCount": 1,
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "ul",
+          "img",
+          "a"
+        ]
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+      ]
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "target": "broken",
+      "path": "symptoms/010-markup-errors/broken.html",
+      "observed": {
+        "title": "マークアップの誤りを含むページ",
+        "h1": {
+          "present": true,
+          "text": "お知らせ",
+          "width": 1264,
+          "height": 49,
+          "rendered": true
+        },
+        "firstParagraph": {
+          "present": true,
+          "text": "最新のお知らせです。",
+          "width": 1264,
+          "height": 25,
+          "rendered": true
+        },
+        "listItem": {
+          "present": true,
+          "text": "項目 1",
+          "width": 1224,
+          "height": 25,
+          "rendered": true
+        },
+        "link": {
+          "present": true,
+          "text": "",
+          "width": 0,
+          "height": 17,
+          "rendered": false
+        },
+        "idLeadCount": 2,
+        "paragraphCount": 2,
+        "imageCount": 1,
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "ul",
+          "img",
+          "a"
+        ]
+      },
+      "consoleErrors": []
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "target": "fixed",
+      "path": "symptoms/010-markup-errors/fixed.html",
+      "observed": {
+        "title": "マークアップの誤りを直したページ",
+        "h1": {
+          "present": true,
+          "text": "お知らせ",
+          "width": 1264,
+          "height": 49,
+          "rendered": true
+        },
+        "firstParagraph": {
+          "present": true,
+          "text": "最新のお知らせです。",
+          "width": 1264,
+          "height": 25,
+          "rendered": true
+        },
+        "listItem": {
+          "present": true,
+          "text": "ul の直下に置けるのは li だけ。",
+          "width": 1224,
+          "height": 25,
+          "rendered": true
+        },
+        "link": {
+          "present": true,
+          "text": "お問い合わせ",
+          "width": 96,
+          "height": 17,
+          "rendered": true
+        },
+        "idLeadCount": 1,
+        "paragraphCount": 2,
+        "imageCount": 1,
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "ul",
+          "img",
+          "a"
+        ]
+      },
+      "consoleErrors": []
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "target": "broken",
+      "path": "symptoms/010-markup-errors/broken.html",
+      "observed": {
+        "title": "マークアップの誤りを含むページ",
+        "h1": {
+          "present": true,
+          "text": "お知らせ",
+          "width": 1264,
+          "height": 48,
+          "rendered": true
+        },
+        "firstParagraph": {
+          "present": true,
+          "text": "最新のお知らせです。",
+          "width": 1264,
+          "height": 24,
+          "rendered": true
+        },
+        "listItem": {
+          "present": true,
+          "text": "項目 1",
+          "width": 1224,
+          "height": 24,
+          "rendered": true
+        },
+        "link": {
+          "present": true,
+          "text": "",
+          "width": 0,
+          "height": 17,
+          "rendered": false
+        },
+        "idLeadCount": 2,
+        "paragraphCount": 2,
+        "imageCount": 1,
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "ul",
+          "img",
+          "a"
+        ]
+      },
+      "consoleErrors": [
+        "Not allowed to load local resource: file://<REPO>/symptoms/010-markup-errors/logo.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "target": "fixed",
+      "path": "symptoms/010-markup-errors/fixed.html",
+      "observed": {
+        "title": "マークアップの誤りを直したページ",
+        "h1": {
+          "present": true,
+          "text": "お知らせ",
+          "width": 1264,
+          "height": 48,
+          "rendered": true
+        },
+        "firstParagraph": {
+          "present": true,
+          "text": "最新のお知らせです。",
+          "width": 1264,
+          "height": 24,
+          "rendered": true
+        },
+        "listItem": {
+          "present": true,
+          "text": "ul の直下に置けるのは li だけ。",
+          "width": 1224,
+          "height": 24,
+          "rendered": true
+        },
+        "link": {
+          "present": true,
+          "text": "お問い合わせ",
+          "width": 96,
+          "height": 17,
+          "rendered": true
+        },
+        "idLeadCount": 1,
+        "paragraphCount": 2,
+        "imageCount": 1,
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "ul",
+          "img",
+          "a"
+        ]
+      },
+      "consoleErrors": [
+        "Not allowed to load local resource: file://<REPO>/symptoms/010-markup-errors/logo.png"
+      ]
+    }
+  ]
+}

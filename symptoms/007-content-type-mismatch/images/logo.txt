@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="サンプルのロゴ">
+  <rect width="320" height="200" fill="#1b5e20"/>
+  <circle cx="80" cy="100" r="48" fill="#e8f5e9"/>
+  <rect x="150" y="70" width="130" height="20" fill="#e8f5e9"/>
+  <rect x="150" y="110" width="90" height="20" fill="#a5d6a7"/>
+</svg>

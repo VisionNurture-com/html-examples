@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>div にどこまで足すと button に追いつくか</title>
+    <style>
+      .btn { display: inline-block; margin: 8px 0; padding: 8px 16px;
+             background: #2b6cb0; color: #fff; cursor: pointer; border: 0; font: inherit; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>div にどこまで足すと button に追いつくか</h1>
+      <p id="status">まだ押していません。</p>
+
+      <!-- 段階 0: 素の div。フォーカスも役割も無い -->
+      <div id="s0" class="btn" onclick="hit('s0')">段階 0：素の div</div>
+
+      <!-- 段階 1: tabindex だけ足す。フォーカスは当たるが役割は伝わらない -->
+      <div id="s1" class="btn" tabindex="0" onclick="hit('s1')">段階 1：tabindex だけ</div>
+
+      <!-- 段階 2: role だけ足す。役割は伝わるがフォーカスが当たらない -->
+      <div id="s2" class="btn" role="button" onclick="hit('s2')">段階 2：role だけ</div>
+
+      <!-- 段階 3: 両方足す。到達も役割も揃うが、Enter と Space では起動しない -->
+      <div id="s3" class="btn" role="button" tabindex="0" onclick="hit('s3')">段階 3：role + tabindex</div>
+
+      <!-- 段階 4: キー処理を自分で書いて、ようやく button と同じ操作になる -->
+      <div id="s4" class="btn" role="button" tabindex="0" onclick="hit('s4')"
+           onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); hit('s4'); }">段階 4：+ キー処理</div>
+
+      <!-- 参照実装: 最初から全部そろっている -->
+      <button id="native" type="button" class="btn" onclick="hit('native')">参照：button</button>
+    </main>
+    <script>
+      function hit(id) {
+        document.getElementById('status').textContent = id + ' を押しました。';
+      }
+    </script>
+  </body>
+</html>

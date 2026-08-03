@@ -1,0 +1,26 @@
+対象: div にどこまで足すと button に追いつくか
+⚠️ Developer ウインドウを検出したため、ページのウインドウを前面へ上げた
+web content に到達: div  にどこまで足すと  button  に追いつくか web content
+interact 直後: In div  にどこまで足すと  button  に追いつくか web content 参照：button button main
+1: heading level 1 div にどこまで足すと button に追いつくか
+2: まだ押していません。
+3: 段階 0：素の div  clickable 
+4: 段階 1：tabindex だけ  clickable 
+5: 段階 2：role だけ button
+6: 段階 3：role + tabindex button
+7: 段階 4：+ キー処理 button
+8: 参照：button button
+9: end of main
+10: You are currently on a main, inside of web content.  To exit this web area, press Control-Option-Shift-Up Arrow.
+11: 
+12: 
+13: 
+14: 
+15: 
+16: 
+17: 
+18: 
+19: 
+20: 
+21: 
+22: 

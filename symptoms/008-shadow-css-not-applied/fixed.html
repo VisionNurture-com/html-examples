@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>CSS カスタムプロパティで境界を越える</title>
+<style>
+  /* 部品が受け取り口として決めた変数に値を渡す。クラス名では届かない */
+  my-card {
+    --card-accent: green;
+    --card-border-width: 4px;
+  }
+  .label { color: green; font-weight: bold }
+</style>
+</head>
+<body>
+  <h1>受け取り口を決めておけば外から変えられる</h1>
+
+  <my-card id="target">お知らせ</my-card>
+
+  <p class="label">この行はページ側の CSS が当たる（比較用）</p>
+
+<script>
+  class MyCard extends HTMLElement {
+    connectedCallback() {
+      const root = this.attachShadow({ mode: 'open' });
+      root.innerHTML = `
+        <style>
+          /* 変数が渡されなかったときに使う既定値を第 2 引数に置く */
+          .frame {
+            border: var(--card-border-width, 1px) solid var(--card-accent, #999);
+            padding: 1rem;
+          }
+          .label { color: var(--card-accent, #333); font-weight: bold }
+        </style>
+        <div class="frame">
+          <span class="label"><slot></slot></span>
+        </div>`;
+    }
+  }
+  customElements.define('my-card', MyCard);
+</script>
+</body>
+</html>

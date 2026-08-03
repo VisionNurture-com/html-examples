@@ -1,0 +1,23 @@
+{
+  "measuredAt": "2026-07-26T09:59:01.499Z",
+  "platform": "Linux-x86_64",
+  "binaries": {
+    "node": "<MISE_INSTALLS>/node/24.18.0/bin/node",
+    "git": "/usr/bin/git"
+  },
+  "versions": {},
+  "counts": {
+    "broken": 11,
+    "fixed": 0,
+    "parserError": 1
+  },
+  "hook": {
+    "exitWithBrokenHtml": 1,
+    "commitsAfterBrokenAttempt": 1,
+    "exitWithNoVerify": 0,
+    "commitsAfterNoVerify": 2
+  },
+  "raw": {
+    "hookLog": "exit_broken=1\ncount_after_broken=1\nexit_bypass=0\ncount_after_bypass=2"
+  }
+}

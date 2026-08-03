@@ -1,0 +1,65 @@
+{
+  "measuredAt": "2026-08-02",
+  "target": "compare/004-close-control/b-dialog.html（dialog + showModal()）",
+  "method": "Safari で file:// のページを開き、showModal() でモーダルを開いてから System Events で key code 48 を送出。1 手ごとに do JavaScript で document.activeElement と document.hasFocus() を読む。同時に keydown リスナーを仕込み、キーがページへ届いた件数を記録する",
+  "environment": {
+    "os": "macOS 26.5.2 (25F84)",
+    "browser": "Safari 26.5.2",
+    "url": "file://（http:// では未確認）"
+  },
+  "setting": {
+    "path": "Safari → Settings… → Advanced → Accessibility:",
+    "label": "Press Tab to highlight each item on a webpage",
+    "labelSource": "/Applications/Safari.app/Contents/Resources/Base.lproj/AdvancedPreferences.nib から逐語抽出",
+    "caption": "Option-Tab highlights only text fields and pop-up menus.",
+    "readable": false,
+    "readableNote": "defaults read com.apple.Safari は 0 行を返す。書き込みだけでなく読み取りも不可のため、設定状態は挙動でしか検算できない"
+  },
+  "conditions": [
+    {
+      "condition": "既定（チェックなし）+ Tab",
+      "sequence": ["ok", "BODY(!focus)", "box", "BODY(!focus)", "box", "BODY(!focus)", "box"],
+      "cycle": ["BODY(!focus)", "box"],
+      "reachedSecondButton": false,
+      "reachedBackgroundLink": false,
+      "keydownDelivered": "6 送出中 3 件",
+      "runs": 3,
+      "runsIdentical": true,
+      "note": "2 つ目のボタン ng へ到達しない。キーは届いているのに焦点が動かないことを keydown の到達件数で確認済み"
+    },
+    {
+      "condition": "既定（チェックなし）+ Option + Tab",
+      "sequence": ["ok", "ng", "BODY(!focus)", "box", "ok", "ng", "BODY(!focus)"],
+      "cycle": ["ok", "ng", "BODY(!focus)", "box"],
+      "reachedSecondButton": true,
+      "reachedBackgroundLink": false,
+      "keydownDelivered": "6 送出中 5 件",
+      "runs": 3,
+      "runsIdentical": true,
+      "note": "設定を変えなくても Option + Tab なら全項目を走査する。Safari 自身の説明文と一致する"
+    },
+    {
+      "condition": "チェックあり + Tab",
+      "sequence": ["ok", "ng", "BODY(!focus)", "box", "ok", "ng", "BODY(!focus)"],
+      "cycle": ["ok", "ng", "BODY(!focus)", "box"],
+      "reachedSecondButton": true,
+      "reachedBackgroundLink": false,
+      "runs": 3,
+      "runsIdentical": true,
+      "note": "既定 + Option + Tab と同一の並び"
+    }
+  ],
+  "finding": "Safari の既定では Tab がボタンを飛ばす。ボタンはテキストフィールドでもポップアップメニューでもないため、Safari の説明文どおりの挙動である。設定を変えるか Option + Tab を使えば全項目を走査する。どの条件でも焦点は <dialog> に閉じ込められずブラウザ UI へ抜け、背面のリンク #after には一度も到達しない（背面は不活性）。実機 Chrome の観測と同じ構図",
+  "corrections": [
+    "pre-write-measurements.md §測定の限界 #3 の「Safari の Tab 走査は未測定」および「Option + Tab も動かない」は誤り。実際には既定状態の Option + Tab で正しく走査する。前回の「動かない」は Safari の設定ウインドウが前面に残り、送出したキーがそちらへ入っていた空振りだった可能性が高い"
+  ],
+  "pitfalls": [
+    "Safari の設定ウインドウ（Advanced）が開いたままだと、送出したキーがすべて設定ウインドウへ入る。a キーも矢印キーもページに 1 件も届かず（keydown 0 件）、そのまま「Tab が動かない」と読むと誤った実測値になる。System Events の AXFocusedWindow を確認し、ページのウインドウを AXRaise してから測る",
+    "測定の 1 巡が終わると焦点はブラウザ UI 側にある。次の巡の開始前に document.hasFocus() が true になるまで待つか、Tab で本文へ戻さないと開始位置がずれて結果が一致しない"
+  ],
+  "limits": [
+    "file:// でのみ測定。http:// での再確認は未実施",
+    "題材は b-dialog.html のみ。他の 4 実装の実機 Tab 走査は未測定",
+    "実機の外側クリックは別項目（未測定）"
+  ]
+}

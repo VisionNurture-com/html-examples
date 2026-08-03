@@ -1,0 +1,42 @@
+{
+  "tool": "tools/measure-keyboard.mjs",
+  "engine": "chromium",
+  "records": [
+    {
+      "file": "symptoms/009-required-novalidate/broken.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "hasSubmitButton": false,
+      "focusOrder": [
+        "input[type=email]#email",
+        "button[type=button]#send"
+      ],
+      "submitEventOnEnterWhenInvalid": 0,
+      "submitEventOnEnterWhenValid": 1
+    },
+    {
+      "file": "symptoms/009-required-novalidate/fixed-requestsubmit.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "hasSubmitButton": false,
+      "focusOrder": [
+        "input[type=email]#email",
+        "button[type=button]#send"
+      ],
+      "submitEventOnEnterWhenInvalid": 0,
+      "submitEventOnEnterWhenValid": 1
+    },
+    {
+      "file": "symptoms/009-required-novalidate/fixed.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "hasSubmitButton": true,
+      "focusOrder": [
+        "input[type=email]#email",
+        "button[type=submit]"
+      ],
+      "submitEventOnEnterWhenInvalid": 0,
+      "submitEventOnEnterWhenValid": 1
+    }
+  ]
+}

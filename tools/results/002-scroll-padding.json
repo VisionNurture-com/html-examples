@@ -1,0 +1,248 @@
+{
+  "tool": "tools/measure-anchor.mjs",
+  "root": "symptoms/002-anchor-id",
+  "records": [
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "scroll-padding.html",
+      "link": "a[href=\"#plan-detail\"]",
+      "label": "scroll-padding-top を付けたページ（#plan-detail）",
+      "scrollBefore": 0,
+      "hash": "plan-detail",
+      "matchedElementCount": 1,
+      "matchedIndexInDocument": 0,
+      "headingOfTarget": "料金プランの詳細",
+      "scrollY": 704,
+      "targetTop": 72,
+      "headerHeight": 64,
+      "hiddenBehindHeader": false,
+      "focusAfterClick": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusBeforeEnter": {
+        "tag": "A",
+        "id": null,
+        "href": "#plan-detail",
+        "isTarget": false,
+        "isClickedLink": true
+      },
+      "focusAfterKeyboardActivation": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusAfterNextTab": {
+        "tag": "A",
+        "id": null,
+        "href": "#plan-detail",
+        "text": "料金プランの詳細"
+      }
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "scroll-padding.html",
+      "link": "a[href=\"#support\"]",
+      "label": "scroll-padding-top を付けたページ（#support）",
+      "scrollBefore": 0,
+      "hash": "support",
+      "matchedElementCount": 1,
+      "matchedIndexInDocument": 0,
+      "headingOfTarget": "サポート",
+      "scrollY": 1324,
+      "targetTop": 72,
+      "headerHeight": 64,
+      "hiddenBehindHeader": false,
+      "focusAfterClick": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusBeforeEnter": {
+        "tag": "A",
+        "id": null,
+        "href": "#support",
+        "isTarget": false,
+        "isClickedLink": true
+      },
+      "focusAfterKeyboardActivation": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusAfterNextTab": {
+        "tag": "A",
+        "id": null,
+        "href": "#plan-detail",
+        "text": "料金プランの詳細"
+      }
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "scroll-padding.html",
+      "link": "a[href=\"#plan-detail\"]",
+      "label": "scroll-padding-top を付けたページ（#plan-detail）",
+      "scrollBefore": 0,
+      "hash": "plan-detail",
+      "matchedElementCount": 1,
+      "matchedIndexInDocument": 0,
+      "headingOfTarget": "料金プランの詳細",
+      "scrollY": 706,
+      "targetTop": 72,
+      "headerHeight": 64,
+      "hiddenBehindHeader": false,
+      "focusAfterClick": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusBeforeEnter": {
+        "tag": "A",
+        "id": null,
+        "href": "#plan-detail",
+        "isTarget": false,
+        "isClickedLink": true
+      },
+      "focusAfterKeyboardActivation": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusAfterNextTab": {
+        "tag": "A",
+        "id": null,
+        "href": "#plan-detail",
+        "text": "料金プランの詳細"
+      }
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "scroll-padding.html",
+      "link": "a[href=\"#support\"]",
+      "label": "scroll-padding-top を付けたページ（#support）",
+      "scrollBefore": 0,
+      "hash": "support",
+      "matchedElementCount": 1,
+      "matchedIndexInDocument": 0,
+      "headingOfTarget": "サポート",
+      "scrollY": 1326,
+      "targetTop": 72,
+      "headerHeight": 64,
+      "hiddenBehindHeader": false,
+      "focusAfterClick": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusBeforeEnter": {
+        "tag": "A",
+        "id": null,
+        "href": "#support",
+        "isTarget": false,
+        "isClickedLink": true
+      },
+      "focusAfterKeyboardActivation": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusAfterNextTab": {
+        "tag": "A",
+        "id": null,
+        "href": "#plan-detail",
+        "text": "料金プランの詳細"
+      }
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "scroll-padding.html",
+      "link": "a[href=\"#plan-detail\"]",
+      "label": "scroll-padding-top を付けたページ（#plan-detail）",
+      "scrollBefore": 0,
+      "hash": "plan-detail",
+      "matchedElementCount": 1,
+      "matchedIndexInDocument": 0,
+      "headingOfTarget": "料金プランの詳細",
+      "scrollY": 704,
+      "targetTop": 72,
+      "headerHeight": 64,
+      "hiddenBehindHeader": false,
+      "focusAfterClick": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusBeforeEnter": {
+        "tag": "A",
+        "id": null,
+        "href": "#plan-detail",
+        "isTarget": false,
+        "isClickedLink": true
+      },
+      "focusAfterKeyboardActivation": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusAfterNextTab": {
+        "tag": "BODY",
+        "id": null
+      }
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "scroll-padding.html",
+      "link": "a[href=\"#support\"]",
+      "label": "scroll-padding-top を付けたページ（#support）",
+      "scrollBefore": 0,
+      "hash": "support",
+      "matchedElementCount": 1,
+      "matchedIndexInDocument": 0,
+      "headingOfTarget": "サポート",
+      "scrollY": 1324,
+      "targetTop": 72,
+      "headerHeight": 64,
+      "hiddenBehindHeader": false,
+      "focusAfterClick": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusBeforeEnter": {
+        "tag": "A",
+        "id": null,
+        "href": "#support",
+        "isTarget": false,
+        "isClickedLink": true
+      },
+      "focusAfterKeyboardActivation": {
+        "tag": "BODY",
+        "id": null,
+        "isTarget": false,
+        "note": "フォーカスは body のまま"
+      },
+      "focusAfterNextTab": {
+        "tag": "BODY",
+        "id": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>クリックがスクリプトで止められているページ</title>
+  </head>
+  <body>
+    <h1>お知らせ一覧</h1>
+
+    <div id="list">
+      <!-- リンク自体は正しく書けている -->
+      <a id="inside" href="./target.html">10 月のお知らせ</a>
+    </div>
+
+    <a id="outside" href="./target.html">11 月のお知らせ（div の外）</a>
+
+    <script>
+      // ここが原因: 親要素に付けたハンドラが、中のリンクの既定動作まで打ち消している
+      document.getElementById('list').addEventListener('click', (event) => {
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>

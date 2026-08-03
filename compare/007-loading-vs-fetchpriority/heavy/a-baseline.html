@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>競合あり A — 属性なし</title>
+<!-- 競合リソース: 実プロジェクトに必ずある描画をせき止める CSS と JS -->
+<link rel="stylesheet" href="../assets/heavy.css">
+<script src="../assets/heavy.js"></script>
+<style>
+body { font-family: system-ui, sans-serif; margin: 0; line-height: 1.7; }
+main { max-inline-size: 60rem; margin-inline: auto; padding: 1rem; }
+img { max-inline-size: 100%; block-size: auto; display: block; }
+.below { margin-block-start: 120vh; }
+</style>
+</head>
+<body>
+<main>
+<h1>競合あり A — 属性なし</h1>
+<!-- 主役の画像。優先度のヒントも遅延指定も付けていない -->
+<img src="../images/hero.jpg" alt="主役の画像" width="1600" height="900">
+<div class="below">
+  <img src="../images/thumb-1.jpg" alt="画面外の画像 1" width="800" height="500">
+  <img src="../images/thumb-2.jpg" alt="画面外の画像 2" width="800" height="500">
+  <img src="../images/thumb-3.jpg" alt="画面外の画像 3" width="800" height="500">
+</div>
+</main>
+</body>
+</html>

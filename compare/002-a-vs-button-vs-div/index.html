@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>a / button / div onclick の比較</title>
+    <style>
+      /* 3 つとも同じ見た目にする。見た目が同じであることが、この比較の前提 */
+      .btn {
+        display: inline-block;
+        padding: 8px 16px;
+        border: 1px solid #333;
+        border-radius: 4px;
+        background: #fff;
+        font: inherit;
+        color: #111;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>同じ見た目の 4 つの実装</h1>
+
+    <!-- ① 行き先がある: a -->
+    <a class="btn" id="impl-a" href="./target.html">お知らせを見る</a>
+
+    <!-- ② その場で起こす操作を、遷移に流用した例: button + スクリプト -->
+    <button class="btn" id="impl-button" type="button">お知らせを見る</button>
+
+    <!-- ③ 対話性を持たない要素にクリックを付けた例: div -->
+    <div class="btn" id="impl-div">お知らせを見る</div>
+
+    <!-- ④ ③ に役割・フォーカス・キー操作を自分で足した例 -->
+    <div class="btn" id="impl-div-patched" role="button" tabindex="0">お知らせを見る</div>
+
+    <script>
+      const go = () => { location.href = './target.html'; };
+
+      document.getElementById('impl-button').addEventListener('click', go);
+      document.getElementById('impl-div').addEventListener('click', go);
+
+      const patched = document.getElementById('impl-div-patched');
+      patched.addEventListener('click', go);
+      patched.addEventListener('keydown', (event) => {
+        // ネイティブの button が既定で持っている挙動を、自分で書き足す
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          go();
+        }
+      });
+    </script>
+  </body>
+</html>

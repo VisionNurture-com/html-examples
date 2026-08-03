@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>文字コードの確認</title>
+  </head>
+  <body>
+    <h1>日本語の見出し</h1>
+    <p>この行が読めていれば、保存時のエンコーディングと宣言が噛み合っています。</p>
+    <!-- ここが原因: <meta charset> の宣言がない。保存は UTF-8 なので、ブラウザの推測が外れると化ける -->
+  </body>
+</html>

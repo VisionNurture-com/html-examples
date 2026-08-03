@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>出るが一瞬ずれる（fixed）</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+img { max-inline-size: 100%; block-size: auto; }
+</style>
+</head>
+<body>
+<main>
+<h1>お知らせ</h1>
+<!-- width と height を書くと、ブラウザは縦横比から表示領域を先に確保する。
+     CSS で block-size: auto を当てても比率は保たれる -->
+<img src="images/hero.jpg" alt="お知らせのイメージ" width="1600" height="900">
+<p>この段落は最初から正しい位置にあります。画像が届いても動きません。</p>
+</main>
+</body>
+</html>

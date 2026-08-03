@@ -1,0 +1,210 @@
+{
+  "measuredAtNote": "実行時刻は実行ログ側に記録する（本ファイルは再実行で決定論的に同じ内容になるべきものを持つ）",
+  "tool": "tools/measure-validation.mjs",
+  "engines": [
+    "chromium"
+  ],
+  "locales": [
+    "ja-JP"
+  ],
+  "uiLocale": "ja-JP",
+  "records": [
+    {
+      "engine": "chromium",
+      "browserVersion": "150.0.7871.182",
+      "channel": "chrome",
+      "locale": "ja-JP",
+      "uiLocale": "ja-JP",
+      "result": {
+        "env": {
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+          "language": "ja-JP",
+          "languages": [
+            "ja-JP"
+          ]
+        },
+        "submitPaths": {
+          "formSubmit": {
+            "submitFired": 0,
+            "invalidFired": 0,
+            "threw": null
+          },
+          "requestSubmit": {
+            "submitFired": 0,
+            "invalidFired": 1,
+            "threw": null
+          },
+          "submitButtonClick": {
+            "submitFired": 0,
+            "invalidFired": 1,
+            "threw": null
+          }
+        },
+        "novalidate": {
+          "checkValidity": false,
+          "inputValid": false,
+          "submitFiredOnRequestSubmit": 1
+        },
+        "formNoValidate": {
+          "normalButtonClick": {
+            "submitFired": 0,
+            "invalidFired": 1
+          },
+          "formNoValidateButtonClick": {
+            "submitFired": 1,
+            "invalidFired": 0
+          },
+          "inputValidAfter": false,
+          "valueMissingAfter": true,
+          "formCheckValidityAfter": false
+        },
+        "customValidity": {
+          "afterSet": {
+            "message": "この項目は必須です",
+            "customError": true,
+            "formValid": false
+          },
+          "afterValidInput": {
+            "message": "この項目は必須です",
+            "customError": true,
+            "formValid": false
+          },
+          "afterReset": {
+            "message": "",
+            "customError": false,
+            "formValid": true
+          }
+        },
+        "checkboxGroup": {
+          "allRequired_noneChecked": {
+            "formValid": false,
+            "eachValid": [
+              false,
+              false,
+              false
+            ]
+          },
+          "allRequired_oneChecked": {
+            "formValid": false,
+            "eachValid": [
+              true,
+              false,
+              false
+            ]
+          },
+          "allRequired_allChecked": {
+            "formValid": true
+          },
+          "oneRequired_noneChecked": {
+            "formValid": false
+          },
+          "oneRequired_otherChecked": {
+            "formValid": false
+          }
+        },
+        "radioGroup": {
+          "oneRequired_noneChecked": {
+            "formValid": false,
+            "eachValid": [
+              false,
+              false,
+              false
+            ]
+          },
+          "oneRequired_otherChecked": {
+            "formValid": true,
+            "eachValid": [
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "messages": {
+          "valueMissing": {
+            "message": "Please fill out this field.",
+            "validity": {
+              "valueMissing": true,
+              "typeMismatch": false,
+              "patternMismatch": false,
+              "rangeUnderflow": false
+            }
+          },
+          "typeMismatch_email": {
+            "message": "Please include an '@' in the email address. 'not-an-email' is missing an '@'.",
+            "validity": {
+              "valueMissing": false,
+              "typeMismatch": true,
+              "patternMismatch": false,
+              "rangeUnderflow": false
+            }
+          },
+          "patternMismatch": {
+            "message": "Please match the requested format.",
+            "validity": {
+              "valueMissing": false,
+              "typeMismatch": false,
+              "patternMismatch": true,
+              "rangeUnderflow": false
+            }
+          },
+          "rangeUnderflow": {
+            "message": "Value must be greater than or equal to 10.",
+            "validity": {
+              "valueMissing": false,
+              "typeMismatch": false,
+              "patternMismatch": false,
+              "rangeUnderflow": true
+            }
+          }
+        },
+        "support": {
+          "requestSubmit": true,
+          "userInvalid": true,
+          "userValid": true,
+          "invalid": true
+        },
+        "requiredIneffective": {
+          "disabled": {
+            "willValidate": false,
+            "valid": true,
+            "valueMissing": false
+          },
+          "hiddenAttribute": {
+            "willValidate": true,
+            "valid": false,
+            "valueMissing": true
+          },
+          "typeHidden": {
+            "willValidate": false,
+            "valid": true,
+            "valueMissing": false
+          },
+          "checkboxUnchecked": {
+            "willValidate": true,
+            "valid": false,
+            "valueMissing": true
+          },
+          "formValid": false,
+          "readonly": {
+            "willValidate": false,
+            "valid": true,
+            "valueMissing": false
+          },
+          "cssDisplayNone": {
+            "willValidate": true,
+            "valid": false,
+            "valueMissing": true
+          },
+          "outsideForm": {
+            "willValidate": true,
+            "valid": false,
+            "valueMissing": true,
+            "formElementsCount": 3
+          },
+          "formValidWithReadonlyAndCssHidden": false
+        }
+      }
+    }
+  ]
+}

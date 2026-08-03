@@ -1,0 +1,7 @@
+files=$(git diff --cached --name-only --diff-filter=ACM -- '*.html')
+if [ -z "$files" ]; then
+  exit 0
+fi
+
+# shellcheck disable=SC2086
+npx --no-install html-validate --config tools/.htmlvalidate.json $files

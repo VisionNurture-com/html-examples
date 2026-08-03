@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ページ内リンクが飛ぶページ</title>
+    <style>
+      header { position: fixed; top: 0; left: 0; right: 0; height: 64px; background: #e8e8e8; }
+      main { padding-top: 64px; }
+      section { min-height: 600px; }
+      /* 直した点 2: 飛んだ先の上に、ヘッダーの高さぶんの余白を確保する */
+      section[id] { scroll-margin-top: 72px; }
+    </style>
+  </head>
+  <body>
+    <header>サイトの見出し</header>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="#plan-detail">料金プランの詳細</a></li>
+          <li><a href="#support">サポート</a></li>
+        </ul>
+      </nav>
+
+      <!-- 直した点 1: id を一意にし、リンク先を意図した節に向けた -->
+      <section id="plan-overview">
+        <h2>料金プランの概要</h2>
+        <p>この節は導入です。</p>
+      </section>
+
+      <section id="plan-detail">
+        <h2>料金プランの詳細</h2>
+        <p>ここへ飛びます。</p>
+      </section>
+
+      <section id="support">
+        <h2>サポート</h2>
+        <p>見出しがヘッダーの下に隠れません。</p>
+      </section>
+
+      <section id="company">
+        <h2>会社案内</h2>
+        <p>後続の内容です。</p>
+      </section>
+    </main>
+  </body>
+</html>

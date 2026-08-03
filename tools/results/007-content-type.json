@@ -1,0 +1,120 @@
+{
+  "measuredAt": "2026-07-28T05:00:47.395Z",
+  "target": "/__content-type-target",
+  "results": [
+    {
+      "id": 1,
+      "label": "中身 PNG / Content-Type: image/jpeg / nosniff なし",
+      "contentType": "image/jpeg",
+      "nosniff": false,
+      "httpStatus": 200,
+      "sentContentType": "image/jpeg",
+      "sentNosniff": null,
+      "naturalWidth": 640,
+      "rendered": true,
+      "consoleErrors": []
+    },
+    {
+      "id": 2,
+      "label": "中身 PNG / Content-Type: image/jpeg / nosniff あり",
+      "contentType": "image/jpeg",
+      "nosniff": true,
+      "httpStatus": 200,
+      "sentContentType": "image/jpeg",
+      "sentNosniff": "nosniff",
+      "naturalWidth": 640,
+      "rendered": true,
+      "consoleErrors": []
+    },
+    {
+      "id": 3,
+      "label": "中身 PNG / Content-Type: text/plain / nosniff なし",
+      "contentType": "text/plain",
+      "nosniff": false,
+      "httpStatus": 200,
+      "sentContentType": "text/plain",
+      "sentNosniff": null,
+      "naturalWidth": 640,
+      "rendered": true,
+      "consoleErrors": []
+    },
+    {
+      "id": 4,
+      "label": "中身 PNG / Content-Type: text/plain / nosniff あり",
+      "contentType": "text/plain",
+      "nosniff": true,
+      "httpStatus": 200,
+      "sentContentType": "text/plain",
+      "sentNosniff": "nosniff",
+      "naturalWidth": 640,
+      "rendered": true,
+      "consoleErrors": []
+    },
+    {
+      "id": 5,
+      "label": "中身 PNG / Content-Type: image/png / nosniff あり（対照）",
+      "contentType": "image/png",
+      "nosniff": true,
+      "httpStatus": 200,
+      "sentContentType": "image/png",
+      "sentNosniff": "nosniff",
+      "naturalWidth": 640,
+      "rendered": true,
+      "consoleErrors": []
+    },
+    {
+      "id": 7,
+      "label": "中身 SVG / Content-Type: text/plain",
+      "contentType": "text/plain",
+      "body": "svg",
+      "httpStatus": 200,
+      "sentContentType": "text/plain",
+      "sentNosniff": null,
+      "naturalWidth": 0,
+      "rendered": false,
+      "consoleErrors": []
+    },
+    {
+      "id": 8,
+      "label": "中身 SVG / Content-Type: image/svg+xml（対照）",
+      "contentType": "image/svg+xml",
+      "body": "svg",
+      "httpStatus": 200,
+      "sentContentType": "image/svg+xml",
+      "sentNosniff": null,
+      "naturalWidth": 640,
+      "rendered": true,
+      "consoleErrors": []
+    },
+    {
+      "id": 9,
+      "label": "中身 HTML エラーページ / Content-Type: image/jpeg（200 で返る）",
+      "contentType": "image/jpeg",
+      "body": "html",
+      "httpStatus": 200,
+      "sentContentType": "image/jpeg",
+      "sentNosniff": null,
+      "naturalWidth": 0,
+      "rendered": false,
+      "consoleErrors": []
+    },
+    {
+      "id": 10,
+      "label": "0 バイト / Content-Type: image/jpeg",
+      "contentType": "image/jpeg",
+      "body": "empty",
+      "httpStatus": 200,
+      "sentContentType": "image/jpeg",
+      "sentNosniff": null,
+      "naturalWidth": 0,
+      "rendered": false,
+      "consoleErrors": []
+    },
+    {
+      "id": 6,
+      "label": "fixed.html（中身 JPEG / Content-Type: image/jpeg）",
+      "naturalWidth": 1600,
+      "rendered": true
+    }
+  ]
+}

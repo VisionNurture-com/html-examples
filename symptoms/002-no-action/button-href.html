@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ボタンを押しても遷移しないページ</title>
+  </head>
+  <body>
+    <h1>お申し込み</h1>
+
+    <!-- ここが原因: button に href を書いている。href は button の属性ではないため無視される -->
+    <button id="broken" href="./target.html">申し込みページへ</button>
+
+    <!-- 遷移させたいなら a を使う -->
+    <a id="fixed" href="./target.html">申し込みページへ（a で書いた場合）</a>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>パスは合っているのに出ない（broken）</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+img { max-inline-size: 100%; block-size: auto; }
+</style>
+</head>
+<body>
+<main>
+<h1>ロゴ</h1>
+<!-- ここが原因: 中身は SVG だが拡張子が .txt のため、配信側は Content-Type: text/plain を返す。
+     JPEG や PNG なら中身の先頭を見て形式を判定できるが、SVG はその判定の対象外。
+     Content-Type が image/svg+xml でない限り、ブラウザは画像として扱わない -->
+<img src="images/logo.txt" alt="サンプルのロゴ" width="320" height="200">
+<p>404 は出ていません。パスも合っています。それでも表示されないことがあります。</p>
+</main>
+</body>
+</html>

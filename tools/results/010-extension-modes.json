@@ -1,0 +1,211 @@
+{
+  "measuredAt": "2026-07-26T08:48:32.985Z",
+  "env": {
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "extension": "html-validate.vscode-html-validate-2.15.5"
+  },
+  "sample": "symptoms/010-markup-errors/broken.html",
+  "method": "LSP（拡張機能の言語サーバーを --stdio で直接起動し publishDiagnostics を数える）",
+  "modes": [
+    {
+      "mode": "local",
+      "workdir": "/var/folders/9b/bg3sc7qd53n9gqqvqmxhrwhr0000gn/T/ext-modes-zDqA4N/local",
+      "hasLocalInstall": true,
+      "timedOut": false,
+      "count": 11,
+      "rules": [
+        "close-order",
+        "doctype-style",
+        "element-permitted-content",
+        "no-dup-id",
+        "no-implicit-close",
+        "wcag/h30",
+        "wcag/h37"
+      ],
+      "entries": [
+        {
+          "rule": "doctype-style",
+          "line": 1,
+          "column": 1,
+          "severity": 1,
+          "message": "DOCTYPE should be uppercase"
+        },
+        {
+          "rule": "no-implicit-close",
+          "line": 2,
+          "column": 2,
+          "severity": 1,
+          "message": "Element <html> is implicitly closed by document ending"
+        },
+        {
+          "rule": "no-implicit-close",
+          "line": 7,
+          "column": 4,
+          "severity": 1,
+          "message": "Element <body> is implicitly closed by adjacent <#document>"
+        },
+        {
+          "rule": "no-implicit-close",
+          "line": 10,
+          "column": 6,
+          "severity": 1,
+          "message": "Element <p> is implicitly closed by sibling"
+        },
+        {
+          "rule": "no-dup-id",
+          "line": 11,
+          "column": 12,
+          "severity": 1,
+          "message": "Duplicate ID \"lead\""
+        },
+        {
+          "rule": "element-permitted-content",
+          "line": 14,
+          "column": 8,
+          "severity": 1,
+          "message": "<div> element is not permitted as content under <ul>"
+        },
+        {
+          "rule": "wcag/h37",
+          "line": 18,
+          "column": 6,
+          "severity": 1,
+          "message": "<img> is missing required \"alt\" attribute"
+        },
+        {
+          "rule": "close-order",
+          "line": 20,
+          "column": 6,
+          "severity": 1,
+          "message": "Unclosed element '<a>'"
+        },
+        {
+          "rule": "wcag/h30",
+          "line": 20,
+          "column": 6,
+          "severity": 1,
+          "message": "Anchor link must have a text describing its purpose"
+        },
+        {
+          "rule": "close-order",
+          "line": 21,
+          "column": 4,
+          "severity": 1,
+          "message": "End tag '</body>' seen but there were open elements"
+        },
+        {
+          "rule": "close-order",
+          "line": 22,
+          "column": 2,
+          "severity": 1,
+          "message": "End tag '</html>' seen but there were open elements"
+        }
+      ],
+      "stderrTail": []
+    },
+    {
+      "mode": "bundled",
+      "workdir": "/var/folders/9b/bg3sc7qd53n9gqqvqmxhrwhr0000gn/T/ext-modes-zDqA4N/bundled",
+      "hasLocalInstall": false,
+      "timedOut": false,
+      "count": 11,
+      "rules": [
+        "close-order",
+        "doctype-style",
+        "element-permitted-content",
+        "no-dup-id",
+        "no-implicit-close",
+        "wcag/h30",
+        "wcag/h37"
+      ],
+      "entries": [
+        {
+          "rule": "doctype-style",
+          "line": 1,
+          "column": 1,
+          "severity": 1,
+          "message": "DOCTYPE should be uppercase"
+        },
+        {
+          "rule": "no-implicit-close",
+          "line": 2,
+          "column": 2,
+          "severity": 1,
+          "message": "Element <html> is implicitly closed by document ending"
+        },
+        {
+          "rule": "no-implicit-close",
+          "line": 7,
+          "column": 4,
+          "severity": 1,
+          "message": "Element <body> is implicitly closed by adjacent <#document>"
+        },
+        {
+          "rule": "no-implicit-close",
+          "line": 10,
+          "column": 6,
+          "severity": 1,
+          "message": "Element <p> is implicitly closed by sibling"
+        },
+        {
+          "rule": "no-dup-id",
+          "line": 11,
+          "column": 12,
+          "severity": 1,
+          "message": "Duplicate ID \"lead\""
+        },
+        {
+          "rule": "element-permitted-content",
+          "line": 14,
+          "column": 8,
+          "severity": 1,
+          "message": "<div> element is not permitted as content under <ul>"
+        },
+        {
+          "rule": "wcag/h37",
+          "line": 18,
+          "column": 6,
+          "severity": 1,
+          "message": "<img> is missing required \"alt\" attribute"
+        },
+        {
+          "rule": "close-order",
+          "line": 20,
+          "column": 6,
+          "severity": 1,
+          "message": "Unclosed element '<a>'"
+        },
+        {
+          "rule": "wcag/h30",
+          "line": 20,
+          "column": 6,
+          "severity": 1,
+          "message": "Anchor link must have a text describing its purpose"
+        },
+        {
+          "rule": "close-order",
+          "line": 21,
+          "column": 4,
+          "severity": 1,
+          "message": "End tag '</body>' seen but there were open elements"
+        },
+        {
+          "rule": "close-order",
+          "line": 22,
+          "column": 2,
+          "severity": 1,
+          "message": "End tag '</html>' seen but there were open elements"
+        }
+      ],
+      "stderrTail": []
+    }
+  ],
+  "comparison": {
+    "inconclusive": false,
+    "sameCount": true,
+    "sameRules": true,
+    "samePositions": true
+  },
+  "conclusion": "この題材では、ローカル導入と同梱版で件数・ルール名・位置が一致した"
+}

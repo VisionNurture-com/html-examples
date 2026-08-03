@@ -1,0 +1,293 @@
+{
+  "scenario": "1 か所の書き間違いが、どの範囲の指定を無効にするか",
+  "expectedColor": "rgb(185, 28, 28)",
+  "engines": {
+    "chromium": {
+      "version": "151.0.7922.34",
+      "cases": [
+        {
+          "id": "baseline",
+          "label": "書き間違いなし（対照）",
+          "one": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": true,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        },
+        {
+          "id": "missing-semicolon",
+          "label": "1 つ目の宣言の末尾に ; がない",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "16px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": false,
+          "twoColorApplied": true
+        },
+        {
+          "id": "missing-closing-brace",
+          "label": "1 つ目のルールの閉じ括弧がない",
+          "one": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": true,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": false
+        },
+        {
+          "id": "unknown-property",
+          "label": "プロパティ名の綴り違い（colr）",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        },
+        {
+          "id": "invalid-value",
+          "label": "値の書き間違い（# を落とした）",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        },
+        {
+          "id": "ideographic-space",
+          "label": "コロンの後ろが全角スペース",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        }
+      ]
+    },
+    "firefox": {
+      "version": "153.0",
+      "cases": [
+        {
+          "id": "baseline",
+          "label": "書き間違いなし（対照）",
+          "one": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": true,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        },
+        {
+          "id": "missing-semicolon",
+          "label": "1 つ目の宣言の末尾に ; がない",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "16px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": false,
+          "twoColorApplied": true
+        },
+        {
+          "id": "missing-closing-brace",
+          "label": "1 つ目のルールの閉じ括弧がない",
+          "one": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": true,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": false
+        },
+        {
+          "id": "unknown-property",
+          "label": "プロパティ名の綴り違い（colr）",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        },
+        {
+          "id": "invalid-value",
+          "label": "値の書き間違い（# を落とした）",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        },
+        {
+          "id": "ideographic-space",
+          "label": "コロンの後ろが全角スペース",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        }
+      ]
+    },
+    "webkit": {
+      "version": "26.5",
+      "cases": [
+        {
+          "id": "baseline",
+          "label": "書き間違いなし（対照）",
+          "one": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": true,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        },
+        {
+          "id": "missing-semicolon",
+          "label": "1 つ目の宣言の末尾に ; がない",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "16px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": false,
+          "twoColorApplied": true
+        },
+        {
+          "id": "missing-closing-brace",
+          "label": "1 つ目のルールの閉じ括弧がない",
+          "one": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": true,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": false
+        },
+        {
+          "id": "unknown-property",
+          "label": "プロパティ名の綴り違い（colr）",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        },
+        {
+          "id": "invalid-value",
+          "label": "値の書き間違い（# を落とした）",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        },
+        {
+          "id": "ideographic-space",
+          "label": "コロンの後ろが全角スペース",
+          "one": {
+            "color": "rgb(0, 0, 0)",
+            "fontSize": "20px"
+          },
+          "two": {
+            "color": "rgb(185, 28, 28)",
+            "fontSize": "16px"
+          },
+          "oneColorApplied": false,
+          "oneFontSizeApplied": true,
+          "twoColorApplied": true
+        }
+      ]
+    }
+  },
+  "measuredAt": "2026-07-28T11:27:54.562Z",
+  "note": "判定は getComputedStyle の実値。oneColorApplied / oneFontSizeApplied は書き間違いのあるルール自身の 2 宣言、twoColorApplied は後続ルールが生き残ったかを表す。"
+}

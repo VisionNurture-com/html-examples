@@ -1,0 +1,31 @@
+{
+  "tool": "tools/measure-keyboard.mjs",
+  "engine": "chromium",
+  "records": [
+    {
+      "file": "compare/006-counting-basis/c-kinds-x4.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "hasSubmitButton": true,
+      "focusOrder": [
+        "input[type=text]",
+        "button[type=submit]"
+      ],
+      "submitEventOnEnterWhenInvalid": 0,
+      "submitEventOnEnterWhenValid": 0
+    },
+    {
+      "file": "compare/006-counting-basis/g-manual-checks.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "hasSubmitButton": false,
+      "focusOrder": [
+        "a",
+        "input[type=email]#mail",
+        "a"
+      ],
+      "submitEventOnEnterWhenInvalid": 1,
+      "submitEventOnEnterWhenValid": 1
+    }
+  ]
+}

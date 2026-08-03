@@ -1,0 +1,28 @@
+{
+  "scenario": "実ファイル名 /Guide.html に対し、小文字パス /guide.html と実ファイル名どおりのパスを要求する",
+  "sample": "symptoms/001-case-sensitive-html",
+  "actualFileName": "Guide.html index.html",
+  "requestedPaths": {
+    "lower": "/guide.html",
+    "exact": "/Guide.html"
+  },
+  "environments": [
+    {
+      "where": "手元（macOS）",
+      "os": "macOS 26.5.2",
+      "server": "Python 3.14.5 / http.server",
+      "lower": "200:425",
+      "exact": "200:425"
+    },
+    {
+      "where": "サーバ（Linux）",
+      "os": "Ubuntu 26.04 LTS",
+      "kernel": "7.0.0-28-generic",
+      "server": "Python 3.14.4 / http.server",
+      "lower": "404:460",
+      "exact": "200:425"
+    }
+  ],
+  "format": "status:bytes",
+  "measuredAt": "2026-07-30T09:42:56Z"
+}

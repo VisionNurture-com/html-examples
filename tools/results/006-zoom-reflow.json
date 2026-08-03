@@ -1,0 +1,245 @@
+{
+  "tool": "measure-zoom-reflow",
+  "widths": [
+    {
+      "id": "base",
+      "width": 1280,
+      "label": "等倍（1280px）"
+    },
+    {
+      "id": "zoom200",
+      "width": 640,
+      "label": "200% 相当（幅を半分の 640px に）"
+    }
+  ],
+  "records": [
+    {
+      "engine": "chromium",
+      "file": "compare/006-counting-basis/a-base.html",
+      "conditions": [
+        {
+          "condition": "base",
+          "label": "等倍（1280px）",
+          "viewportWidth": 1280,
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "overflowPx": 0,
+          "countedElements": 2,
+          "offscreenElements": [],
+          "swapped": []
+        },
+        {
+          "condition": "zoom200",
+          "label": "200% 相当（幅を半分の 640px に）",
+          "viewportWidth": 640,
+          "scrollWidth": 640,
+          "clientWidth": 640,
+          "overflowPx": 0,
+          "countedElements": 2,
+          "offscreenElements": [],
+          "swapped": []
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "file": "compare/006-counting-basis/b-elements-x10.html",
+      "conditions": [
+        {
+          "condition": "base",
+          "label": "等倍（1280px）",
+          "viewportWidth": 1280,
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "overflowPx": 0,
+          "countedElements": 2,
+          "offscreenElements": [],
+          "swapped": []
+        },
+        {
+          "condition": "zoom200",
+          "label": "200% 相当（幅を半分の 640px に）",
+          "viewportWidth": 640,
+          "scrollWidth": 640,
+          "clientWidth": 640,
+          "overflowPx": 0,
+          "countedElements": 2,
+          "offscreenElements": [],
+          "swapped": []
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "file": "compare/006-counting-basis/c-kinds-x4.html",
+      "conditions": [
+        {
+          "condition": "base",
+          "label": "等倍（1280px）",
+          "viewportWidth": 1280,
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "overflowPx": 0,
+          "countedElements": 4,
+          "offscreenElements": [],
+          "swapped": []
+        },
+        {
+          "condition": "zoom200",
+          "label": "200% 相当（幅を半分の 640px に）",
+          "viewportWidth": 640,
+          "scrollWidth": 640,
+          "clientWidth": 640,
+          "overflowPx": 0,
+          "countedElements": 4,
+          "offscreenElements": [],
+          "swapped": []
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "file": "compare/006-counting-basis/d-fixed.html",
+      "conditions": [
+        {
+          "condition": "base",
+          "label": "等倍（1280px）",
+          "viewportWidth": 1280,
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "overflowPx": 0,
+          "countedElements": 2,
+          "offscreenElements": [],
+          "swapped": []
+        },
+        {
+          "condition": "zoom200",
+          "label": "200% 相当（幅を半分の 640px に）",
+          "viewportWidth": 640,
+          "scrollWidth": 640,
+          "clientWidth": 640,
+          "overflowPx": 0,
+          "countedElements": 2,
+          "offscreenElements": [],
+          "swapped": []
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "file": "compare/006-counting-basis/e-component-x3.html",
+      "conditions": [
+        {
+          "condition": "base",
+          "label": "等倍（1280px）",
+          "viewportWidth": 1280,
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "overflowPx": 0,
+          "countedElements": 2,
+          "offscreenElements": [],
+          "swapped": []
+        },
+        {
+          "condition": "zoom200",
+          "label": "200% 相当（幅を半分の 640px に）",
+          "viewportWidth": 640,
+          "scrollWidth": 640,
+          "clientWidth": 640,
+          "overflowPx": 0,
+          "countedElements": 2,
+          "offscreenElements": [],
+          "swapped": []
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "file": "compare/006-counting-basis/f-minimal.html",
+      "conditions": [
+        {
+          "condition": "base",
+          "label": "等倍（1280px）",
+          "viewportWidth": 1280,
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "overflowPx": 0,
+          "countedElements": 2,
+          "offscreenElements": [],
+          "swapped": []
+        },
+        {
+          "condition": "zoom200",
+          "label": "200% 相当（幅を半分の 640px に）",
+          "viewportWidth": 640,
+          "scrollWidth": 640,
+          "clientWidth": 640,
+          "overflowPx": 0,
+          "countedElements": 2,
+          "offscreenElements": [],
+          "swapped": []
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "file": "compare/006-counting-basis/g-manual-checks.html",
+      "conditions": [
+        {
+          "condition": "base",
+          "label": "等倍（1280px）",
+          "viewportWidth": 1280,
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "overflowPx": 0,
+          "countedElements": 9,
+          "offscreenElements": [
+            {
+              "label": "この案内は画面に出していない",
+              "left": -9999
+            }
+          ],
+          "swapped": [
+            {
+              "label": "先に書いた段落",
+              "domIndex": 3,
+              "visualIndex": 2
+            },
+            {
+              "label": "あとに書いた段落",
+              "domIndex": 2,
+              "visualIndex": 3
+            }
+          ]
+        },
+        {
+          "condition": "zoom200",
+          "label": "200% 相当（幅を半分の 640px に）",
+          "viewportWidth": 640,
+          "scrollWidth": 786,
+          "clientWidth": 640,
+          "overflowPx": 146,
+          "countedElements": 9,
+          "offscreenElements": [
+            {
+              "label": "この案内は画面に出していない",
+              "left": -9999
+            }
+          ],
+          "swapped": [
+            {
+              "label": "先に書いた段落",
+              "domIndex": 3,
+              "visualIndex": 2
+            },
+            {
+              "label": "あとに書いた段落",
+              "domIndex": 2,
+              "visualIndex": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

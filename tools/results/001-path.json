@@ -1,0 +1,100 @@
+{
+  "measuredAt": "2026-07-29T14:35:36.703Z",
+  "env": {
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "root": "symptoms/001-save-target",
+  "note": "判定は「表示されたか」ではなく Status と解決された URL。付随リクエストは判定に混ぜない",
+  "otherPathsRequested": [
+    "/guide.html",
+    "/favicon.ico"
+  ],
+  "records": [
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "link": "wrong",
+      "note": "同じ階層にあると思って書いたリンク",
+      "writtenHref": "guide.html",
+      "targetAttr": null,
+      "openedInNewTab": false,
+      "originalPageUrl": "/guide.html",
+      "resolvedUrl": "/guide.html",
+      "status": 404,
+      "title": "404",
+      "reached": false
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "link": "right",
+      "note": "実ファイルの場所に合わせたリンク",
+      "writtenHref": "pages/guide.html",
+      "targetAttr": null,
+      "openedInNewTab": false,
+      "originalPageUrl": "/pages/guide.html",
+      "resolvedUrl": "/pages/guide.html",
+      "status": 200,
+      "title": "使い方",
+      "reached": true
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "link": "wrong",
+      "note": "同じ階層にあると思って書いたリンク",
+      "writtenHref": "guide.html",
+      "targetAttr": null,
+      "openedInNewTab": false,
+      "originalPageUrl": "/guide.html",
+      "resolvedUrl": "/guide.html",
+      "status": 404,
+      "title": "404",
+      "reached": false
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "link": "right",
+      "note": "実ファイルの場所に合わせたリンク",
+      "writtenHref": "pages/guide.html",
+      "targetAttr": null,
+      "openedInNewTab": false,
+      "originalPageUrl": "/pages/guide.html",
+      "resolvedUrl": "/pages/guide.html",
+      "status": 200,
+      "title": "使い方",
+      "reached": true
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "link": "wrong",
+      "note": "同じ階層にあると思って書いたリンク",
+      "writtenHref": "guide.html",
+      "targetAttr": null,
+      "openedInNewTab": false,
+      "originalPageUrl": "/guide.html",
+      "resolvedUrl": "/guide.html",
+      "status": 404,
+      "title": "404",
+      "reached": false
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "link": "right",
+      "note": "実ファイルの場所に合わせたリンク",
+      "writtenHref": "pages/guide.html",
+      "targetAttr": null,
+      "openedInNewTab": false,
+      "originalPageUrl": "/pages/guide.html",
+      "resolvedUrl": "/pages/guide.html",
+      "status": 200,
+      "title": "使い方",
+      "reached": true
+    }
+  ]
+}

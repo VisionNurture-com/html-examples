@@ -1,0 +1,32 @@
+{
+  "measuredAt": "2026-07-27",
+  "question": "CDP の Network.emulateNetworkConditions を有効にすると、画像が LCP 候補として記録されなくなるか",
+  "environment": {
+    "chromium": "151.0.7922.34",
+    "playwright": "1.62.0",
+    "headless": true,
+    "page": "compare/007-loading-vs-fetchpriority/simple/a-baseline.html",
+    "viewport": { "width": 1280, "height": 800 },
+    "heroImage": { "file": "images/hero.jpg", "bytes": 431862, "intrinsic": "1600x900", "renderedCss": "960x540" }
+  },
+  "observations": [
+    { "throttling": "なし", "lcpEntries": 1, "lcpElement": "IMG", "lcpSize": 518400, "lcpMs": 40 },
+    { "throttling": "CDP 8 Mbps / 20ms", "lcpEntries": 1, "lcpElement": "H1", "lcpSize": 9994, "lcpMs": 44 },
+    { "throttling": "CDP 4 Mbps / 40ms", "lcpEntries": 1, "lcpElement": "H1", "lcpSize": 9994, "lcpMs": 68 },
+    { "throttling": "CDP 1.6 Mbps / 150ms", "lcpEntries": 1, "lcpElement": "H1", "lcpSize": 9994, "lcpMs": 188 },
+    { "throttling": "CPU 4x のみ（ネットワークは素通し）", "lcpEntries": 1, "lcpElement": "IMG", "lcpSize": 518400, "lcpMs": 48 },
+    { "throttling": "サーバ側スロットリング 1.6 Mbps / 150ms", "lcpEntries": 1, "lcpElement": "IMG", "lcpSize": 518400, "lcpMs": 2468 }
+  ],
+  "controlChecks": {
+    "documentVisibilityState": "全区間 visible（visibilitychange の発火なし）",
+    "imageComplete": "true（naturalWidth=1600）",
+    "imageInViewport": "true（rect x=160 y=113 w=960 h=540）",
+    "resourceTiming": "hero.jpg は start 171ms / responseEnd 4119ms（スロットリングは効いている）"
+  },
+  "conclusion": [
+    "帯域の強弱と無関係に、CDP のネットワークエミュレーションを有効化した時点で画像の LCP 候補記録が働かなくなる",
+    "CPU スロットリング（Emulation.setCPUThrottlingRate）は影響しない",
+    "したがって本シリーズの CWV 計測では CDP スロットリングを使わず、サーバ側で帯域を絞る"
+  ],
+  "impactOnKnowledge": "CLS は Playwright の実 CDP スロットリングで測れるが、LCP については本環境で成立しない"
+}

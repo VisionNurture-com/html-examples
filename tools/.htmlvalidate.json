@@ -1,0 +1,6 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "form-dup-name": ["error", { "shared": ["radio", "checkbox"] }]
+  }
+}

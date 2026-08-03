@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>クリックが別の要素に届いているページ</title>
+    <style>
+      body { margin: 0; }
+      .hero { position: relative; height: 200px; background: #f0f0f0; }
+      .hero a { position: relative; z-index: 1; }
+      /* ここが原因: 透明な装飾用の要素が、リンクの上に重なっている */
+      .decoration {
+        position: absolute; inset: 0;
+        background: transparent;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <a id="covered" href="./target.html">キャンペーンの詳細</a>
+      <div class="decoration"></div>
+    </div>
+
+    <p><a id="uncovered" href="./target.html">同じリンク（重なりの外）</a></p>
+  </body>
+</html>

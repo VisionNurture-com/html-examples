@@ -1,0 +1,73 @@
+{
+  "tool": "一時計測（リポジトリにファイルを足さず override でメモリ上配信）",
+  "scenario": "同じ <button> + スクリプトで location.href と location.replace を比べ、履歴の増減と戻れるかを測る",
+  "note": "⏸ 保留 B（記事 sec05 の「その組み合わせは測っていません」）を解消するための測定",
+  "records": [
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "implementation": "location.href",
+      "historyBefore": 2,
+      "historyAfter": 3,
+      "historyDelta": 1,
+      "urlAfterNavigate": "/target.html",
+      "urlAfterBack": "/",
+      "wentBackToOriginalPage": true
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "implementation": "location.replace",
+      "historyBefore": 2,
+      "historyAfter": 2,
+      "historyDelta": 0,
+      "urlAfterNavigate": "/target.html",
+      "urlAfterBack": "about:blank",
+      "wentBackToOriginalPage": false
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "implementation": "location.href",
+      "historyBefore": 1,
+      "historyAfter": 2,
+      "historyDelta": 1,
+      "urlAfterNavigate": "/target.html",
+      "urlAfterBack": "/",
+      "wentBackToOriginalPage": true
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "implementation": "location.replace",
+      "historyBefore": 1,
+      "historyAfter": 1,
+      "historyDelta": 0,
+      "urlAfterNavigate": "/target.html",
+      "urlAfterBack": "/target.html",
+      "wentBackToOriginalPage": false
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "implementation": "location.href",
+      "historyBefore": 2,
+      "historyAfter": 3,
+      "historyDelta": 1,
+      "urlAfterNavigate": "/target.html",
+      "urlAfterBack": "/",
+      "wentBackToOriginalPage": true
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "implementation": "location.replace",
+      "historyBefore": 2,
+      "historyAfter": 2,
+      "historyDelta": 0,
+      "urlAfterNavigate": "/target.html",
+      "urlAfterBack": "about:blank",
+      "wentBackToOriginalPage": false
+    }
+  ]
+}

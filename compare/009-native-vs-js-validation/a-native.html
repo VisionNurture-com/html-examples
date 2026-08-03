@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>A: ネイティブ制約検証のみ</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+label { display: block; margin-block-start: 0.8rem; font-weight: bold; }
+input { padding: 0.4rem; inline-size: 18rem; }
+input:user-invalid { border-color: #c00; }
+button { margin-block-start: 1rem; padding: 0.4rem 1.2rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>お問い合わせ（A: ネイティブのみ）</h1>
+<form method="post">
+  <label for="name">お名前（必須）</label>
+  <input type="text" id="name" name="name" required autocomplete="name">
+  <label for="email">メールアドレス（必須）</label>
+  <input type="email" id="email" name="email" required autocomplete="email">
+  <label for="tel">電話番号（半角数字 10〜11 桁）</label>
+  <input type="tel" id="tel" name="tel" pattern="[0-9]{10,11}" autocomplete="tel">
+  <button type="submit">送信する</button>
+</form>
+</main>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>境界あり（:host とページ側の指定がぶつかる）</title>
+<style>
+  body { color: rebeccapurple; font-family: Georgia, serif }
+  .label { border-bottom: 4px solid green }
+  my-card::part(title) { text-decoration: underline }
+  my-card { --card-accent: green }
+  /* ページ側から部品そのものを名指しする。部品の :host とどちらが勝つか */
+  my-card { outline: 4px solid green }
+</style>
+</head>
+<body>
+  <h1>:host とページ側の指定がぶつかったとき</h1>
+  <my-card id="target">お知らせ</my-card>
+
+<script>
+  class MyCard extends HTMLElement {
+    connectedCallback() {
+      const root = this.attachShadow({ mode: 'open' });
+      root.innerHTML = `
+        <style>
+          /* 部品が自分自身に当てる指定 */
+          :host { outline: 4px solid blue; display: block; padding: .5rem }
+        </style>
+        <span class="label" part="title" id="probe">${this.textContent}</span>`;
+      this.dataset.ready = '1';
+    }
+  }
+  customElements.define('my-card', MyCard);
+</script>
+</body>
+</html>

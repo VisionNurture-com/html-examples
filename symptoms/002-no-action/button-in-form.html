@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>フォームの中に置いたボタン</title>
+  </head>
+  <body>
+    <h1>お問い合わせ</h1>
+
+    <form action="./target.html" method="get">
+      <label>お名前 <input type="text" name="q" value="taro"></label>
+
+      <!-- ここが観測点: type を書いていない。button の type は、書かなかったときの既定が submit -->
+      <button id="implicit">確認する</button>
+
+      <!-- 同じ見た目のボタンに type を明示した場合 -->
+      <button id="explicit" type="button">確認する（type を明示）</button>
+    </form>
+  </body>
+</html>

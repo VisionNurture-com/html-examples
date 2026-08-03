@@ -1,0 +1,217 @@
+{
+  "measuredAt": "2026-08-02T14:31:59.555Z",
+  "spec": {
+    "bundle": "JS 全チャンク（vendor 含む）/ HTML・CSS・source map は除く / raw・gzip・brotli を併記",
+    "init": "両者は観測点が異なるため同じものを測っていない（下記 observationPoint を参照）",
+    "deps": "npm ls --all --omit=dev の実パッケージ数（推移的依存を含む・devDependencies 除く）"
+  },
+  "bundle": {
+    "wc": {
+      "files": [
+        "compare/008-wc-vs-react/a-wc/my-tabs.js"
+      ],
+      "rawBytes": 1951,
+      "gzipBytes": 953,
+      "brotliBytes": 752
+    },
+    "react": {
+      "files": [
+        "compare/008-wc-vs-react/b-react/dist/assets/index.js"
+      ],
+      "rawBytes": 191216,
+      "gzipBytes": 59809,
+      "brotliBytes": 51408
+    }
+  },
+  "bundleParity": {
+    "wc": {
+      "engine": "chromium",
+      "measuredFiles": [
+        "my-tabs.js"
+      ],
+      "fetchedFiles": [
+        "my-tabs.js"
+      ],
+      "match": true
+    },
+    "react": {
+      "engine": "chromium",
+      "measuredFiles": [
+        "index.js"
+      ],
+      "fetchedFiles": [
+        "index.js"
+      ],
+      "match": true
+    }
+  },
+  "dependencies": {
+    "wc": {
+      "count": 0,
+      "note": "package.json なし"
+    },
+    "react": {
+      "count": 3,
+      "packages": [
+        "react-dom",
+        "react",
+        "scheduler"
+      ]
+    }
+  },
+  "init": {
+    "chromium": {
+      "version": "151.0.7922.34",
+      "variants": {
+        "wc": {
+          "observationPoint": "customElements.whenDefined('my-tabs') 解決後の最初の requestAnimationFrame",
+          "fetchedJs": [
+            "/compare/008-wc-vs-react/a-wc/my-tabs.js"
+          ],
+          "runs": 10,
+          "operableRuns": 10,
+          "medianMs": 33.45,
+          "minMs": 30.3,
+          "maxMs": 117.9,
+          "samplesMs": [
+            117.9,
+            30.3,
+            30.4,
+            31.1,
+            33.5,
+            32,
+            33.6,
+            33.4,
+            33.8,
+            33.6
+          ]
+        },
+        "react": {
+          "observationPoint": "root に data-ready が現れた後の最初の requestAnimationFrame",
+          "fetchedJs": [
+            "/compare/008-wc-vs-react/b-react/dist/assets/index.js"
+          ],
+          "runs": 10,
+          "operableRuns": 10,
+          "medianMs": 30.65,
+          "minMs": 30,
+          "maxMs": 37.6,
+          "samplesMs": [
+            34.1,
+            30.6,
+            30.3,
+            30.9,
+            37.6,
+            34,
+            30.7,
+            30.1,
+            30,
+            30.5
+          ]
+        }
+      }
+    },
+    "firefox": {
+      "version": "153.0",
+      "variants": {
+        "wc": {
+          "observationPoint": "customElements.whenDefined('my-tabs') 解決後の最初の requestAnimationFrame",
+          "fetchedJs": [
+            "/compare/008-wc-vs-react/a-wc/my-tabs.js"
+          ],
+          "runs": 10,
+          "operableRuns": 10,
+          "medianMs": 15.5,
+          "minMs": 9,
+          "maxMs": 86,
+          "samplesMs": [
+            86,
+            23,
+            14,
+            9,
+            17,
+            14,
+            14,
+            14,
+            18,
+            17
+          ]
+        },
+        "react": {
+          "observationPoint": "root に data-ready が現れた後の最初の requestAnimationFrame",
+          "fetchedJs": [
+            "/compare/008-wc-vs-react/b-react/dist/assets/index.js"
+          ],
+          "runs": 10,
+          "operableRuns": 10,
+          "medianMs": 29,
+          "minMs": 22,
+          "maxMs": 39,
+          "samplesMs": [
+            26,
+            29,
+            30,
+            29,
+            24,
+            27,
+            29,
+            32,
+            22,
+            39
+          ]
+        }
+      }
+    },
+    "webkit": {
+      "version": "26.5",
+      "variants": {
+        "wc": {
+          "observationPoint": "customElements.whenDefined('my-tabs') 解決後の最初の requestAnimationFrame",
+          "fetchedJs": [
+            "/compare/008-wc-vs-react/a-wc/my-tabs.js"
+          ],
+          "runs": 10,
+          "operableRuns": 10,
+          "medianMs": 13,
+          "minMs": 12,
+          "maxMs": 63,
+          "samplesMs": [
+            63,
+            13,
+            16,
+            16,
+            17,
+            12,
+            12,
+            12,
+            13,
+            12
+          ]
+        },
+        "react": {
+          "observationPoint": "root に data-ready が現れた後の最初の requestAnimationFrame",
+          "fetchedJs": [
+            "/compare/008-wc-vs-react/b-react/dist/assets/index.js"
+          ],
+          "runs": 10,
+          "operableRuns": 10,
+          "medianMs": 20,
+          "minMs": 19,
+          "maxMs": 23,
+          "samplesMs": [
+            23,
+            19,
+            21,
+            19,
+            21,
+            19,
+            20,
+            23,
+            20,
+            19
+          ]
+        }
+      }
+    }
+  }
+}

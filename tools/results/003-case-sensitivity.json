@@ -1,0 +1,27 @@
+{
+  "scenario": "実ファイル名 css/Main-Style.css に対し、小文字パスと実ファイル名どおりのパスを要求する",
+  "actualFileName": "Main-Style.css",
+  "requestedPaths": {
+    "lower": "/css/main-style.css",
+    "exact": "/css/Main-Style.css"
+  },
+  "environments": [
+    {
+      "where": "手元（macOS）",
+      "os": "macOS 26.5.2",
+      "server": "Python 3.14.5 / http.server",
+      "lower": "200:203",
+      "exact": "200:203"
+    },
+    {
+      "where": "サーバ（Linux）",
+      "os": "Ubuntu 26.04 LTS",
+      "kernel": "7.0.0-28-generic",
+      "server": "Python 3.14.4 / http.server",
+      "lower": "404:460",
+      "exact": "200:203"
+    }
+  ],
+  "format": "status:bytes",
+  "measuredAt": "2026-07-28T10:01:27Z"
+}

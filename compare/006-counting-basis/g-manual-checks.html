@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>自動では見つからない</title>
+  <style>
+    .row { display: flex; flex-direction: row-reverse; gap: 1rem; }
+    .offscreen { position: absolute; left: -9999px; }
+    .plain { color: #000000; text-decoration: none; }
+    .card { width: 760px; border: 1px solid #767676; padding: 8px; }
+  </style>
+</head>
+<body>
+  <header><h1>お問い合わせ</h1></header>
+  <nav aria-label="ページ内"><a href="#form">入力欄へ</a></nav>
+  <main>
+    <img src="notice.png" width="120" height="80" alt="受付は平日 9 時から 17 時まで">
+    <!-- 見た目の並びが、書いた順と逆になる -->
+    <div class="row">
+      <p>あとに書いた段落</p>
+      <p>先に書いた段落</p>
+    </div>
+    <!-- 画面には出していないが、読み上げには出る -->
+    <p class="offscreen">この案内は画面に出していない</p>
+    <form id="form">
+      <label for="mail">メールアドレス</label>
+      <input id="mail" type="email">
+      <!-- 役割と名前は付いているが、Tab では止まらない -->
+      <div role="button" aria-label="送信する"
+           onclick="document.getElementById('done').hidden = false">送信する</div>
+    </form>
+    <!-- 押した結果が出るが、そこへ移動はしない -->
+    <p id="done" hidden>送信しました</p>
+    <!-- 幅を数値で固定しているため、拡大すると画面からはみ出す -->
+    <p class="card">受付番号は控えを取ってから画面を閉じてください</p>
+    <!-- リンクに見えないリンク -->
+    <p><a class="plain" href="help.html">受付できない場合の対処</a></p>
+  </main>
+</body>
+</html>

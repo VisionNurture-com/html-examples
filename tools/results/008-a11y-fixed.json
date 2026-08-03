@@ -1,0 +1,76 @@
+{
+  "tool": "tools/measure-a11y.mjs",
+  "engine": "chromium",
+  "axeVersion": "4.12.1",
+  "records": [
+    {
+      "file": "symptoms/008-shadow-css-not-applied/fixed.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "nodes": 1,
+          "help": "Document should have one main landmark"
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "nodes": 3,
+          "help": "All page content should be contained by landmarks"
+        }
+      ],
+      "violationCount": 2,
+      "affectedNodeCount": 4,
+      "accessibilityTree": []
+    },
+    {
+      "file": "symptoms/008-slot-not-shown/fixed.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "nodes": 1,
+          "help": "Document should have one main landmark"
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "nodes": 2,
+          "help": "All page content should be contained by landmarks"
+        }
+      ],
+      "violationCount": 2,
+      "affectedNodeCount": 3,
+      "accessibilityTree": []
+    },
+    {
+      "file": "symptoms/008-connected-callback-empty/fixed.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "nodes": 1,
+          "help": "Document should have one main landmark"
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "nodes": 3,
+          "help": "All page content should be contained by landmarks"
+        }
+      ],
+      "violationCount": 2,
+      "affectedNodeCount": 4,
+      "accessibilityTree": []
+    }
+  ]
+}

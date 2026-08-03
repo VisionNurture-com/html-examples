@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>定義は head・数えるのをマイクロタスクに送る</title>
+<script>
+  class MyList extends HTMLElement {
+    connectedCallback() {
+      // マイクロタスクは現在のタスクの直後に走る
+      queueMicrotask(() => this.count());
+    }
+    count() {
+      this.dataset.counted = String(this.querySelectorAll('li').length);
+    }
+  }
+  customElements.define('my-list', MyList);
+</script>
+</head>
+<body>
+  <h1>定義は head・数えるのをマイクロタスクに送る</h1>
+
+  <my-list id="target">
+    <ul>
+      <li>りんご</li>
+      <li>みかん</li>
+      <li>ぶどう</li>
+    </ul>
+  </my-list>
+
+</body>
+</html>

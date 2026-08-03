@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>メッセージを変えたら送信できなくなった（broken）</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+label { display: block; font-weight: bold; }
+input { padding: 0.4rem; inline-size: 18rem; }
+button { margin-block-start: 1rem; padding: 0.4rem 1.2rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>会員登録</h1>
+<form id="signup" method="post">
+  <label for="email">メールアドレス（必須）</label>
+  <input type="email" id="email" name="email" required>
+  <button type="submit">登録する</button>
+</form>
+<script>
+const email = document.getElementById('email');
+email.addEventListener('invalid', () => {
+  // ここが原因: セットしたカスタムメッセージを空文字列へ戻していない。
+  // メッセージが空でない限り、正しい値を入力しても customError が立ち続ける。
+  email.setCustomValidity('会社のメールアドレスを入力してください');
+});
+</script>
+</main>
+</body>
+</html>

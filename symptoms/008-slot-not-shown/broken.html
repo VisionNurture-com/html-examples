@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>slot に渡した中身が出ない</title>
+</head>
+<body>
+  <h1>渡したはずの中身が画面に出ない</h1>
+
+  <my-panel id="target">
+    <!-- 呼び出し側は slot="header" と書いている -->
+    <h2 slot="header">売上レポート</h2>
+    <p>今月の合計は 1,240 件でした。</p>
+  </my-panel>
+
+<script>
+  class MyPanel extends HTMLElement {
+    connectedCallback() {
+      const root = this.attachShadow({ mode: 'open' });
+      // 部品側は name="title" で待ち構えている。名前が一致しないので投影されない
+      root.innerHTML = `
+        <section>
+          <slot name="title"></slot>
+          <slot></slot>
+        </section>`;
+    }
+  }
+  customElements.define('my-panel', MyPanel);
+</script>
+</body>
+</html>

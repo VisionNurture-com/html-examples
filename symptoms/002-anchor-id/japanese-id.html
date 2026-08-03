@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>id に日本語を使ったページ</title>
+    <style>section { min-height: 600px; }</style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <!-- 検証する主張: 「id や URL に日本語が入るとリンクが機能しない」（競合が挙げる原因）
+             書いたままの日本語と、パーセントエンコードした形の両方を用意して結果を比べる -->
+        <li><a id="link-raw" href="#料金プラン">日本語のまま書いたリンク</a></li>
+        <li><a id="link-encoded" href="#%E6%96%99%E9%87%91%E3%83%97%E3%83%A9%E3%83%B3">エンコードして書いたリンク</a></li>
+      </ul>
+    </nav>
+
+    <section id="先頭">
+      <h2>先頭</h2>
+    </section>
+
+    <section id="料金プラン">
+      <h2>料金プラン</h2>
+      <p>日本語の id を持つ節です。</p>
+    </section>
+  </body>
+</html>

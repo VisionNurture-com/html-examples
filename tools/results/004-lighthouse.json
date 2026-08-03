@@ -1,0 +1,87 @@
+{
+  "measuredAt": "2026-08-02T00:32:21.218Z",
+  "root": "compare/004-close-control",
+  "chromium": "151.0.7922.34",
+  "targets": [
+    {
+      "file": "a-custom.html",
+      "lighthouseVersion": "13.4.1",
+      "a11yScore": 95,
+      "failedAudits": [
+        "landmark-one-main"
+      ],
+      "manualAuditCount": 10,
+      "axeViolations": 3,
+      "axeRules": [
+        "landmark-one-main",
+        "page-has-heading-one",
+        "region"
+      ],
+      "axeVersion": "4.12.1"
+    },
+    {
+      "file": "b-dialog.html",
+      "lighthouseVersion": "13.4.1",
+      "a11yScore": 95,
+      "failedAudits": [
+        "landmark-one-main"
+      ],
+      "manualAuditCount": 10,
+      "axeViolations": 3,
+      "axeRules": [
+        "landmark-one-main",
+        "page-has-heading-one",
+        "region"
+      ],
+      "axeVersion": "4.12.1"
+    },
+    {
+      "file": "c-closedby-any.html",
+      "lighthouseVersion": "13.4.1",
+      "a11yScore": 95,
+      "failedAudits": [
+        "landmark-one-main"
+      ],
+      "manualAuditCount": 10,
+      "axeViolations": 3,
+      "axeRules": [
+        "landmark-one-main",
+        "page-has-heading-one",
+        "region"
+      ],
+      "axeVersion": "4.12.1"
+    },
+    {
+      "file": "d-details.html",
+      "lighthouseVersion": "13.4.1",
+      "a11yScore": 95,
+      "failedAudits": [
+        "landmark-one-main"
+      ],
+      "manualAuditCount": 10,
+      "axeViolations": 3,
+      "axeRules": [
+        "landmark-one-main",
+        "page-has-heading-one",
+        "region"
+      ],
+      "axeVersion": "4.12.1"
+    },
+    {
+      "file": "e-popover.html",
+      "lighthouseVersion": "13.4.1",
+      "a11yScore": 95,
+      "failedAudits": [
+        "landmark-one-main"
+      ],
+      "manualAuditCount": 10,
+      "axeViolations": 3,
+      "axeRules": [
+        "landmark-one-main",
+        "page-has-heading-one",
+        "region"
+      ],
+      "axeVersion": "4.12.1"
+    }
+  ]
+}

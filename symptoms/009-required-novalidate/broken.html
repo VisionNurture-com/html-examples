@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>required を付けたのに送信できる（broken）</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+label { display: block; font-weight: bold; }
+input { padding: 0.4rem; inline-size: 18rem; }
+button { margin-block-start: 1rem; padding: 0.4rem 1.2rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>お問い合わせ</h1>
+<form id="contact" method="post">
+  <label for="email">メールアドレス（必須）</label>
+  <input type="email" id="email" name="email" required>
+  <!-- ここが原因 1: type="button" は送信ボタンではないので、押しても検証が走らない -->
+  <button type="button" id="send">送信</button>
+</form>
+<script>
+const form = document.getElementById('contact');
+document.getElementById('send').addEventListener('click', () => {
+  // ここが原因 2: form.submit() は制約検証を通らずに送信する
+  form.submit();
+});
+</script>
+</main>
+</body>
+</html>

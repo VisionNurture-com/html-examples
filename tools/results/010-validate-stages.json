@@ -1,0 +1,135 @@
+{
+  "measuredAt": "2026-07-26T08:23:33.753Z",
+  "runs": 5,
+  "env": {
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "htmlValidate": "html-validate-11.5.6",
+    "config": "tools/.htmlvalidate.json"
+  },
+  "stages": [
+    {
+      "stage": "1-editor-only",
+      "note": "開いたファイル 1 本。エディタの検査範囲を CLI で代替測定した値であり、エディタ上の体感待ち時間ではない",
+      "files": [
+        "symptoms/010-markup-errors/broken.html"
+      ],
+      "fileCount": 1,
+      "errors": 11,
+      "warnings": 0,
+      "cliExitCode": 1,
+      "apiErrors": 11,
+      "cliMs": {
+        "median": 411.1,
+        "min": 394.8,
+        "max": 420.8,
+        "runs": [
+          413.5,
+          394.8,
+          420.8,
+          411.1,
+          405.8
+        ]
+      },
+      "apiMs": {
+        "median": 6.2,
+        "min": 4.3,
+        "max": 54.8,
+        "runs": [
+          54.8,
+          6.8,
+          6.2,
+          5.7,
+          4.3
+        ]
+      }
+    },
+    {
+      "stage": "2-pre-commit",
+      "note": "フックが git diff --cached で作る一覧を模した固定 2 本。実フックの動作確認は別途 RESULT.md に記録",
+      "files": [
+        "symptoms/010-markup-errors/broken.html",
+        "symptoms/010-markup-errors/fixed.html"
+      ],
+      "fileCount": 2,
+      "errors": 11,
+      "warnings": 0,
+      "cliExitCode": 1,
+      "apiErrors": 11,
+      "cliMs": {
+        "median": 412.1,
+        "min": 401.8,
+        "max": 424.6,
+        "runs": [
+          402.9,
+          401.8,
+          415.9,
+          412.1,
+          424.6
+        ]
+      },
+      "apiMs": {
+        "median": 7,
+        "min": 6,
+        "max": 7.9,
+        "runs": [
+          7.9,
+          7.6,
+          7,
+          6,
+          6.4
+        ]
+      }
+    },
+    {
+      "stage": "3-ci",
+      "note": "symptoms/ と compare/ 配下の全 .html。CI が回す範囲",
+      "files": [
+        "symptoms/009-checkbox-group/broken.html",
+        "symptoms/009-checkbox-group/fixed-a11y.html",
+        "symptoms/009-checkbox-group/fixed.html",
+        "symptoms/009-custom-message/broken.html",
+        "symptoms/009-custom-message/fixed.html",
+        "symptoms/009-required-novalidate/broken.html",
+        "symptoms/009-required-novalidate/fixed-requestsubmit.html",
+        "symptoms/009-required-novalidate/fixed.html",
+        "symptoms/010-embedded-errors/broken.html",
+        "symptoms/010-markup-errors/broken.html",
+        "symptoms/010-markup-errors/fixed.html",
+        "symptoms/010-parser-error/broken.html",
+        "compare/009-native-vs-js-validation/a-native.html",
+        "compare/009-native-vs-js-validation/b-js.html"
+      ],
+      "fileCount": 14,
+      "errors": 15,
+      "warnings": 0,
+      "cliExitCode": 1,
+      "apiErrors": 15,
+      "cliMs": {
+        "median": 486.1,
+        "min": 476.5,
+        "max": 505.4,
+        "runs": [
+          476.5,
+          484.3,
+          486.1,
+          505.4,
+          497.3
+        ]
+      },
+      "apiMs": {
+        "median": 37.5,
+        "min": 35.9,
+        "max": 42.7,
+        "runs": [
+          42.7,
+          37,
+          35.9,
+          37.5,
+          39.1
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>表の見出しを伝えるページ</title>
+  </head>
+  <body>
+    <main>
+      <h1>担当者ごとの受付件数</h1>
+      <!-- caption は表の名前。読み上げは表に入った時点でこれを読む -->
+      <table>
+        <caption>担当者ごとの受付件数（2026 年 4 月・5 月）</caption>
+        <thead>
+          <tr>
+            <!-- scope="col" は「この列の見出し」。データセルを読むとき列名が添えられる -->
+            <th scope="col">担当</th>
+            <th scope="col">4 月</th>
+            <th scope="col">5 月</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- scope="row" は「この行の見出し」。行名も添えられる -->
+            <th scope="row">Alice</th>
+            <td>12</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <th scope="row">Bob</th>
+            <td>9</td>
+            <td>21</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

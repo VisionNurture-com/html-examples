@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>途中から崩れるページ</title>
+  </head>
+  <body>
+    <h1>今週のお知らせ</h1>
+
+    <p><a href="/notice">詳しくはこちら <!-- ここが原因: a を閉じていない。以降の本文がすべてリンクになる -->
+    <p>ここから下は、リンクにするつもりのない文章です。</p>
+
+    <table>
+      <caption>受付時間</caption>
+      来店の前にご確認ください <!-- ここが原因: table の直下にテキストを置いている。DOM では表の前へ移される -->
+      <tr><td>平日</td><td>10:00-18:00</td></tr>
+    </table>
+  </body>
+</html>

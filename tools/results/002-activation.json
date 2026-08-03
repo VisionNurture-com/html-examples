@@ -1,0 +1,564 @@
+{
+  "tool": "tools/measure-activation.mjs",
+  "root": "compare/002-a-vs-button-vs-div",
+  "records": [
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "impl": "a href",
+      "id": "impl-a",
+      "tag": "a",
+      "roleAttr": null,
+      "tabindexAttr": null,
+      "ariaSnapshot": "- link \"お知らせを見る\":\n  - /url: ./target.html",
+      "tabStopsToReach": 1,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "",
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "",
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        ""
+      ],
+      "tabVerdict": "1 回目で到達",
+      "programmaticallyFocusable": true,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "byEnter": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "bySpace": {
+        "navigated": false,
+        "url": "http://127.0.0.1:56110/",
+        "historyBefore": 2,
+        "historyAfter": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "impl": "button + script",
+      "id": "impl-button",
+      "tag": "button",
+      "roleAttr": null,
+      "tabindexAttr": null,
+      "ariaSnapshot": "- button \"お知らせを見る\"",
+      "tabStopsToReach": 2,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "",
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "",
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        ""
+      ],
+      "tabVerdict": "2 回目で到達",
+      "programmaticallyFocusable": true,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "byEnter": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "bySpace": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      }
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "impl": "div onclick",
+      "id": "impl-div",
+      "tag": "div",
+      "roleAttr": null,
+      "tabindexAttr": null,
+      "ariaSnapshot": "- text: お知らせを見る",
+      "tabStopsToReach": null,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "",
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "",
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        ""
+      ],
+      "tabVerdict": "到達しない",
+      "programmaticallyFocusable": false,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "byEnter": {
+        "navigated": null,
+        "reason": "フォーカスを載せられないためキー操作を測れない",
+        "url": "http://127.0.0.1:56110/",
+        "historyBefore": 2,
+        "historyAfter": 2
+      },
+      "bySpace": {
+        "navigated": null,
+        "reason": "フォーカスを載せられないためキー操作を測れない",
+        "url": "http://127.0.0.1:56110/",
+        "historyBefore": 2,
+        "historyAfter": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "impl": "div + role/tabindex/keydown",
+      "id": "impl-div-patched",
+      "tag": "div",
+      "roleAttr": "button",
+      "tabindexAttr": "0",
+      "ariaSnapshot": "- button \"お知らせを見る\"",
+      "tabStopsToReach": 3,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "",
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "",
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        ""
+      ],
+      "tabVerdict": "3 回目で到達",
+      "programmaticallyFocusable": true,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "byEnter": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "bySpace": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      }
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "impl": "a href",
+      "id": "impl-a",
+      "tag": "a",
+      "roleAttr": null,
+      "tabindexAttr": null,
+      "ariaSnapshot": "- link \"お知らせを見る\":\n  - /url: ./target.html",
+      "tabStopsToReach": 1,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched"
+      ],
+      "tabVerdict": "1 回目で到達",
+      "programmaticallyFocusable": true,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 1,
+        "historyAfter": 2
+      },
+      "byEnter": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 1,
+        "historyAfter": 2
+      },
+      "bySpace": {
+        "navigated": false,
+        "url": "http://127.0.0.1:56110/",
+        "historyBefore": 1,
+        "historyAfter": 1
+      }
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "impl": "button + script",
+      "id": "impl-button",
+      "tag": "button",
+      "roleAttr": null,
+      "tabindexAttr": null,
+      "ariaSnapshot": "- button \"お知らせを見る\"",
+      "tabStopsToReach": 2,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched"
+      ],
+      "tabVerdict": "2 回目で到達",
+      "programmaticallyFocusable": true,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 1,
+        "historyAfter": 2
+      },
+      "byEnter": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 1,
+        "historyAfter": 2
+      },
+      "bySpace": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 1,
+        "historyAfter": 2
+      }
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "impl": "div onclick",
+      "id": "impl-div",
+      "tag": "div",
+      "roleAttr": null,
+      "tabindexAttr": null,
+      "ariaSnapshot": "- text: お知らせを見る",
+      "tabStopsToReach": null,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched"
+      ],
+      "tabVerdict": "到達しない",
+      "programmaticallyFocusable": false,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 1,
+        "historyAfter": 2
+      },
+      "byEnter": {
+        "navigated": null,
+        "reason": "フォーカスを載せられないためキー操作を測れない",
+        "url": "http://127.0.0.1:56110/",
+        "historyBefore": 1,
+        "historyAfter": 1
+      },
+      "bySpace": {
+        "navigated": null,
+        "reason": "フォーカスを載せられないためキー操作を測れない",
+        "url": "http://127.0.0.1:56110/",
+        "historyBefore": 1,
+        "historyAfter": 1
+      }
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "impl": "div + role/tabindex/keydown",
+      "id": "impl-div-patched",
+      "tag": "div",
+      "roleAttr": "button",
+      "tabindexAttr": "0",
+      "ariaSnapshot": "- button \"お知らせを見る\"",
+      "tabStopsToReach": 3,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-a",
+        "impl-button",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched",
+        "impl-div-patched"
+      ],
+      "tabVerdict": "3 回目で到達",
+      "programmaticallyFocusable": true,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 1,
+        "historyAfter": 2
+      },
+      "byEnter": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 1,
+        "historyAfter": 2
+      },
+      "bySpace": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 1,
+        "historyAfter": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "impl": "a href",
+      "id": "impl-a",
+      "tag": "a",
+      "roleAttr": null,
+      "tabindexAttr": null,
+      "ariaSnapshot": "- link \"お知らせを見る\":\n  - /url: ./target.html",
+      "tabStopsToReach": null,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        ""
+      ],
+      "tabVerdict": "到達しない",
+      "programmaticallyFocusable": true,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "byEnter": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "bySpace": {
+        "navigated": false,
+        "url": "http://127.0.0.1:56110/",
+        "historyBefore": 2,
+        "historyAfter": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "impl": "button + script",
+      "id": "impl-button",
+      "tag": "button",
+      "roleAttr": null,
+      "tabindexAttr": null,
+      "ariaSnapshot": "- button \"お知らせを見る\"",
+      "tabStopsToReach": null,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        ""
+      ],
+      "tabVerdict": "到達しない",
+      "programmaticallyFocusable": true,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "byEnter": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "bySpace": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "impl": "div onclick",
+      "id": "impl-div",
+      "tag": "div",
+      "roleAttr": null,
+      "tabindexAttr": null,
+      "ariaSnapshot": "- text: お知らせを見る",
+      "tabStopsToReach": null,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        ""
+      ],
+      "tabVerdict": "到達しない",
+      "programmaticallyFocusable": false,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "byEnter": {
+        "navigated": null,
+        "reason": "フォーカスを載せられないためキー操作を測れない",
+        "url": "http://127.0.0.1:56110/",
+        "historyBefore": 2,
+        "historyAfter": 2
+      },
+      "bySpace": {
+        "navigated": null,
+        "reason": "フォーカスを載せられないためキー操作を測れない",
+        "url": "http://127.0.0.1:56110/",
+        "historyBefore": 2,
+        "historyAfter": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "impl": "div + role/tabindex/keydown",
+      "id": "impl-div-patched",
+      "tag": "div",
+      "roleAttr": "button",
+      "tabindexAttr": "0",
+      "ariaSnapshot": "- button \"お知らせを見る\"",
+      "tabStopsToReach": 1,
+      "tabTraversalMeasurable": true,
+      "tabSequenceObserved": [
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        "",
+        "impl-div-patched",
+        ""
+      ],
+      "tabVerdict": "1 回目で到達",
+      "programmaticallyFocusable": true,
+      "byMouse": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "byEnter": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      },
+      "bySpace": {
+        "navigated": true,
+        "url": "http://127.0.0.1:56110/target.html",
+        "historyBefore": 2,
+        "historyAfter": 3
+      }
+    }
+  ]
+}

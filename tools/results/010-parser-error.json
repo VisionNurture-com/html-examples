@@ -1,0 +1,48 @@
+{
+  "measuredAt": "2026-07-26T08:23:33.938Z",
+  "target": "symptoms/010-parser-error/broken.html",
+  "fragment": "<<section>>",
+  "fragmentLine": 9,
+  "env": {
+    "node": "v24.18.0",
+    "platform": "darwin"
+  },
+  "broken": {
+    "errorCount": 1,
+    "warningCount": 0,
+    "rules": [
+      "parser-error@9:5"
+    ],
+    "ruleIds": [
+      "parser-error"
+    ]
+  },
+  "control": {
+    "errorCount": 9,
+    "warningCount": 0,
+    "rules": [
+      "no-implicit-close@2:2",
+      "no-implicit-close@7:4",
+      "close-order@9:6",
+      "no-implicit-close@9:6",
+      "wcag/h37@10:6",
+      "close-order@11:6",
+      "wcag/h30@11:6",
+      "close-order@12:4",
+      "close-order@13:2"
+    ],
+    "ruleIds": [
+      "close-order",
+      "no-implicit-close",
+      "wcag/h30",
+      "wcag/h37"
+    ]
+  },
+  "lostRulesInBroken": [
+    "close-order",
+    "no-implicit-close",
+    "wcag/h30",
+    "wcag/h37"
+  ],
+  "conclusion": "parser-error が出た場合、control で報告される誤りの一部が報告されなくなる（解析の打ち切りと整合）"
+}

@@ -1,0 +1,546 @@
+{
+  "tool": "tools/measure-click-target.mjs",
+  "root": "symptoms/002-no-action",
+  "records": [
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "button-href.html",
+      "id": "broken",
+      "label": "button に href を書いた",
+      "tag": "button",
+      "hrefAttr": "./target.html",
+      "resolvedHref": null,
+      "hitElement": "broken",
+      "hitIsTarget": true,
+      "navigated": false,
+      "urlAfter": "http://127.0.0.1:55923/button-href.html",
+      "events": [
+        {
+          "target": "broken",
+          "defaultPrevented": false
+        },
+        {
+          "phase": "bubble",
+          "target": "broken",
+          "defaultPrevented": false
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "button-href.html",
+      "id": "fixed",
+      "label": "同じ用途を a で書いた",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "fixed",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "prevented.html",
+      "id": "inside",
+      "label": "親要素のハンドラが打ち消す位置のリンク",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "inside",
+      "hitIsTarget": true,
+      "navigated": false,
+      "urlAfter": "http://127.0.0.1:55923/prevented.html",
+      "events": [
+        {
+          "target": "inside",
+          "defaultPrevented": false
+        },
+        {
+          "phase": "bubble",
+          "target": "inside",
+          "defaultPrevented": true
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "prevented.html",
+      "id": "outside",
+      "label": "同じリンク（打ち消しの外）",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "outside",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "overlay.html",
+      "id": "covered",
+      "label": "透明な要素が上に重なったリンク",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "decoration",
+      "hitIsTarget": false,
+      "navigated": false,
+      "urlAfter": "http://127.0.0.1:55923/overlay.html",
+      "events": [
+        {
+          "target": "DIV",
+          "defaultPrevented": false
+        },
+        {
+          "phase": "bubble",
+          "target": "DIV",
+          "defaultPrevented": false
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "overlay.html",
+      "id": "uncovered",
+      "label": "同じリンク（重なりの外）",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "uncovered",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "fullwidth-space.html",
+      "id": "plain",
+      "label": "① 通常",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "plain",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "fullwidth-space.html",
+      "id": "around",
+      "label": "② タグの前後に全角スペース",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "around",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "fullwidth-space.html",
+      "id": "inside",
+      "label": "③ リンクテキストの中に全角スペース",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "inside",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "fullwidth-space.html",
+      "id": "attr",
+      "label": "④ 属性値の前に全角スペース",
+      "tag": "a",
+      "hrefAttr": "　./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/%E3%80%80./target.html",
+      "hitElement": "attr",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/%E3%80%80./target.html",
+      "events": []
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "button-href.html",
+      "id": "broken",
+      "label": "button に href を書いた",
+      "tag": "button",
+      "hrefAttr": "./target.html",
+      "resolvedHref": null,
+      "hitElement": "broken",
+      "hitIsTarget": true,
+      "navigated": false,
+      "urlAfter": "http://127.0.0.1:55923/button-href.html",
+      "events": [
+        {
+          "target": "broken",
+          "defaultPrevented": false
+        },
+        {
+          "phase": "bubble",
+          "target": "broken",
+          "defaultPrevented": false
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "button-href.html",
+      "id": "fixed",
+      "label": "同じ用途を a で書いた",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "fixed",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "prevented.html",
+      "id": "inside",
+      "label": "親要素のハンドラが打ち消す位置のリンク",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "inside",
+      "hitIsTarget": true,
+      "navigated": false,
+      "urlAfter": "http://127.0.0.1:55923/prevented.html",
+      "events": [
+        {
+          "target": "inside",
+          "defaultPrevented": false
+        },
+        {
+          "phase": "bubble",
+          "target": "inside",
+          "defaultPrevented": true
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "prevented.html",
+      "id": "outside",
+      "label": "同じリンク（打ち消しの外）",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "outside",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "overlay.html",
+      "id": "covered",
+      "label": "透明な要素が上に重なったリンク",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "decoration",
+      "hitIsTarget": false,
+      "navigated": false,
+      "urlAfter": "http://127.0.0.1:55923/overlay.html",
+      "events": [
+        {
+          "target": "DIV",
+          "defaultPrevented": false
+        },
+        {
+          "phase": "bubble",
+          "target": "DIV",
+          "defaultPrevented": false
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "overlay.html",
+      "id": "uncovered",
+      "label": "同じリンク（重なりの外）",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "uncovered",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "fullwidth-space.html",
+      "id": "plain",
+      "label": "① 通常",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "plain",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "fullwidth-space.html",
+      "id": "around",
+      "label": "② タグの前後に全角スペース",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "around",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "fullwidth-space.html",
+      "id": "inside",
+      "label": "③ リンクテキストの中に全角スペース",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "inside",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "fullwidth-space.html",
+      "id": "attr",
+      "label": "④ 属性値の前に全角スペース",
+      "tag": "a",
+      "hrefAttr": "　./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/%E3%80%80./target.html",
+      "hitElement": "attr",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/%E3%80%80./target.html",
+      "events": []
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "button-href.html",
+      "id": "broken",
+      "label": "button に href を書いた",
+      "tag": "button",
+      "hrefAttr": "./target.html",
+      "resolvedHref": null,
+      "hitElement": "broken",
+      "hitIsTarget": true,
+      "navigated": false,
+      "urlAfter": "http://127.0.0.1:55923/button-href.html",
+      "events": [
+        {
+          "target": "broken",
+          "defaultPrevented": false
+        },
+        {
+          "phase": "bubble",
+          "target": "broken",
+          "defaultPrevented": false
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "button-href.html",
+      "id": "fixed",
+      "label": "同じ用途を a で書いた",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "fixed",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "prevented.html",
+      "id": "inside",
+      "label": "親要素のハンドラが打ち消す位置のリンク",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "inside",
+      "hitIsTarget": true,
+      "navigated": false,
+      "urlAfter": "http://127.0.0.1:55923/prevented.html",
+      "events": [
+        {
+          "target": "inside",
+          "defaultPrevented": false
+        },
+        {
+          "phase": "bubble",
+          "target": "inside",
+          "defaultPrevented": true
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "prevented.html",
+      "id": "outside",
+      "label": "同じリンク（打ち消しの外）",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "outside",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "overlay.html",
+      "id": "covered",
+      "label": "透明な要素が上に重なったリンク",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "decoration",
+      "hitIsTarget": false,
+      "navigated": false,
+      "urlAfter": "http://127.0.0.1:55923/overlay.html",
+      "events": [
+        {
+          "target": "DIV",
+          "defaultPrevented": false
+        },
+        {
+          "phase": "bubble",
+          "target": "DIV",
+          "defaultPrevented": false
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "overlay.html",
+      "id": "uncovered",
+      "label": "同じリンク（重なりの外）",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "uncovered",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "fullwidth-space.html",
+      "id": "plain",
+      "label": "① 通常",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "plain",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "fullwidth-space.html",
+      "id": "around",
+      "label": "② タグの前後に全角スペース",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "around",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "fullwidth-space.html",
+      "id": "inside",
+      "label": "③ リンクテキストの中に全角スペース",
+      "tag": "a",
+      "hrefAttr": "./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/target.html",
+      "hitElement": "inside",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/target.html",
+      "events": []
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "fullwidth-space.html",
+      "id": "attr",
+      "label": "④ 属性値の前に全角スペース",
+      "tag": "a",
+      "hrefAttr": "　./target.html",
+      "resolvedHref": "http://127.0.0.1:55923/%E3%80%80./target.html",
+      "hitElement": "attr",
+      "hitIsTarget": true,
+      "navigated": true,
+      "urlAfter": "http://127.0.0.1:55923/%E3%80%80./target.html",
+      "events": []
+    }
+  ]
+}

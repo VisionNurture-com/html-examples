@@ -1,0 +1,257 @@
+{
+  "measuredAt": "2026-07-29T01:39:55.296Z",
+  "env": {
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "note": "生ソースは読み込み前のファイル、observed は読み込み後の DOM。両者の差が補正の結果",
+  "records": [
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "target": "broken",
+      "path": "symptoms/001-unclosed/broken.html",
+      "sourceLines": 20,
+      "observed": {
+        "domTree": [
+          "<body>",
+          "  <h1> \"今週のお知らせ\"",
+          "  <p>",
+          "    <a> \"詳しくはこちら\"",
+          "  <p>",
+          "    <a> \"ここから下は、リンクにするつもりのない文章です。\"",
+          "  <a> \"来店の前にご確認ください\"",
+          "    <table>",
+          "      <caption> \"受付時間\"",
+          "      <tbody>",
+          "        <tr>",
+          "          <td> \"平日\"",
+          "          <td> \"10:00-18:00\""
+        ],
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "a"
+        ],
+        "anchor": {
+          "text": "詳しくはこちら",
+          "length": 7
+        },
+        "paragraphCount": 2,
+        "paragraphsInsideAnchor": 0,
+        "table": {
+          "rowCount": 1,
+          "textMovedOutside": "来店の前にご確認ください",
+          "directTextInTable": ""
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "target": "fixed",
+      "path": "symptoms/001-unclosed/fixed.html",
+      "sourceLines": 22,
+      "observed": {
+        "domTree": [
+          "<body>",
+          "  <h1> \"今週のお知らせ\"",
+          "  <p>",
+          "    <a> \"詳しくはこちら\"",
+          "  <p> \"ここから下は、リンクにするつもりのない文章です。\"",
+          "  <p> \"来店の前にご確認ください\"",
+          "  <table>",
+          "    <caption> \"受付時間\"",
+          "    <tbody>",
+          "      <tr>",
+          "        <td> \"平日\"",
+          "        <td> \"10:00-18:00\""
+        ],
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "p",
+          "table"
+        ],
+        "anchor": {
+          "text": "詳しくはこちら",
+          "length": 7
+        },
+        "paragraphCount": 3,
+        "paragraphsInsideAnchor": 0,
+        "table": {
+          "rowCount": 1,
+          "textMovedOutside": "",
+          "directTextInTable": ""
+        }
+      }
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "target": "broken",
+      "path": "symptoms/001-unclosed/broken.html",
+      "sourceLines": 20,
+      "observed": {
+        "domTree": [
+          "<body>",
+          "  <h1> \"今週のお知らせ\"",
+          "  <p>",
+          "    <a> \"詳しくはこちら\"",
+          "  <p>",
+          "    <a> \"ここから下は、リンクにするつもりのない文章です。\"",
+          "  <a> \"来店の前にご確認ください\"",
+          "    <table>",
+          "      <caption> \"受付時間\"",
+          "      <tbody>",
+          "        <tr>",
+          "          <td> \"平日\"",
+          "          <td> \"10:00-18:00\""
+        ],
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "a"
+        ],
+        "anchor": {
+          "text": "詳しくはこちら",
+          "length": 7
+        },
+        "paragraphCount": 2,
+        "paragraphsInsideAnchor": 0,
+        "table": {
+          "rowCount": 1,
+          "textMovedOutside": "来店の前にご確認ください",
+          "directTextInTable": ""
+        }
+      }
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "target": "fixed",
+      "path": "symptoms/001-unclosed/fixed.html",
+      "sourceLines": 22,
+      "observed": {
+        "domTree": [
+          "<body>",
+          "  <h1> \"今週のお知らせ\"",
+          "  <p>",
+          "    <a> \"詳しくはこちら\"",
+          "  <p> \"ここから下は、リンクにするつもりのない文章です。\"",
+          "  <p> \"来店の前にご確認ください\"",
+          "  <table>",
+          "    <caption> \"受付時間\"",
+          "    <tbody>",
+          "      <tr>",
+          "        <td> \"平日\"",
+          "        <td> \"10:00-18:00\""
+        ],
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "p",
+          "table"
+        ],
+        "anchor": {
+          "text": "詳しくはこちら",
+          "length": 7
+        },
+        "paragraphCount": 3,
+        "paragraphsInsideAnchor": 0,
+        "table": {
+          "rowCount": 1,
+          "textMovedOutside": "",
+          "directTextInTable": ""
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "target": "broken",
+      "path": "symptoms/001-unclosed/broken.html",
+      "sourceLines": 20,
+      "observed": {
+        "domTree": [
+          "<body>",
+          "  <h1> \"今週のお知らせ\"",
+          "  <p>",
+          "    <a> \"詳しくはこちら\"",
+          "  <p>",
+          "    <a> \"ここから下は、リンクにするつもりのない文章です。\"",
+          "  <a> \"来店の前にご確認ください\"",
+          "    <table>",
+          "      <caption> \"受付時間\"",
+          "      <tbody>",
+          "        <tr>",
+          "          <td> \"平日\"",
+          "          <td> \"10:00-18:00\""
+        ],
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "a"
+        ],
+        "anchor": {
+          "text": "詳しくはこちら",
+          "length": 7
+        },
+        "paragraphCount": 2,
+        "paragraphsInsideAnchor": 0,
+        "table": {
+          "rowCount": 1,
+          "textMovedOutside": "来店の前にご確認ください",
+          "directTextInTable": ""
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "target": "fixed",
+      "path": "symptoms/001-unclosed/fixed.html",
+      "sourceLines": 22,
+      "observed": {
+        "domTree": [
+          "<body>",
+          "  <h1> \"今週のお知らせ\"",
+          "  <p>",
+          "    <a> \"詳しくはこちら\"",
+          "  <p> \"ここから下は、リンクにするつもりのない文章です。\"",
+          "  <p> \"来店の前にご確認ください\"",
+          "  <table>",
+          "    <caption> \"受付時間\"",
+          "    <tbody>",
+          "      <tr>",
+          "        <td> \"平日\"",
+          "        <td> \"10:00-18:00\""
+        ],
+        "bodyChildTags": [
+          "h1",
+          "p",
+          "p",
+          "p",
+          "table"
+        ],
+        "anchor": {
+          "text": "詳しくはこちら",
+          "length": 7
+        },
+        "paragraphCount": 3,
+        "paragraphsInsideAnchor": 0,
+        "table": {
+          "rowCount": 1,
+          "textMovedOutside": "",
+          "directTextInTable": ""
+        }
+      }
+    }
+  ]
+}

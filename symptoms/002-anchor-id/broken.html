@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ページ内リンクが飛ばないページ</title>
+    <style>
+      /* 上に固定されたヘッダー。飛んだ先がこの下に隠れる */
+      header { position: fixed; top: 0; left: 0; right: 0; height: 64px; background: #e8e8e8; }
+      main { padding-top: 64px; }
+      section { min-height: 600px; }
+    </style>
+  </head>
+  <body>
+    <header>サイトの見出し</header>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="#plan">料金プラン</a></li>
+          <li><a href="#support">サポート</a></li>
+        </ul>
+      </nav>
+
+      <!-- ここが原因 1: 同じ id を 2 か所に書いている。#plan は先に現れた方へ飛ぶ -->
+      <section id="plan">
+        <h2>料金プランの概要</h2>
+        <p>この節は導入です。読者が読みたいのは下の詳細表です。</p>
+      </section>
+
+      <section id="plan">
+        <h2>料金プランの詳細</h2>
+        <p>読者が飛びたいのはこちらですが、上の節へ飛びます。</p>
+      </section>
+
+      <!-- ここが原因 2: id は一意だが、飛んだ先が固定ヘッダーの下に隠れる -->
+      <section id="support">
+        <h2>サポート</h2>
+        <p>この見出しは、飛んだ直後にヘッダーの下へ入ります。</p>
+      </section>
+
+      <!-- 末尾の節はページの終わりで止まり、画面の上端まで来ない。
+           上の #support を上端まで運べるようにするための、後ろに続く内容 -->
+      <section id="company">
+        <h2>会社案内</h2>
+        <p>後続の内容です。</p>
+      </section>
+    </main>
+  </body>
+</html>

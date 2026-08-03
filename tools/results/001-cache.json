@@ -1,0 +1,204 @@
+{
+  "measuredAt": "2026-07-29T01:55:49.621Z",
+  "env": {
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "countedPath": "/page.html",
+  "note": "再取得の判定は transferSize でなくサーバ到達回数。対象は countedPath のみを数える",
+  "otherPathsRequested": [
+    "/favicon.ico"
+  ],
+  "records": [
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "mode": "no-store",
+      "cacheControl": "no-store",
+      "note": "毎回取りに来ることを期待する指示",
+      "serverHits": {
+        "afterFirst": 1,
+        "afterReload": 2,
+        "afterEdit": 3,
+        "afterRevisit": 4
+      },
+      "shown": {
+        "first": "v1",
+        "reload": "v1",
+        "afterEdit": "v2",
+        "afterRevisit": "v3"
+      },
+      "reflectedAfterEdit": true,
+      "reflectedAfterRevisit": true
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "mode": "max-age=600",
+      "cacheControl": "max-age=600",
+      "note": "10 分は再利用してよいという指示",
+      "serverHits": {
+        "afterFirst": 1,
+        "afterReload": 2,
+        "afterEdit": 3,
+        "afterRevisit": 3
+      },
+      "shown": {
+        "first": "v1",
+        "reload": "v1",
+        "afterEdit": "v2",
+        "afterRevisit": "v2"
+      },
+      "reflectedAfterEdit": true,
+      "reflectedAfterRevisit": false
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "mode": "指示なし",
+      "cacheControl": null,
+      "note": "Cache-Control を返さない。ブラウザの判断に委ねる",
+      "serverHits": {
+        "afterFirst": 1,
+        "afterReload": 2,
+        "afterEdit": 3,
+        "afterRevisit": 4
+      },
+      "shown": {
+        "first": "v1",
+        "reload": "v1",
+        "afterEdit": "v2",
+        "afterRevisit": "v3"
+      },
+      "reflectedAfterEdit": true,
+      "reflectedAfterRevisit": true
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "mode": "no-store",
+      "cacheControl": "no-store",
+      "note": "毎回取りに来ることを期待する指示",
+      "serverHits": {
+        "afterFirst": 1,
+        "afterReload": 2,
+        "afterEdit": 3,
+        "afterRevisit": 4
+      },
+      "shown": {
+        "first": "v1",
+        "reload": "v1",
+        "afterEdit": "v2",
+        "afterRevisit": "v3"
+      },
+      "reflectedAfterEdit": true,
+      "reflectedAfterRevisit": true
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "mode": "max-age=600",
+      "cacheControl": "max-age=600",
+      "note": "10 分は再利用してよいという指示",
+      "serverHits": {
+        "afterFirst": 1,
+        "afterReload": 2,
+        "afterEdit": 3,
+        "afterRevisit": 3
+      },
+      "shown": {
+        "first": "v1",
+        "reload": "v1",
+        "afterEdit": "v2",
+        "afterRevisit": "v2"
+      },
+      "reflectedAfterEdit": true,
+      "reflectedAfterRevisit": false
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "mode": "指示なし",
+      "cacheControl": null,
+      "note": "Cache-Control を返さない。ブラウザの判断に委ねる",
+      "serverHits": {
+        "afterFirst": 1,
+        "afterReload": 2,
+        "afterEdit": 3,
+        "afterRevisit": 4
+      },
+      "shown": {
+        "first": "v1",
+        "reload": "v1",
+        "afterEdit": "v2",
+        "afterRevisit": "v3"
+      },
+      "reflectedAfterEdit": true,
+      "reflectedAfterRevisit": true
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "mode": "no-store",
+      "cacheControl": "no-store",
+      "note": "毎回取りに来ることを期待する指示",
+      "serverHits": {
+        "afterFirst": 1,
+        "afterReload": 2,
+        "afterEdit": 3,
+        "afterRevisit": 4
+      },
+      "shown": {
+        "first": "v1",
+        "reload": "v1",
+        "afterEdit": "v2",
+        "afterRevisit": "v3"
+      },
+      "reflectedAfterEdit": true,
+      "reflectedAfterRevisit": true
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "mode": "max-age=600",
+      "cacheControl": "max-age=600",
+      "note": "10 分は再利用してよいという指示",
+      "serverHits": {
+        "afterFirst": 1,
+        "afterReload": 2,
+        "afterEdit": 3,
+        "afterRevisit": 3
+      },
+      "shown": {
+        "first": "v1",
+        "reload": "v1",
+        "afterEdit": "v2",
+        "afterRevisit": "v2"
+      },
+      "reflectedAfterEdit": true,
+      "reflectedAfterRevisit": false
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "mode": "指示なし",
+      "cacheControl": null,
+      "note": "Cache-Control を返さない。ブラウザの判断に委ねる",
+      "serverHits": {
+        "afterFirst": 1,
+        "afterReload": 2,
+        "afterEdit": 3,
+        "afterRevisit": 4
+      },
+      "shown": {
+        "first": "v1",
+        "reload": "v1",
+        "afterEdit": "v2",
+        "afterRevisit": "v3"
+      },
+      "reflectedAfterEdit": true,
+      "reflectedAfterRevisit": true
+    }
+  ]
+}

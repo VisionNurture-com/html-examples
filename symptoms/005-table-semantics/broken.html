@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>表が誤読されるページ</title>
+  </head>
+  <body>
+    <main>
+      <h1>担当者ごとの受付件数</h1>
+      <!-- ここが原因 1: 表に caption が無い。何の表かが読み上げから分からない -->
+      <table>
+        <tr>
+          <!-- ここが原因 2: 見出しのセルが th ではなく td。行と列の見出しが伝わらない -->
+          <td>担当</td>
+          <td>4 月</td>
+          <td>5 月</td>
+        </tr>
+        <tr>
+          <td>Alice</td>
+          <td>12</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>9</td>
+          <td>21</td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>

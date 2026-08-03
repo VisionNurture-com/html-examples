@@ -1,0 +1,2 @@
+/* Shadow root の中から読み込む外部スタイルシート */
+.label { border-bottom: 4px solid rgb(255, 0, 0) }

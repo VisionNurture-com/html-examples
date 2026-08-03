@@ -1,0 +1,22 @@
+<!doctype html>  <!-- 小文字の doctype: 仕様上は妥当だが表記が揃わない -->
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>マークアップの誤りを含むページ</title>
+  </head>
+  <body>
+    <h1>お知らせ</h1>
+
+    <p id="lead">最新のお知らせです。 <!-- ここが原因: p を閉じていない -->
+    <p id="lead">同じ id をもう一度使っています。</p> <!-- ここが原因: id が重複している -->
+
+    <ul>
+      <div>ul の直下に div を置いています。</div>  <!-- ここが原因: ul の直下に置けるのは li だけ -->
+      <li>項目 1</li>
+    </ul>
+
+    <img src="logo.png"> <!-- ここが原因: alt がない -->
+
+    <a href="/contact"> <!-- ここが原因: a を閉じていない / リンク文字もない -->
+  </body>
+</html>

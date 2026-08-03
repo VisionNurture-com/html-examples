@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>トークナイズできない断片を含むページ</title>
+  </head>
+  <body>
+    <h1>お知らせ</h1>
+    <<section>> <!-- ここが原因: 打ち間違いでタグとして読めない断片が入っている -->
+    <p id="lead">最新のお知らせです。 <!-- 上の行より後ろの誤りが報告されるかを見るための行 -->
+    <img src="logo.png"> <!-- 同上: alt がない誤りを置いている -->
+    <a href="/contact"> <!-- 同上: 閉じていない -->
+  </body>
+</html>

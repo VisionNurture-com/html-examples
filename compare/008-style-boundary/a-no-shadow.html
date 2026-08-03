@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>境界なし（Shadow DOM を張らない）</title>
+<style>
+  /* 継承するプロパティを祖先に置く。境界を越えるかどうかの観測用 */
+  body { color: rebeccapurple; font-family: Georgia, serif }
+  /* クラスセレクタでの指定 */
+  .label { border-bottom: 4px solid green }
+  /* 部品の一部を名指しする指定 */
+  my-card::part(title) { text-decoration: underline }
+  /* 部品が受け取り口として決めた変数 */
+  my-card { --card-accent: green }
+</style>
+</head>
+<body>
+  <h1>Shadow DOM を張らない</h1>
+  <my-card id="target">お知らせ</my-card>
+
+<script>
+  class MyCard extends HTMLElement {
+    connectedCallback() {
+      // attachShadow を呼ばない。中身は通常の DOM（light DOM）として置く
+      this.innerHTML = `<span class="label" part="title" id="probe">${this.textContent}</span>`;
+      this.dataset.ready = '1';
+    }
+  }
+  customElements.define('my-card', MyCard);
+</script>
+</body>
+</html>

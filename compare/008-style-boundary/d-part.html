@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>境界あり（part を公開する）</title>
+<style>
+  body { color: rebeccapurple; font-family: Georgia, serif }
+  .label { border-bottom: 4px solid green }
+  my-card::part(title) { text-decoration: underline }
+  my-card { --card-accent: green }
+</style>
+</head>
+<body>
+  <h1>part で名前を公開する</h1>
+  <my-card id="target">お知らせ</my-card>
+
+<script>
+  class MyCard extends HTMLElement {
+    connectedCallback() {
+      const root = this.attachShadow({ mode: 'open' });
+      // part="title" を付けた要素だけ、外側から ::part(title) で指定できる
+      root.innerHTML = `<span class="label" part="title" id="probe">${this.textContent}</span>`;
+      this.dataset.ready = '1';
+    }
+  }
+  customElements.define('my-card', MyCard);
+</script>
+</body>
+</html>

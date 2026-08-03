@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ネイティブ要素へ戻したページ</title>
+    <style>
+      .btn { display: inline-block; padding: 8px 16px; background: #2b6cb0; color: #fff; cursor: pointer;
+             border: 0; font: inherit; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>申し込みの確認</h1>
+      <p id="status">まだ送信していません。</p>
+      <!-- button に戻すと、フォーカス・Enter・Space・役割の読み上げが最初から付いてくる。
+           type="button" は既定の submit を避けるための明示（書かないと submit になる） -->
+      <button type="button" class="btn" onclick="send()">送信する</button>
+    </main>
+    <script>
+      function send() {
+        document.getElementById('status').textContent = '送信しました。';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>slot の名前を揃える</title>
+</head>
+<body>
+  <h1>名前が一致した slot だけが投影される</h1>
+
+  <my-panel id="target">
+    <!-- 部品側の name と同じ文字列を書く -->
+    <h2 slot="title">売上レポート</h2>
+    <p>今月の合計は 1,240 件でした。</p>
+  </my-panel>
+
+<script>
+  class MyPanel extends HTMLElement {
+    connectedCallback() {
+      const root = this.attachShadow({ mode: 'open' });
+      root.innerHTML = `
+        <section>
+          <slot name="title">（見出し未指定）</slot>
+          <slot>（本文未指定）</slot>
+        </section>`;
+    }
+  }
+  customElements.define('my-panel', MyPanel);
+</script>
+</body>
+</html>

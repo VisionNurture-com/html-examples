@@ -1,0 +1,17 @@
+{
+  "name": "008-react-interop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Does React pass attributes or properties to a custom element, and do custom events reach React?",
+  "license": "MIT",
+  "type": "module",
+  "scripts": { "build": "vite build" },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "vite": "8.2.0"
+  }
+}

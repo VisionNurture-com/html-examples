@@ -1,0 +1,31 @@
+{
+  "measuredAt": "2026-07-31",
+  "method": "AppleScript: VO+Shift+Down で web content へ interact 後、VO+Right で走査し content of last phrase を逐語取得",
+  "environment": {
+    "os": "macOS（VoiceOver UI 言語 = 英語）",
+    "screenReader": "VoiceOver",
+    "browser": "Safari",
+    "voiceLocale": "en",
+    "page": "compare/005-aria-stages/index.html",
+    "note": "ページの lang は ja。役割語（clickable / button）は VoiceOver の UI 言語に従う"
+  },
+  "guard": {
+    "preWalkCheck": "interact 直後の読み上げが web content を示すことを確認してから走査した",
+    "preWalkPhrase": "In div にどこまで足すと button に追いつくか web content main",
+    "abortedRuns": 3,
+    "abortReason": "Dictation システムダイアログ / Safari 設定ウインドウに VO カーソルが取られていたため、値を読まずに中止した"
+  },
+  "records": [
+    { "id": "s0",     "label": "段階 0：素の div",        "phrase": "段階 0：素の div  clickable" },
+    { "id": "s1",     "label": "段階 1：tabindex だけ",   "phrase": "段階 1：tabindex だけ  clickable" },
+    { "id": "s2",     "label": "段階 2：role だけ",       "phrase": "段階 2：role だけ button" },
+    { "id": "s3",     "label": "段階 3：role + tabindex", "phrase": "段階 3：role + tabindex button" },
+    { "id": "s4",     "label": "段階 4：+ キー処理",      "phrase": "段階 4：+ キー処理 button" },
+    { "id": "native", "label": "参照：button",            "phrase": "参照：button button" }
+  ],
+  "surrounding": [
+    "heading level 1 div にどこまで足すと button に追いつくか",
+    "まだ押していません。",
+    "end of main"
+  ]
+}

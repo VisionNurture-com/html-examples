@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>境界あり（受け取り口を用意しない）</title>
+<style>
+  body { color: rebeccapurple; font-family: Georgia, serif }
+  .label { border-bottom: 4px solid green }
+  my-card::part(title) { text-decoration: underline }
+  my-card { --card-accent: green }
+</style>
+</head>
+<body>
+  <h1>Shadow DOM を張る（受け取り口なし）</h1>
+  <my-card id="target">お知らせ</my-card>
+
+<script>
+  class MyCard extends HTMLElement {
+    connectedCallback() {
+      const root = this.attachShadow({ mode: 'open' });
+      // part 属性も付けず、変数も読まない。境界の既定の姿
+      root.innerHTML = `<span class="label" id="probe">${this.textContent}</span>`;
+      this.dataset.ready = '1';
+    }
+  }
+  customElements.define('my-card', MyCard);
+</script>
+</body>
+</html>

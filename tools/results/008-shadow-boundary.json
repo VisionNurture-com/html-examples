@@ -1,0 +1,227 @@
+{
+  "measuredAt": "2026-08-02T10:26:23.946Z",
+  "engines": {
+    "chromium": {
+      "version": "151.0.7922.34",
+      "targets": {
+        "shadow-css": {
+          "label": "外側の CSS が中に届くか",
+          "variants": {
+            "broken": {
+              "file": "symptoms/008-shadow-css-not-applied/broken.html",
+              "upgradeSettled": true,
+              "shadowLabelColor": "rgb(0, 0, 0)",
+              "shadowFrameBorderWidth": "0px",
+              "outsideLabelColor": "rgb(0, 128, 0)",
+              "shadowRootMode": "open"
+            },
+            "fixed": {
+              "file": "symptoms/008-shadow-css-not-applied/fixed.html",
+              "upgradeSettled": true,
+              "shadowLabelColor": "rgb(0, 128, 0)",
+              "shadowFrameBorderWidth": "4px",
+              "outsideLabelColor": "rgb(0, 128, 0)",
+              "shadowRootMode": "open"
+            }
+          }
+        },
+        "slot": {
+          "label": "slot に渡した中身が投影されるか",
+          "variants": {
+            "broken": {
+              "file": "symptoms/008-slot-not-shown/broken.html",
+              "upgradeSettled": true,
+              "namedSlotName": "title",
+              "headingSlotAttr": "header",
+              "assignedToNamed": [],
+              "assignedToDefault": [
+                "p"
+              ],
+              "headingRenderedHeight": 0
+            },
+            "fixed": {
+              "file": "symptoms/008-slot-not-shown/fixed.html",
+              "upgradeSettled": true,
+              "namedSlotName": "title",
+              "headingSlotAttr": "title",
+              "assignedToNamed": [
+                "h2"
+              ],
+              "assignedToDefault": [
+                "p"
+              ],
+              "headingRenderedHeight": 36
+            }
+          }
+        },
+        "connected-callback": {
+          "label": "connectedCallback の時点で子要素が見えるか",
+          "variants": {
+            "broken": {
+              "file": "symptoms/008-connected-callback-empty/broken.html",
+              "upgradeSettled": true,
+              "countedAtConnected": "0",
+              "actualChildLi": 3,
+              "outputText": "0"
+            },
+            "fixed": {
+              "file": "symptoms/008-connected-callback-empty/fixed.html",
+              "upgradeSettled": true,
+              "countedAtConnected": "3",
+              "actualChildLi": 3,
+              "outputText": "3"
+            }
+          }
+        }
+      }
+    },
+    "firefox": {
+      "version": "153.0",
+      "targets": {
+        "shadow-css": {
+          "label": "外側の CSS が中に届くか",
+          "variants": {
+            "broken": {
+              "file": "symptoms/008-shadow-css-not-applied/broken.html",
+              "upgradeSettled": true,
+              "shadowLabelColor": "rgb(0, 0, 0)",
+              "shadowFrameBorderWidth": "0px",
+              "outsideLabelColor": "rgb(0, 128, 0)",
+              "shadowRootMode": "open"
+            },
+            "fixed": {
+              "file": "symptoms/008-shadow-css-not-applied/fixed.html",
+              "upgradeSettled": true,
+              "shadowLabelColor": "rgb(0, 128, 0)",
+              "shadowFrameBorderWidth": "4px",
+              "outsideLabelColor": "rgb(0, 128, 0)",
+              "shadowRootMode": "open"
+            }
+          }
+        },
+        "slot": {
+          "label": "slot に渡した中身が投影されるか",
+          "variants": {
+            "broken": {
+              "file": "symptoms/008-slot-not-shown/broken.html",
+              "upgradeSettled": true,
+              "namedSlotName": "title",
+              "headingSlotAttr": "header",
+              "assignedToNamed": [],
+              "assignedToDefault": [
+                "p"
+              ],
+              "headingRenderedHeight": 0
+            },
+            "fixed": {
+              "file": "symptoms/008-slot-not-shown/fixed.html",
+              "upgradeSettled": true,
+              "namedSlotName": "title",
+              "headingSlotAttr": "title",
+              "assignedToNamed": [
+                "h2"
+              ],
+              "assignedToDefault": [
+                "p"
+              ],
+              "headingRenderedHeight": 37
+            }
+          }
+        },
+        "connected-callback": {
+          "label": "connectedCallback の時点で子要素が見えるか",
+          "variants": {
+            "broken": {
+              "file": "symptoms/008-connected-callback-empty/broken.html",
+              "upgradeSettled": true,
+              "countedAtConnected": "0",
+              "actualChildLi": 3,
+              "outputText": "0"
+            },
+            "fixed": {
+              "file": "symptoms/008-connected-callback-empty/fixed.html",
+              "upgradeSettled": true,
+              "countedAtConnected": "3",
+              "actualChildLi": 3,
+              "outputText": "3"
+            }
+          }
+        }
+      }
+    },
+    "webkit": {
+      "version": "26.5",
+      "targets": {
+        "shadow-css": {
+          "label": "外側の CSS が中に届くか",
+          "variants": {
+            "broken": {
+              "file": "symptoms/008-shadow-css-not-applied/broken.html",
+              "upgradeSettled": true,
+              "shadowLabelColor": "rgb(0, 0, 0)",
+              "shadowFrameBorderWidth": "0px",
+              "outsideLabelColor": "rgb(0, 128, 0)",
+              "shadowRootMode": "open"
+            },
+            "fixed": {
+              "file": "symptoms/008-shadow-css-not-applied/fixed.html",
+              "upgradeSettled": true,
+              "shadowLabelColor": "rgb(0, 128, 0)",
+              "shadowFrameBorderWidth": "4px",
+              "outsideLabelColor": "rgb(0, 128, 0)",
+              "shadowRootMode": "open"
+            }
+          }
+        },
+        "slot": {
+          "label": "slot に渡した中身が投影されるか",
+          "variants": {
+            "broken": {
+              "file": "symptoms/008-slot-not-shown/broken.html",
+              "upgradeSettled": true,
+              "namedSlotName": "title",
+              "headingSlotAttr": "header",
+              "assignedToNamed": [],
+              "assignedToDefault": [
+                "p"
+              ],
+              "headingRenderedHeight": 0
+            },
+            "fixed": {
+              "file": "symptoms/008-slot-not-shown/fixed.html",
+              "upgradeSettled": true,
+              "namedSlotName": "title",
+              "headingSlotAttr": "title",
+              "assignedToNamed": [
+                "h2"
+              ],
+              "assignedToDefault": [
+                "p"
+              ],
+              "headingRenderedHeight": 36
+            }
+          }
+        },
+        "connected-callback": {
+          "label": "connectedCallback の時点で子要素が見えるか",
+          "variants": {
+            "broken": {
+              "file": "symptoms/008-connected-callback-empty/broken.html",
+              "upgradeSettled": true,
+              "countedAtConnected": "0",
+              "actualChildLi": 3,
+              "outputText": "0"
+            },
+            "fixed": {
+              "file": "symptoms/008-connected-callback-empty/fixed.html",
+              "upgradeSettled": true,
+              "countedAtConnected": "3",
+              "actualChildLi": 3,
+              "outputText": "3"
+            }
+          }
+        }
+      }
+    }
+  }
+}

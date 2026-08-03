@@ -1,0 +1,25 @@
+{
+  "tool": "tools/measure-ui-language.mjs",
+  "app": "<PLAYWRIGHT_CACHE>/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app",
+  "browserVersion": "151.0.7922.34",
+  "uiLocaleRequested": "ja-JP",
+  "mechanism": "open --args -AppleLanguages \"(<locale>)\" + CDP 接続。macOS では --lang / LANG が効かず AppleLanguages が優先される",
+  "result": {
+    "messages": {
+      "valueMissing": "このフィールドを入力してください。",
+      "typeMismatchEmail": "メール アドレスに「@」を挿入してください。「not-an-email」内に「@」がありません。",
+      "typeMismatchUrl": "URL を入力してください。",
+      "patternMismatch": "指定されている形式で入力してください。",
+      "rangeUnderflow": "値は 10 以上にする必要があります。",
+      "rangeOverflow": "値は 5 以下にする必要があります。",
+      "checkboxMissing": "次に進むにはこのチェックボックスをオンにしてください。",
+      "radioMissing": "これらのオプションから 1 つ選択してください。",
+      "selectMissing": "リスト内の項目を選択してください。"
+    },
+    "navigatorLanguage": "ja",
+    "navigatorLanguages": [
+      "ja"
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+  }
+}

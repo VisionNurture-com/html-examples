@@ -1,0 +1,168 @@
+{
+  "measuredAt": "2026-07-29T06:08:51.715Z",
+  "env": {
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "expectedH1": "日本語の見出し",
+  "note": "http 側は Content-Type に charset を付けずに返す。付けるとヘッダが宣言より優先され、測りたい噛み合いが見えなくなる",
+  "records": [
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "file": "decl-no_save-utf-8-bom.html",
+      "declared": null,
+      "saved": "utf-8-bom",
+      "transport": "file",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "file": "decl-no_save-utf-8-bom.html",
+      "declared": null,
+      "saved": "utf-8-bom",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "file": "decl-yes_save-utf-8-bom.html",
+      "declared": "utf-8-bom",
+      "saved": "utf-8-bom",
+      "transport": "file",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "file": "decl-yes_save-utf-8-bom.html",
+      "declared": "utf-8-bom",
+      "saved": "utf-8-bom",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "file": "decl-no_save-utf-8-bom.html",
+      "declared": null,
+      "saved": "utf-8-bom",
+      "transport": "file",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "file": "decl-no_save-utf-8-bom.html",
+      "declared": null,
+      "saved": "utf-8-bom",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "file": "decl-yes_save-utf-8-bom.html",
+      "declared": "utf-8-bom",
+      "saved": "utf-8-bom",
+      "transport": "file",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "firefox",
+      "engineVersion": "153.0",
+      "file": "decl-yes_save-utf-8-bom.html",
+      "declared": "utf-8-bom",
+      "saved": "utf-8-bom",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "file": "decl-no_save-utf-8-bom.html",
+      "declared": null,
+      "saved": "utf-8-bom",
+      "transport": "file",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "file": "decl-no_save-utf-8-bom.html",
+      "declared": null,
+      "saved": "utf-8-bom",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "file": "decl-yes_save-utf-8-bom.html",
+      "declared": "utf-8-bom",
+      "saved": "utf-8-bom",
+      "transport": "file",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "file": "decl-yes_save-utf-8-bom.html",
+      "declared": "utf-8-bom",
+      "saved": "utf-8-bom",
+      "transport": "http",
+      "observed": {
+        "characterSet": "UTF-8",
+        "h1Text": "日本語の見出し",
+        "readable": true
+      }
+    }
+  ]
+}

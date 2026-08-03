@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>競合あり B — 主役に fetchpriority="high"</title>
+<!-- 競合リソース: 実プロジェクトに必ずある描画をせき止める CSS と JS -->
+<link rel="stylesheet" href="../assets/heavy.css">
+<script src="../assets/heavy.js"></script>
+<style>
+body { font-family: system-ui, sans-serif; margin: 0; line-height: 1.7; }
+main { max-inline-size: 60rem; margin-inline: auto; padding: 1rem; }
+img { max-inline-size: 100%; block-size: auto; display: block; }
+.below { margin-block-start: 120vh; }
+</style>
+</head>
+<body>
+<main>
+<h1>競合あり B — 主役に fetchpriority="high"</h1>
+<!-- CSS と JS が帯域を奪う状況で、主役だけ優先度を上げる -->
+<img src="../images/hero.jpg" alt="主役の画像" width="1600" height="900" fetchpriority="high">
+<div class="below">
+  <img src="../images/thumb-1.jpg" alt="画面外の画像 1" width="800" height="500">
+  <img src="../images/thumb-2.jpg" alt="画面外の画像 2" width="800" height="500">
+  <img src="../images/thumb-3.jpg" alt="画面外の画像 3" width="800" height="500">
+</div>
+</main>
+</body>
+</html>

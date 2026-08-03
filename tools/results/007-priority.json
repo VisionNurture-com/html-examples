@@ -1,0 +1,316 @@
+{
+  "measuredAt": "2026-07-27T16:03:18.826Z",
+  "note": "initialPriority は CDP Network.requestWillBeSent の値",
+  "results": [
+    {
+      "id": "simple-A",
+      "file": "compare/007-loading-vs-fetchpriority/simple/a-baseline.html",
+      "requests": [
+        {
+          "name": "a-baseline.html",
+          "initialPriority": "VeryHigh",
+          "at": 94327
+        },
+        {
+          "name": "hero.jpg",
+          "initialPriority": "Medium",
+          "at": 94483
+        },
+        {
+          "name": "thumb-1.jpg",
+          "initialPriority": "Medium",
+          "at": 94484
+        },
+        {
+          "name": "thumb-2.jpg",
+          "initialPriority": "Medium",
+          "at": 94484
+        },
+        {
+          "name": "thumb-3.jpg",
+          "initialPriority": "Medium",
+          "at": 94484
+        }
+      ]
+    },
+    {
+      "id": "simple-B",
+      "file": "compare/007-loading-vs-fetchpriority/simple/b-fetchpriority.html",
+      "requests": [
+        {
+          "name": "b-fetchpriority.html",
+          "initialPriority": "VeryHigh",
+          "at": 99115
+        },
+        {
+          "name": "hero.jpg",
+          "initialPriority": "High",
+          "at": 99271
+        },
+        {
+          "name": "thumb-1.jpg",
+          "initialPriority": "Medium",
+          "at": 99271
+        },
+        {
+          "name": "thumb-2.jpg",
+          "initialPriority": "Medium",
+          "at": 99271
+        },
+        {
+          "name": "thumb-3.jpg",
+          "initialPriority": "Medium",
+          "at": 99271
+        }
+      ]
+    },
+    {
+      "id": "heavy-A",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/a-baseline.html",
+      "requests": [
+        {
+          "name": "a-baseline.html",
+          "initialPriority": "VeryHigh",
+          "at": 3929
+        },
+        {
+          "name": "heavy.css",
+          "initialPriority": "VeryHigh",
+          "at": 4084
+        },
+        {
+          "name": "heavy.js",
+          "initialPriority": "High",
+          "at": 4084
+        },
+        {
+          "name": "hero.jpg",
+          "initialPriority": "Medium",
+          "at": 4084
+        },
+        {
+          "name": "thumb-1.jpg",
+          "initialPriority": "Medium",
+          "at": 4084
+        },
+        {
+          "name": "thumb-2.jpg",
+          "initialPriority": "Medium",
+          "at": 4084
+        },
+        {
+          "name": "thumb-3.jpg",
+          "initialPriority": "Medium",
+          "at": 4084
+        }
+      ]
+    },
+    {
+      "id": "heavy-B",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/b-fetchpriority.html",
+      "requests": [
+        {
+          "name": "b-fetchpriority.html",
+          "initialPriority": "VeryHigh",
+          "at": 10072
+        },
+        {
+          "name": "heavy.css",
+          "initialPriority": "VeryHigh",
+          "at": 10228
+        },
+        {
+          "name": "heavy.js",
+          "initialPriority": "High",
+          "at": 10228
+        },
+        {
+          "name": "hero.jpg",
+          "initialPriority": "High",
+          "at": 10228
+        },
+        {
+          "name": "thumb-1.jpg",
+          "initialPriority": "Medium",
+          "at": 10228
+        },
+        {
+          "name": "thumb-2.jpg",
+          "initialPriority": "Medium",
+          "at": 10228
+        },
+        {
+          "name": "thumb-3.jpg",
+          "initialPriority": "Medium",
+          "at": 10228
+        }
+      ]
+    },
+    {
+      "id": "heavy-C",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/c-fetchpriority-multi.html",
+      "requests": [
+        {
+          "name": "c-fetchpriority-multi.html",
+          "initialPriority": "VeryHigh",
+          "at": 16218
+        },
+        {
+          "name": "heavy.css",
+          "initialPriority": "VeryHigh",
+          "at": 16373
+        },
+        {
+          "name": "heavy.js",
+          "initialPriority": "High",
+          "at": 16373
+        },
+        {
+          "name": "hero.jpg",
+          "initialPriority": "High",
+          "at": 16373
+        },
+        {
+          "name": "thumb-1.jpg",
+          "initialPriority": "High",
+          "at": 16373
+        },
+        {
+          "name": "thumb-2.jpg",
+          "initialPriority": "High",
+          "at": 16373
+        },
+        {
+          "name": "thumb-3.jpg",
+          "initialPriority": "High",
+          "at": 16373
+        }
+      ]
+    },
+    {
+      "id": "heavy-D",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/d-preload.html",
+      "requests": [
+        {
+          "name": "d-preload.html",
+          "initialPriority": "VeryHigh",
+          "at": 22363
+        },
+        {
+          "name": "heavy.css",
+          "initialPriority": "VeryHigh",
+          "at": 22517
+        },
+        {
+          "name": "heavy.js",
+          "initialPriority": "High",
+          "at": 22517
+        },
+        {
+          "name": "hero.jpg",
+          "initialPriority": "High",
+          "at": 22517
+        },
+        {
+          "name": "thumb-1.jpg",
+          "initialPriority": "Medium",
+          "at": 22518
+        },
+        {
+          "name": "thumb-2.jpg",
+          "initialPriority": "Medium",
+          "at": 22518
+        },
+        {
+          "name": "thumb-3.jpg",
+          "initialPriority": "Medium",
+          "at": 22518
+        }
+      ]
+    },
+    {
+      "id": "heavy-D2",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/d-preload.html",
+      "transform": "preload 行から fetchpriority=\"high\" を除去（メモリ上配信・ディスクは不変）",
+      "appliedLink": "<link rel=\"preload\" as=\"image\" href=\"../images/hero.jpg\">",
+      "requests": [
+        {
+          "name": "__d2-preload-only.html",
+          "initialPriority": "VeryHigh",
+          "at": 28503
+        },
+        {
+          "name": "heavy.css",
+          "initialPriority": "VeryHigh",
+          "at": 28658
+        },
+        {
+          "name": "heavy.js",
+          "initialPriority": "High",
+          "at": 28659
+        },
+        {
+          "name": "hero.jpg",
+          "initialPriority": "Low",
+          "at": 28659
+        },
+        {
+          "name": "thumb-1.jpg",
+          "initialPriority": "Medium",
+          "at": 28659
+        },
+        {
+          "name": "thumb-2.jpg",
+          "initialPriority": "Medium",
+          "at": 28659
+        },
+        {
+          "name": "thumb-3.jpg",
+          "initialPriority": "Medium",
+          "at": 28659
+        }
+      ]
+    },
+    {
+      "id": "heavy-E",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/e-lazy-all.html",
+      "requests": [
+        {
+          "name": "e-lazy-all.html",
+          "initialPriority": "VeryHigh",
+          "at": 34634
+        },
+        {
+          "name": "heavy.css",
+          "initialPriority": "VeryHigh",
+          "at": 34790
+        },
+        {
+          "name": "heavy.js",
+          "initialPriority": "High",
+          "at": 34790
+        },
+        {
+          "name": "hero.jpg",
+          "initialPriority": "Low",
+          "at": 36273
+        },
+        {
+          "name": "thumb-1.jpg",
+          "initialPriority": "Low",
+          "at": 36273
+        },
+        {
+          "name": "thumb-2.jpg",
+          "initialPriority": "Low",
+          "at": 36273
+        },
+        {
+          "name": "thumb-3.jpg",
+          "initialPriority": "Low",
+          "at": 36273
+        }
+      ]
+    }
+  ]
+}

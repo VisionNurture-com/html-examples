@@ -1,0 +1,125 @@
+{
+  "measuredAt": "2026-08-02T10:39:06.170Z",
+  "engines": {
+    "chromium": {
+      "version": "151.0.7922.34",
+      "targets": {
+        "a-head-define.html": {
+          "label": "定義を head・その場で数える",
+          "countSettled": true,
+          "countedAtCallback": "0",
+          "actualLi": 3,
+          "correct": false
+        },
+        "b-tail-define.html": {
+          "label": "定義をページ末尾へ移す",
+          "countSettled": true,
+          "countedAtCallback": "3",
+          "actualLi": 3,
+          "correct": true
+        },
+        "c-microtask.html": {
+          "label": "定義は head・マイクロタスクへ送る",
+          "countSettled": true,
+          "countedAtCallback": "0",
+          "actualLi": 3,
+          "correct": false
+        },
+        "d-timeout.html": {
+          "label": "定義は head・setTimeout へ送る",
+          "countSettled": true,
+          "countedAtCallback": "3",
+          "actualLi": 3,
+          "correct": true
+        },
+        "e-domcontentloaded.html": {
+          "label": "定義は head・DOMContentLoaded を待つ",
+          "countSettled": true,
+          "countedAtCallback": "3",
+          "actualLi": 3,
+          "correct": true
+        }
+      }
+    },
+    "firefox": {
+      "version": "153.0",
+      "targets": {
+        "a-head-define.html": {
+          "label": "定義を head・その場で数える",
+          "countSettled": true,
+          "countedAtCallback": "0",
+          "actualLi": 3,
+          "correct": false
+        },
+        "b-tail-define.html": {
+          "label": "定義をページ末尾へ移す",
+          "countSettled": true,
+          "countedAtCallback": "3",
+          "actualLi": 3,
+          "correct": true
+        },
+        "c-microtask.html": {
+          "label": "定義は head・マイクロタスクへ送る",
+          "countSettled": true,
+          "countedAtCallback": "0",
+          "actualLi": 3,
+          "correct": false
+        },
+        "d-timeout.html": {
+          "label": "定義は head・setTimeout へ送る",
+          "countSettled": true,
+          "countedAtCallback": "3",
+          "actualLi": 3,
+          "correct": true
+        },
+        "e-domcontentloaded.html": {
+          "label": "定義は head・DOMContentLoaded を待つ",
+          "countSettled": true,
+          "countedAtCallback": "3",
+          "actualLi": 3,
+          "correct": true
+        }
+      }
+    },
+    "webkit": {
+      "version": "26.5",
+      "targets": {
+        "a-head-define.html": {
+          "label": "定義を head・その場で数える",
+          "countSettled": true,
+          "countedAtCallback": "0",
+          "actualLi": 3,
+          "correct": false
+        },
+        "b-tail-define.html": {
+          "label": "定義をページ末尾へ移す",
+          "countSettled": true,
+          "countedAtCallback": "3",
+          "actualLi": 3,
+          "correct": true
+        },
+        "c-microtask.html": {
+          "label": "定義は head・マイクロタスクへ送る",
+          "countSettled": true,
+          "countedAtCallback": "0",
+          "actualLi": 3,
+          "correct": false
+        },
+        "d-timeout.html": {
+          "label": "定義は head・setTimeout へ送る",
+          "countSettled": true,
+          "countedAtCallback": "3",
+          "actualLi": 3,
+          "correct": true
+        },
+        "e-domcontentloaded.html": {
+          "label": "定義は head・DOMContentLoaded を待つ",
+          "countSettled": true,
+          "countedAtCallback": "3",
+          "actualLi": 3,
+          "correct": true
+        }
+      }
+    }
+  }
+}

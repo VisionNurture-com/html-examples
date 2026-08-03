@@ -1,0 +1,476 @@
+{
+  "measuredAt": "2026-07-31T07:03:19.305Z",
+  "records": [
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "symptoms/005-heading-order/broken.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "サポート窓口のご案内"
+        },
+        {
+          "level": 3,
+          "text": "受付時間"
+        },
+        {
+          "level": 3,
+          "text": "連絡先"
+        },
+        {
+          "level": 1,
+          "text": "よくある質問"
+        },
+        {
+          "level": 4,
+          "text": "返信までどのくらいかかりますか"
+        }
+      ],
+      "headingSkips": [
+        {
+          "from": {
+            "level": 1,
+            "text": "サポート窓口のご案内"
+          },
+          "to": {
+            "level": 3,
+            "text": "受付時間"
+          },
+          "gap": 2
+        },
+        {
+          "from": {
+            "level": 1,
+            "text": "よくある質問"
+          },
+          "to": {
+            "level": 4,
+            "text": "返信までどのくらいかかりますか"
+          },
+          "gap": 3
+        }
+      ],
+      "landmarks": {
+        "main": 2,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [],
+      "ariaSnapshot": "- main:\n  - heading \"サポート窓口のご案内\" [level=1]\n  - heading \"受付時間\" [level=3]\n  - paragraph: 平日 9 時から 17 時まで受け付けます。\n  - heading \"連絡先\" [level=3]\n  - paragraph: support@example.com までお送りください。\n- main:\n  - heading \"よくある質問\" [level=1]\n  - heading \"返信までどのくらいかかりますか\" [level=4]\n  - paragraph: 2 営業日以内にお返しします。"
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "symptoms/005-heading-order/fixed.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "サポート窓口のご案内"
+        },
+        {
+          "level": 2,
+          "text": "受付時間"
+        },
+        {
+          "level": 2,
+          "text": "連絡先"
+        },
+        {
+          "level": 2,
+          "text": "よくある質問"
+        },
+        {
+          "level": 3,
+          "text": "返信までどのくらいかかりますか"
+        }
+      ],
+      "headingSkips": [],
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [],
+      "ariaSnapshot": "- main:\n  - heading \"サポート窓口のご案内\" [level=1]\n  - heading \"受付時間\" [level=2]\n  - paragraph: 平日 9 時から 17 時まで受け付けます。\n  - heading \"連絡先\" [level=2]\n  - paragraph: support@example.com までお送りください。\n  - heading \"よくある質問\" [level=2]\n  - heading \"返信までどのくらいかかりますか\" [level=3]\n  - paragraph: 2 営業日以内にお返しします。"
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "symptoms/005-table-semantics/broken.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "担当者ごとの受付件数"
+        }
+      ],
+      "headingSkips": [],
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [
+        {
+          "caption": null,
+          "thCount": 0,
+          "thWithScope": 0,
+          "scopes": [],
+          "rows": 3
+        }
+      ],
+      "ariaSnapshot": "- main:\n  - heading \"担当者ごとの受付件数\" [level=1]\n  - table:\n    - rowgroup:\n      - row \"担当 4 月 5 月\":\n        - cell \"担当\"\n        - cell \"4 月\"\n        - cell \"5 月\"\n      - row \"Alice 12 18\":\n        - cell \"Alice\"\n        - cell \"12\"\n        - cell \"18\"\n      - row \"Bob 9 21\":\n        - cell \"Bob\"\n        - cell \"9\"\n        - cell \"21\""
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "file": "symptoms/005-table-semantics/fixed.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "担当者ごとの受付件数"
+        }
+      ],
+      "headingSkips": [],
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [
+        {
+          "caption": "担当者ごとの受付件数（2026 年 4 月・5 月）",
+          "thCount": 5,
+          "thWithScope": 5,
+          "scopes": [
+            "col",
+            "col",
+            "col",
+            "row",
+            "row"
+          ],
+          "rows": 3
+        }
+      ],
+      "ariaSnapshot": "- main:\n  - heading \"担当者ごとの受付件数\" [level=1]\n  - table \"担当者ごとの受付件数（2026 年 4 月・5 月）\":\n    - caption: 担当者ごとの受付件数（2026 年 4 月・5 月）\n    - rowgroup:\n      - row \"担当 4 月 5 月\":\n        - columnheader \"担当\"\n        - columnheader \"4 月\"\n        - columnheader \"5 月\"\n    - rowgroup:\n      - row \"Alice 12 18\":\n        - rowheader \"Alice\"\n        - cell \"12\"\n        - cell \"18\"\n      - row \"Bob 9 21\":\n        - rowheader \"Bob\"\n        - cell \"9\"\n        - cell \"21\""
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "symptoms/005-heading-order/broken.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "サポート窓口のご案内"
+        },
+        {
+          "level": 3,
+          "text": "受付時間"
+        },
+        {
+          "level": 3,
+          "text": "連絡先"
+        },
+        {
+          "level": 1,
+          "text": "よくある質問"
+        },
+        {
+          "level": 4,
+          "text": "返信までどのくらいかかりますか"
+        }
+      ],
+      "headingSkips": [
+        {
+          "from": {
+            "level": 1,
+            "text": "サポート窓口のご案内"
+          },
+          "to": {
+            "level": 3,
+            "text": "受付時間"
+          },
+          "gap": 2
+        },
+        {
+          "from": {
+            "level": 1,
+            "text": "よくある質問"
+          },
+          "to": {
+            "level": 4,
+            "text": "返信までどのくらいかかりますか"
+          },
+          "gap": 3
+        }
+      ],
+      "landmarks": {
+        "main": 2,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [],
+      "ariaSnapshot": "- main:\n  - heading \"サポート窓口のご案内\" [level=1]\n  - heading \"受付時間\" [level=3]\n  - paragraph: 平日 9 時から 17 時まで受け付けます。\n  - heading \"連絡先\" [level=3]\n  - paragraph: support@example.com までお送りください。\n- main:\n  - heading \"よくある質問\" [level=1]\n  - heading \"返信までどのくらいかかりますか\" [level=4]\n  - paragraph: 2 営業日以内にお返しします。"
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "symptoms/005-heading-order/fixed.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "サポート窓口のご案内"
+        },
+        {
+          "level": 2,
+          "text": "受付時間"
+        },
+        {
+          "level": 2,
+          "text": "連絡先"
+        },
+        {
+          "level": 2,
+          "text": "よくある質問"
+        },
+        {
+          "level": 3,
+          "text": "返信までどのくらいかかりますか"
+        }
+      ],
+      "headingSkips": [],
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [],
+      "ariaSnapshot": "- main:\n  - heading \"サポート窓口のご案内\" [level=1]\n  - heading \"受付時間\" [level=2]\n  - paragraph: 平日 9 時から 17 時まで受け付けます。\n  - heading \"連絡先\" [level=2]\n  - paragraph: support@example.com までお送りください。\n  - heading \"よくある質問\" [level=2]\n  - heading \"返信までどのくらいかかりますか\" [level=3]\n  - paragraph: 2 営業日以内にお返しします。"
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "symptoms/005-table-semantics/broken.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "担当者ごとの受付件数"
+        }
+      ],
+      "headingSkips": [],
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [
+        {
+          "caption": null,
+          "thCount": 0,
+          "thWithScope": 0,
+          "scopes": [],
+          "rows": 3
+        }
+      ],
+      "ariaSnapshot": "- main:\n  - heading \"担当者ごとの受付件数\" [level=1]\n  - table:\n    - rowgroup:\n      - row \"担当 4 月 5 月\":\n        - cell \"担当\"\n        - cell \"4 月\"\n        - cell \"5 月\"\n      - row \"Alice 12 18\":\n        - cell \"Alice\"\n        - cell \"12\"\n        - cell \"18\"\n      - row \"Bob 9 21\":\n        - cell \"Bob\"\n        - cell \"9\"\n        - cell \"21\""
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "file": "symptoms/005-table-semantics/fixed.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "担当者ごとの受付件数"
+        }
+      ],
+      "headingSkips": [],
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [
+        {
+          "caption": "担当者ごとの受付件数（2026 年 4 月・5 月）",
+          "thCount": 5,
+          "thWithScope": 5,
+          "scopes": [
+            "col",
+            "col",
+            "col",
+            "row",
+            "row"
+          ],
+          "rows": 3
+        }
+      ],
+      "ariaSnapshot": "- main:\n  - heading \"担当者ごとの受付件数\" [level=1]\n  - table \"担当者ごとの受付件数（2026 年 4 月・5 月）\":\n    - caption: 担当者ごとの受付件数（2026 年 4 月・5 月）\n    - rowgroup:\n      - row \"担当 4 月 5 月\":\n        - columnheader \"担当\"\n        - columnheader \"4 月\"\n        - columnheader \"5 月\"\n    - rowgroup:\n      - row \"Alice 12 18\":\n        - rowheader \"Alice\"\n        - cell \"12\"\n        - cell \"18\"\n      - row \"Bob 9 21\":\n        - rowheader \"Bob\"\n        - cell \"9\"\n        - cell \"21\""
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "symptoms/005-heading-order/broken.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "サポート窓口のご案内"
+        },
+        {
+          "level": 3,
+          "text": "受付時間"
+        },
+        {
+          "level": 3,
+          "text": "連絡先"
+        },
+        {
+          "level": 1,
+          "text": "よくある質問"
+        },
+        {
+          "level": 4,
+          "text": "返信までどのくらいかかりますか"
+        }
+      ],
+      "headingSkips": [
+        {
+          "from": {
+            "level": 1,
+            "text": "サポート窓口のご案内"
+          },
+          "to": {
+            "level": 3,
+            "text": "受付時間"
+          },
+          "gap": 2
+        },
+        {
+          "from": {
+            "level": 1,
+            "text": "よくある質問"
+          },
+          "to": {
+            "level": 4,
+            "text": "返信までどのくらいかかりますか"
+          },
+          "gap": 3
+        }
+      ],
+      "landmarks": {
+        "main": 2,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [],
+      "ariaSnapshot": "- main:\n  - heading \"サポート窓口のご案内\" [level=1]\n  - heading \"受付時間\" [level=3]\n  - paragraph: 平日 9 時から 17 時まで受け付けます。\n  - heading \"連絡先\" [level=3]\n  - paragraph: support@example.com までお送りください。\n- main:\n  - heading \"よくある質問\" [level=1]\n  - heading \"返信までどのくらいかかりますか\" [level=4]\n  - paragraph: 2 営業日以内にお返しします。"
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "symptoms/005-heading-order/fixed.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "サポート窓口のご案内"
+        },
+        {
+          "level": 2,
+          "text": "受付時間"
+        },
+        {
+          "level": 2,
+          "text": "連絡先"
+        },
+        {
+          "level": 2,
+          "text": "よくある質問"
+        },
+        {
+          "level": 3,
+          "text": "返信までどのくらいかかりますか"
+        }
+      ],
+      "headingSkips": [],
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [],
+      "ariaSnapshot": "- main:\n  - heading \"サポート窓口のご案内\" [level=1]\n  - heading \"受付時間\" [level=2]\n  - paragraph: 平日 9 時から 17 時まで受け付けます。\n  - heading \"連絡先\" [level=2]\n  - paragraph: support@example.com までお送りください。\n  - heading \"よくある質問\" [level=2]\n  - heading \"返信までどのくらいかかりますか\" [level=3]\n  - paragraph: 2 営業日以内にお返しします。"
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "symptoms/005-table-semantics/broken.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "担当者ごとの受付件数"
+        }
+      ],
+      "headingSkips": [],
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [
+        {
+          "caption": null,
+          "thCount": 0,
+          "thWithScope": 0,
+          "scopes": [],
+          "rows": 3
+        }
+      ],
+      "ariaSnapshot": "- main:\n  - heading \"担当者ごとの受付件数\" [level=1]\n  - table:\n    - rowgroup:\n      - row \"担当 4 月 5 月\":\n        - cell \"担当\"\n        - cell \"4 月\"\n        - cell \"5 月\"\n      - row \"Alice 12 18\":\n        - cell \"Alice\"\n        - cell \"12\"\n        - cell \"18\"\n      - row \"Bob 9 21\":\n        - cell \"Bob\"\n        - cell \"9\"\n        - cell \"21\""
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "file": "symptoms/005-table-semantics/fixed.html",
+      "outline": [
+        {
+          "level": 1,
+          "text": "担当者ごとの受付件数"
+        }
+      ],
+      "headingSkips": [],
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "tables": [
+        {
+          "caption": "担当者ごとの受付件数（2026 年 4 月・5 月）",
+          "thCount": 5,
+          "thWithScope": 5,
+          "scopes": [
+            "col",
+            "col",
+            "col",
+            "row",
+            "row"
+          ],
+          "rows": 3
+        }
+      ],
+      "ariaSnapshot": "- main:\n  - heading \"担当者ごとの受付件数\" [level=1]\n  - table \"担当者ごとの受付件数（2026 年 4 月・5 月）\":\n    - caption: 担当者ごとの受付件数（2026 年 4 月・5 月）\n    - rowgroup:\n      - row \"担当 4 月 5 月\":\n        - columnheader \"担当\"\n        - columnheader \"4 月\"\n        - columnheader \"5 月\"\n    - rowgroup:\n      - row \"Alice 12 18\":\n        - rowheader \"Alice\"\n        - cell \"12\"\n        - cell \"18\"\n      - row \"Bob 9 21\":\n        - rowheader \"Bob\"\n        - cell \"9\"\n        - cell \"21\""
+    }
+  ]
+}

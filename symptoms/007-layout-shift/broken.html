@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>出るが一瞬ずれる（broken）</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+img { max-inline-size: 100%; block-size: auto; }
+</style>
+</head>
+<body>
+<main>
+<h1>お知らせ</h1>
+<!-- ここが原因: width と height がないため、画像が届くまで表示領域が 0 のまま。
+     届いた瞬間に高さが確定し、下の文章が押し下げられる -->
+<img src="images/hero.jpg" alt="お知らせのイメージ">
+<p>この段落は、画像が届いた瞬間に下へ押し出されます。読んでいる途中で位置が変わるため、
+   押そうとしたリンクを押し損ねる原因にもなります。</p>
+</main>
+</body>
+</html>

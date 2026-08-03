@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>間違いの種類が 4 つ</title>
+</head>
+<body>
+  <h1>お問い合わせ</h1>
+  <!-- ここが原因 1: alt がない -->
+  <img src="notice.png" width="120" height="80">
+  <!-- ここが原因 2: 入力欄に名前が付いていない（label も aria-label もない） -->
+  <input type="text">
+  <!-- ここが原因 3: ボタンの中身が空で、何のボタンか伝わらない -->
+  <button></button>
+  <!-- ここが原因 4: 文字色と背景色の差が小さく、読み取りにくい -->
+  <p style="color:#bbbbbb; background:#ffffff">送信すると確認メールが届きます。</p>
+</body>
+</html>

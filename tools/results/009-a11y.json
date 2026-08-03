@@ -1,0 +1,666 @@
+{
+  "tool": "tools/measure-a11y.mjs",
+  "engine": "chromium",
+  "axeVersion": "4.12.1",
+  "records": [
+    {
+      "file": "symptoms/009-required-novalidate/broken.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "violationCount": 0,
+      "affectedNodeCount": 0,
+      "accessibilityTree": [
+        {
+          "tag": "form",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）\n  \n  \n  送信",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "role": null,
+          "accessibleName": "送信",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        }
+      ]
+    },
+    {
+      "file": "symptoms/009-required-novalidate/fixed.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "violationCount": 0,
+      "affectedNodeCount": 0,
+      "accessibilityTree": [
+        {
+          "tag": "form",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）\n  \n  \n  送信する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": null,
+          "accessibleName": "送信する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        }
+      ]
+    },
+    {
+      "file": "symptoms/009-required-novalidate/fixed-requestsubmit.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "violationCount": 0,
+      "affectedNodeCount": 0,
+      "accessibilityTree": [
+        {
+          "tag": "form",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）\n  \n  送信する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "role": null,
+          "accessibleName": "送信する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        }
+      ]
+    },
+    {
+      "file": "symptoms/009-custom-message/broken.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "violationCount": 0,
+      "affectedNodeCount": 0,
+      "accessibilityTree": [
+        {
+          "tag": "form",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）\n  \n  登録する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": null,
+          "accessibleName": "登録する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        }
+      ]
+    },
+    {
+      "file": "symptoms/009-custom-message/fixed.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "violationCount": 0,
+      "affectedNodeCount": 0,
+      "accessibilityTree": [
+        {
+          "tag": "form",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）\n  \n  登録する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": null,
+          "accessibleName": "登録する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        }
+      ]
+    },
+    {
+      "file": "symptoms/009-checkbox-group/broken.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "violationCount": 0,
+      "affectedNodeCount": 0,
+      "accessibilityTree": [
+        {
+          "tag": "form",
+          "type": null,
+          "role": null,
+          "accessibleName": "興味のある分野（1 つ以上）\n    \n    ",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "fieldset",
+          "type": "fieldset",
+          "role": null,
+          "accessibleName": "興味のある分野（1 つ以上）\n    \n    ",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "legend",
+          "type": null,
+          "role": null,
+          "accessibleName": "興味のある分野（1 つ以上）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "HTML",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "role": null,
+          "accessibleName": "HTML",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "CSS",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "role": null,
+          "accessibleName": "CSS",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "JavaScript",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "role": null,
+          "accessibleName": "JavaScript",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": null,
+          "accessibleName": "送信する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        }
+      ]
+    },
+    {
+      "file": "symptoms/009-checkbox-group/fixed.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "violationCount": 0,
+      "affectedNodeCount": 0,
+      "accessibilityTree": [
+        {
+          "tag": "form",
+          "type": null,
+          "role": null,
+          "accessibleName": "興味のある分野（1 つ以上）\n     HTML",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "fieldset",
+          "type": "fieldset",
+          "role": null,
+          "accessibleName": "興味のある分野（1 つ以上）\n     HTML",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "legend",
+          "type": null,
+          "role": null,
+          "accessibleName": "興味のある分野（1 つ以上）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "HTML",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "role": null,
+          "accessibleName": "HTML",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "CSS",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "role": null,
+          "accessibleName": "CSS",
+          "required": false,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "JavaScript",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "role": null,
+          "accessibleName": "JavaScript",
+          "required": false,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": null,
+          "accessibleName": "送信する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        }
+      ]
+    },
+    {
+      "file": "compare/009-native-vs-js-validation/a-native.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "violationCount": 0,
+      "affectedNodeCount": 0,
+      "accessibilityTree": [
+        {
+          "tag": "form",
+          "type": null,
+          "role": null,
+          "accessibleName": "お名前（必須）\n  \n  メールアドレス（必須）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "お名前（必須）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "role": null,
+          "accessibleName": "お名前（必須）",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": true,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "電話番号（半角数字 10〜11 桁）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "role": null,
+          "accessibleName": "電話番号（半角数字 10〜11 桁）",
+          "required": false,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": null,
+          "accessibleName": "送信する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        }
+      ]
+    },
+    {
+      "file": "compare/009-native-vs-js-validation/b-js.html",
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "violationCount": 0,
+      "affectedNodeCount": 0,
+      "accessibilityTree": [
+        {
+          "tag": "form",
+          "type": null,
+          "role": null,
+          "accessibleName": "お名前（必須）\n  \n  \n  メールアドレス（",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "お名前（必須）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "role": null,
+          "accessibleName": "お名前（必須）",
+          "required": false,
+          "ariaInvalid": null,
+          "ariaDescribedby": "name-error",
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "role": null,
+          "accessibleName": "メールアドレス（必須）",
+          "required": false,
+          "ariaInvalid": null,
+          "ariaDescribedby": "email-error",
+          "ariaLive": null
+        },
+        {
+          "tag": "label",
+          "type": null,
+          "role": null,
+          "accessibleName": "電話番号（半角数字 10〜11 桁）",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "role": null,
+          "accessibleName": "電話番号（半角数字 10〜11 桁）",
+          "required": false,
+          "ariaInvalid": null,
+          "ariaDescribedby": "tel-error",
+          "ariaLive": null
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": null,
+          "accessibleName": "送信する",
+          "required": null,
+          "ariaInvalid": null,
+          "ariaDescribedby": null,
+          "ariaLive": null
+        }
+      ]
+    }
+  ]
+}

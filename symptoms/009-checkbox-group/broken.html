@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>チェックボックスが全部必須になる（broken）</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+fieldset { border: 1px solid #999; padding: 1rem; inline-size: 20rem; }
+button { margin-block-start: 1rem; padding: 0.4rem 1.2rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>アンケート</h1>
+<form id="survey" method="post">
+  <fieldset>
+    <legend>興味のある分野（1 つ以上）</legend>
+    <!-- ここが原因: required は input 単体を見る。同一 name でも群として扱われない -->
+    <label><input type="checkbox" name="topic" value="html" required> HTML</label>
+    <label><input type="checkbox" name="topic" value="css" required> CSS</label>
+    <label><input type="checkbox" name="topic" value="js" required> JavaScript</label>
+  </fieldset>
+  <button type="submit">送信する</button>
+</form>
+</main>
+</body>
+</html>

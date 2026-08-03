@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>定義を head に置いてその場で数える</title>
+<script>
+  class MyList extends HTMLElement {
+    connectedCallback() {
+      // 開始タグを読んだ時点で走る。子要素はまだ解析されていない
+      this.count();
+    }
+    count() {
+      this.dataset.counted = String(this.querySelectorAll('li').length);
+    }
+  }
+  customElements.define('my-list', MyList);
+</script>
+</head>
+<body>
+  <h1>定義を head に置いてその場で数える</h1>
+
+  <my-list id="target">
+    <ul>
+      <li>りんご</li>
+      <li>みかん</li>
+      <li>ぶどう</li>
+    </ul>
+  </my-list>
+
+</body>
+</html>

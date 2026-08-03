@@ -1,0 +1,566 @@
+{
+  "tool": "tools/measure-a11y-coverage.mjs",
+  "versions": {
+    "axeCore": "4.12.1",
+    "lighthouse": "13.4.1",
+    "htmlValidate": "11.6.0"
+  },
+  "note": "Lighthouse は file:// を受け付けないため、3 手段すべて同じローカル HTTP URL に対して測定した",
+  "records": [
+    {
+      "file": "compare/006-counting-basis/a-base.html",
+      "axe": {
+        "ruleCount": 3,
+        "nodeCount": 5,
+        "componentCount": 5,
+        "successCriteriaKinds": [
+          "wcag111"
+        ],
+        "nonWcagRuleCount": 2,
+        "passCount": 10,
+        "incompleteCount": 0,
+        "inapplicableCount": 76,
+        "evaluatedRuleCount": 89,
+        "violations": [
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "nodes": 1,
+            "wcagTagged": true
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1,
+            "wcagTagged": false
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "nodes": 3,
+            "wcagTagged": false
+          }
+        ]
+      },
+      "htmlValidate": {
+        "messageCount": 1,
+        "rules": [
+          "wcag/h37"
+        ],
+        "messages": [
+          {
+            "rule": "wcag/h37",
+            "line": 10,
+            "column": 4
+          }
+        ]
+      },
+      "lighthouse": {
+        "score": 76,
+        "auditRefCount": 76,
+        "failCount": 2,
+        "passCount": 6,
+        "notApplicableCount": 58,
+        "manualCount": 10,
+        "failIds": [
+          "image-alt",
+          "landmark-one-main"
+        ],
+        "manualIds": [
+          "focusable-controls",
+          "interactive-element-affordance",
+          "logical-tab-order",
+          "visual-order-follows-dom",
+          "focus-traps",
+          "managed-focus",
+          "use-landmarks",
+          "offscreen-content-hidden",
+          "custom-controls-labels",
+          "custom-controls-roles"
+        ]
+      }
+    },
+    {
+      "file": "compare/006-counting-basis/b-elements-x10.html",
+      "axe": {
+        "ruleCount": 3,
+        "nodeCount": 23,
+        "componentCount": 5,
+        "successCriteriaKinds": [
+          "wcag111"
+        ],
+        "nonWcagRuleCount": 2,
+        "passCount": 10,
+        "incompleteCount": 0,
+        "inapplicableCount": 76,
+        "evaluatedRuleCount": 89,
+        "violations": [
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "nodes": 10,
+            "wcagTagged": true
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1,
+            "wcagTagged": false
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "nodes": 12,
+            "wcagTagged": false
+          }
+        ]
+      },
+      "htmlValidate": {
+        "messageCount": 10,
+        "rules": [
+          "wcag/h37"
+        ],
+        "messages": [
+          {
+            "rule": "wcag/h37",
+            "line": 10,
+            "column": 4
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 11,
+            "column": 4
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 12,
+            "column": 4
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 13,
+            "column": 4
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 14,
+            "column": 4
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 15,
+            "column": 4
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 16,
+            "column": 4
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 17,
+            "column": 4
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 18,
+            "column": 4
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 19,
+            "column": 4
+          }
+        ]
+      },
+      "lighthouse": {
+        "score": 76,
+        "auditRefCount": 76,
+        "failCount": 2,
+        "passCount": 6,
+        "notApplicableCount": 58,
+        "manualCount": 10,
+        "failIds": [
+          "image-alt",
+          "landmark-one-main"
+        ],
+        "manualIds": [
+          "focusable-controls",
+          "interactive-element-affordance",
+          "logical-tab-order",
+          "visual-order-follows-dom",
+          "focus-traps",
+          "managed-focus",
+          "use-landmarks",
+          "offscreen-content-hidden",
+          "custom-controls-labels",
+          "custom-controls-roles"
+        ]
+      }
+    },
+    {
+      "file": "compare/006-counting-basis/c-kinds-x4.html",
+      "axe": {
+        "ruleCount": 6,
+        "nodeCount": 9,
+        "componentCount": 9,
+        "successCriteriaKinds": [
+          "wcag111",
+          "wcag143",
+          "wcag412"
+        ],
+        "nonWcagRuleCount": 2,
+        "passCount": 14,
+        "incompleteCount": 0,
+        "inapplicableCount": 71,
+        "evaluatedRuleCount": 91,
+        "violations": [
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "nodes": 1,
+            "wcagTagged": true
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": 1,
+            "wcagTagged": true
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "nodes": 1,
+            "wcagTagged": true
+          },
+          {
+            "id": "label",
+            "impact": "critical",
+            "nodes": 1,
+            "wcagTagged": true
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1,
+            "wcagTagged": false
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "nodes": 4,
+            "wcagTagged": false
+          }
+        ]
+      },
+      "htmlValidate": {
+        "messageCount": 4,
+        "rules": [
+          "no-implicit-button-type",
+          "no-inline-style",
+          "text-content",
+          "wcag/h37"
+        ],
+        "messages": [
+          {
+            "rule": "wcag/h37",
+            "line": 10,
+            "column": 4
+          },
+          {
+            "rule": "no-implicit-button-type",
+            "line": 14,
+            "column": 4
+          },
+          {
+            "rule": "text-content",
+            "line": 14,
+            "column": 4
+          },
+          {
+            "rule": "no-inline-style",
+            "line": 16,
+            "column": 6
+          }
+        ]
+      },
+      "lighthouse": {
+        "score": 51,
+        "auditRefCount": 76,
+        "failCount": 5,
+        "passCount": 6,
+        "notApplicableCount": 55,
+        "manualCount": 10,
+        "failIds": [
+          "button-name",
+          "color-contrast",
+          "image-alt",
+          "label",
+          "landmark-one-main"
+        ],
+        "manualIds": [
+          "focusable-controls",
+          "interactive-element-affordance",
+          "logical-tab-order",
+          "visual-order-follows-dom",
+          "focus-traps",
+          "managed-focus",
+          "use-landmarks",
+          "offscreen-content-hidden",
+          "custom-controls-labels",
+          "custom-controls-roles"
+        ]
+      }
+    },
+    {
+      "file": "compare/006-counting-basis/d-fixed.html",
+      "axe": {
+        "ruleCount": 2,
+        "nodeCount": 4,
+        "componentCount": 4,
+        "successCriteriaKinds": [],
+        "nonWcagRuleCount": 2,
+        "passCount": 11,
+        "incompleteCount": 0,
+        "inapplicableCount": 76,
+        "evaluatedRuleCount": 89,
+        "violations": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1,
+            "wcagTagged": false
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "nodes": 3,
+            "wcagTagged": false
+          }
+        ]
+      },
+      "htmlValidate": {
+        "messageCount": 0,
+        "rules": [],
+        "messages": []
+      },
+      "lighthouse": {
+        "score": 94,
+        "auditRefCount": 76,
+        "failCount": 1,
+        "passCount": 7,
+        "notApplicableCount": 58,
+        "manualCount": 10,
+        "failIds": [
+          "landmark-one-main"
+        ],
+        "manualIds": [
+          "focusable-controls",
+          "interactive-element-affordance",
+          "logical-tab-order",
+          "visual-order-follows-dom",
+          "focus-traps",
+          "managed-focus",
+          "use-landmarks",
+          "offscreen-content-hidden",
+          "custom-controls-labels",
+          "custom-controls-roles"
+        ]
+      }
+    },
+    {
+      "file": "compare/006-counting-basis/e-component-x3.html",
+      "axe": {
+        "ruleCount": 3,
+        "nodeCount": 9,
+        "componentCount": 5,
+        "successCriteriaKinds": [
+          "wcag111"
+        ],
+        "nonWcagRuleCount": 2,
+        "passCount": 11,
+        "incompleteCount": 0,
+        "inapplicableCount": 76,
+        "evaluatedRuleCount": 90,
+        "violations": [
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "nodes": 3,
+            "wcagTagged": true
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1,
+            "wcagTagged": false
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "nodes": 5,
+            "wcagTagged": false
+          }
+        ]
+      },
+      "htmlValidate": {
+        "messageCount": 3,
+        "rules": [
+          "wcag/h37"
+        ],
+        "messages": [
+          {
+            "rule": "wcag/h37",
+            "line": 10,
+            "column": 22
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 11,
+            "column": 22
+          },
+          {
+            "rule": "wcag/h37",
+            "line": 12,
+            "column": 22
+          }
+        ]
+      },
+      "lighthouse": {
+        "score": 76,
+        "auditRefCount": 76,
+        "failCount": 2,
+        "passCount": 6,
+        "notApplicableCount": 58,
+        "manualCount": 10,
+        "failIds": [
+          "image-alt",
+          "landmark-one-main"
+        ],
+        "manualIds": [
+          "focusable-controls",
+          "interactive-element-affordance",
+          "logical-tab-order",
+          "visual-order-follows-dom",
+          "focus-traps",
+          "managed-focus",
+          "use-landmarks",
+          "offscreen-content-hidden",
+          "custom-controls-labels",
+          "custom-controls-roles"
+        ]
+      }
+    },
+    {
+      "file": "compare/006-counting-basis/f-minimal.html",
+      "axe": {
+        "ruleCount": 2,
+        "nodeCount": 3,
+        "componentCount": 3,
+        "successCriteriaKinds": [],
+        "nonWcagRuleCount": 2,
+        "passCount": 8,
+        "incompleteCount": 0,
+        "inapplicableCount": 79,
+        "evaluatedRuleCount": 89,
+        "violations": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1,
+            "wcagTagged": false
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "nodes": 2,
+            "wcagTagged": false
+          }
+        ]
+      },
+      "htmlValidate": {
+        "messageCount": 0,
+        "rules": [],
+        "messages": []
+      },
+      "lighthouse": {
+        "score": 93,
+        "auditRefCount": 76,
+        "failCount": 1,
+        "passCount": 6,
+        "notApplicableCount": 59,
+        "manualCount": 10,
+        "failIds": [
+          "landmark-one-main"
+        ],
+        "manualIds": [
+          "focusable-controls",
+          "interactive-element-affordance",
+          "logical-tab-order",
+          "visual-order-follows-dom",
+          "focus-traps",
+          "managed-focus",
+          "use-landmarks",
+          "offscreen-content-hidden",
+          "custom-controls-labels",
+          "custom-controls-roles"
+        ]
+      }
+    },
+    {
+      "file": "compare/006-counting-basis/g-manual-checks.html",
+      "axe": {
+        "ruleCount": 0,
+        "nodeCount": 0,
+        "componentCount": 0,
+        "successCriteriaKinds": [],
+        "nonWcagRuleCount": 0,
+        "passCount": 34,
+        "incompleteCount": 0,
+        "inapplicableCount": 55,
+        "evaluatedRuleCount": 89,
+        "violations": []
+      },
+      "htmlValidate": {
+        "messageCount": 2,
+        "rules": [
+          "prefer-native-element",
+          "wcag/h32"
+        ],
+        "messages": [
+          {
+            "rule": "wcag/h32",
+            "line": 25,
+            "column": 6
+          },
+          {
+            "rule": "prefer-native-element",
+            "line": 29,
+            "column": 12
+          }
+        ]
+      },
+      "lighthouse": {
+        "score": 100,
+        "auditRefCount": 76,
+        "failCount": 0,
+        "passCount": 21,
+        "notApplicableCount": 45,
+        "manualCount": 10,
+        "failIds": [],
+        "manualIds": [
+          "focusable-controls",
+          "interactive-element-affordance",
+          "logical-tab-order",
+          "visual-order-follows-dom",
+          "focus-traps",
+          "managed-focus",
+          "use-landmarks",
+          "offscreen-content-hidden",
+          "custom-controls-labels",
+          "custom-controls-roles"
+        ]
+      }
+    }
+  ]
+}

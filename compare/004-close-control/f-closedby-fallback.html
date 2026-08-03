@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>dialog closedby + フォールバック</title>
+<style>
+  body { margin: 0; padding: 1rem; height: 300vh }
+  /* 余白をダイアログ自身に持たせると余白のクリックも「外側」になるため、内側の箱へ寄せる */
+  dialog { border: 2px solid #333; padding: 0 } dialog > div { padding: 1rem }
+</style>
+</head>
+<body>
+  <button type="button" id="open">開く</button>
+  <!-- closedby を書きつつ、この指定が読まれないブラウザ向けの逃げ道も残す -->
+  <dialog id="box" closedby="any" aria-label="確認">
+    <div>
+      <button type="button" id="ok">OK</button>
+      <button type="button" id="ng">やめる</button>
+    </div>
+  </dialog>
+  <a href="#end" id="after">ページ末尾へ</a>
+  <p id="end">末尾</p>
+<script>
+  const box = document.getElementById('box');
+  document.getElementById('open').onclick = () => box.showModal();
+  document.getElementById('ng').onclick = () => box.close();
+  // 外側の暗い部分はダイアログ自身が受け取る。押された場所がダイアログそのものなら外側とみなす
+  box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>タブ UI — 素の Web Components 版</title>
+</head>
+<body>
+  <h1>Web Components 版</h1>
+
+  <my-tabs id="tabs">
+    <span slot="tab">概要</span>
+    <span slot="tab">使い方</span>
+    <span slot="tab">料金</span>
+    <div slot="panel">サービスの概要を説明します。</div>
+    <div slot="panel">導入の手順を説明します。</div>
+    <div slot="panel">料金プランを説明します。</div>
+  </my-tabs>
+
+  <script src="./my-tabs.js"></script>
+</body>
+</html>

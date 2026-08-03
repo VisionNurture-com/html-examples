@@ -1,0 +1,222 @@
+{
+  "tool": "tools/measure-rule-sets.mjs",
+  "note": "Lighthouse の監査項目一覧は中身に依存しないため、最小の HTML に対して 1 回実行して取得した。人が確認する項目（manual）は採点対象から除いて突き合わせている。適合レベル別の合計（levelTaggedTotal）が達成基準に紐づくルール数（wcagTagged）と一致しないのは、レベルのタグが -obsolete になっているルールがあるためで、その内訳は obsoleteLevelRules に出している。deprecatedRules はより広く、現行のレベルのタグを持ったまま非推奨の印が付いたルールも含む",
+  "summary": {
+    "axe": {
+      "version": "4.12.1",
+      "ruleTotal": 105,
+      "wcagTagged": 75,
+      "nonWcag": 30,
+      "successCriteriaKinds": 29,
+      "levelCounts": {
+        "wcag2a": 62,
+        "wcag21aa": 3,
+        "wcag2aaa": 3,
+        "wcag2aa": 3,
+        "wcag21a": 1,
+        "wcag22aa": 1
+      },
+      "levelTaggedTotal": 73,
+      "obsoleteLevelTagged": 2,
+      "deprecatedTagged": 5
+    },
+    "lighthouse": {
+      "version": "13.4.1",
+      "auditRefTotal": 76,
+      "scored": 66,
+      "manual": 10
+    },
+    "overlap": {
+      "bothCount": 66,
+      "lighthouseOnlyCount": 0,
+      "axeOnlyCount": 39
+    }
+  },
+  "obsoleteLevelRules": [
+    {
+      "id": "duplicate-id",
+      "levelTags": [
+        "wcag2a-obsolete"
+      ],
+      "successCriteria": [
+        "wcag411"
+      ],
+      "deprecated": true
+    },
+    {
+      "id": "duplicate-id-active",
+      "levelTags": [
+        "wcag2a-obsolete"
+      ],
+      "successCriteria": [
+        "wcag411"
+      ],
+      "deprecated": true
+    }
+  ],
+  "deprecatedRules": [
+    {
+      "id": "aria-roledescription",
+      "levelTags": [
+        "wcag2a"
+      ],
+      "successCriteria": [
+        "wcag412"
+      ]
+    },
+    {
+      "id": "audio-caption",
+      "levelTags": [
+        "wcag2a"
+      ],
+      "successCriteria": [
+        "wcag121"
+      ]
+    },
+    {
+      "id": "duplicate-id",
+      "levelTags": [
+        "wcag2a-obsolete"
+      ],
+      "successCriteria": [
+        "wcag411"
+      ]
+    },
+    {
+      "id": "duplicate-id-active",
+      "levelTags": [
+        "wcag2a-obsolete"
+      ],
+      "successCriteria": [
+        "wcag411"
+      ]
+    },
+    {
+      "id": "landmark-complementary-is-top-level",
+      "levelTags": [],
+      "successCriteria": []
+    }
+  ],
+  "lighthouseManualIds": [
+    "custom-controls-labels",
+    "custom-controls-roles",
+    "focus-traps",
+    "focusable-controls",
+    "interactive-element-affordance",
+    "logical-tab-order",
+    "managed-focus",
+    "offscreen-content-hidden",
+    "use-landmarks",
+    "visual-order-follows-dom"
+  ],
+  "lighthouseOnlyIds": [],
+  "axeOnlyIds": [
+    "area-alt",
+    "aria-braille-equivalent",
+    "aria-roledescription",
+    "aria-tab-name",
+    "audio-caption",
+    "avoid-inline-spacing",
+    "blink",
+    "color-contrast-enhanced",
+    "css-orientation-lock",
+    "duplicate-id",
+    "duplicate-id-active",
+    "empty-table-header",
+    "focus-order-semantics",
+    "frame-focusable-content",
+    "frame-tested",
+    "frame-title-unique",
+    "hidden-content",
+    "label-title-only",
+    "landmark-banner-is-top-level",
+    "landmark-complementary-is-top-level",
+    "landmark-contentinfo-is-top-level",
+    "landmark-main-is-top-level",
+    "landmark-no-duplicate-banner",
+    "landmark-no-duplicate-contentinfo",
+    "landmark-no-duplicate-main",
+    "landmark-unique",
+    "marquee",
+    "meta-refresh-no-exceptions",
+    "meta-viewport-large",
+    "nested-interactive",
+    "no-autoplay-audio",
+    "p-as-heading",
+    "page-has-heading-one",
+    "region",
+    "role-img-alt",
+    "scope-attr-valid",
+    "scrollable-region-focusable",
+    "server-side-image-map",
+    "summary-name"
+  ],
+  "bothIds": [
+    "accesskeys",
+    "aria-allowed-attr",
+    "aria-allowed-role",
+    "aria-command-name",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-dialog-name",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-input-field-name",
+    "aria-meter-name",
+    "aria-progressbar-name",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-required-children",
+    "aria-required-parent",
+    "aria-roles",
+    "aria-text",
+    "aria-toggle-field-name",
+    "aria-tooltip-name",
+    "aria-treeitem-name",
+    "aria-valid-attr",
+    "aria-valid-attr-value",
+    "autocomplete-valid",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "definition-list",
+    "dlitem",
+    "document-title",
+    "duplicate-id-aria",
+    "empty-heading",
+    "form-field-multiple-labels",
+    "frame-title",
+    "heading-order",
+    "html-has-lang",
+    "html-lang-valid",
+    "html-xml-lang-mismatch",
+    "identical-links-same-purpose",
+    "image-alt",
+    "image-redundant-alt",
+    "input-button-name",
+    "input-image-alt",
+    "label",
+    "label-content-name-mismatch",
+    "landmark-one-main",
+    "link-in-text-block",
+    "link-name",
+    "list",
+    "listitem",
+    "meta-refresh",
+    "meta-viewport",
+    "object-alt",
+    "presentation-role-conflict",
+    "select-name",
+    "skip-link",
+    "svg-img-alt",
+    "tabindex",
+    "table-duplicate-name",
+    "table-fake-caption",
+    "target-size",
+    "td-has-header",
+    "td-headers-attr",
+    "th-has-data-cells",
+    "valid-lang",
+    "video-caption"
+  ]
+}

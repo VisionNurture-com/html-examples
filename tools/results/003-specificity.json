@@ -1,0 +1,116 @@
+{
+  "scenario": "同じ要素に複数の指定が当たるとき、どれが採用されるか",
+  "colors": {
+    "blue": "rgb(29, 78, 216)",
+    "red": "rgb(185, 28, 28)"
+  },
+  "engines": {
+    "chromium": {
+      "version": "151.0.7922.34",
+      "cases": [
+        {
+          "id": "id-vs-class",
+          "label": "id の指定と class の指定（class を後に書く）",
+          "computedColor": "rgb(29, 78, 216)",
+          "winner": "#notice / インライン（青）"
+        },
+        {
+          "id": "class-vs-class",
+          "label": "class どうし（後に書いたほうが勝つか）",
+          "computedColor": "rgb(185, 28, 28)",
+          "winner": ".alert（赤）"
+        },
+        {
+          "id": "class-order-reversed",
+          "label": "class どうし・記述順を入れ替える",
+          "computedColor": "rgb(29, 78, 216)",
+          "winner": "#notice / インライン（青）"
+        },
+        {
+          "id": "important-on-class",
+          "label": "id の指定に対して class 側に !important を付ける",
+          "computedColor": "rgb(185, 28, 28)",
+          "winner": ".alert（赤）"
+        },
+        {
+          "id": "inline-vs-important",
+          "label": "インラインの style 属性と、class 側の !important",
+          "computedColor": "rgb(185, 28, 28)",
+          "winner": ".alert（赤）"
+        }
+      ]
+    },
+    "firefox": {
+      "version": "153.0",
+      "cases": [
+        {
+          "id": "id-vs-class",
+          "label": "id の指定と class の指定（class を後に書く）",
+          "computedColor": "rgb(29, 78, 216)",
+          "winner": "#notice / インライン（青）"
+        },
+        {
+          "id": "class-vs-class",
+          "label": "class どうし（後に書いたほうが勝つか）",
+          "computedColor": "rgb(185, 28, 28)",
+          "winner": ".alert（赤）"
+        },
+        {
+          "id": "class-order-reversed",
+          "label": "class どうし・記述順を入れ替える",
+          "computedColor": "rgb(29, 78, 216)",
+          "winner": "#notice / インライン（青）"
+        },
+        {
+          "id": "important-on-class",
+          "label": "id の指定に対して class 側に !important を付ける",
+          "computedColor": "rgb(185, 28, 28)",
+          "winner": ".alert（赤）"
+        },
+        {
+          "id": "inline-vs-important",
+          "label": "インラインの style 属性と、class 側の !important",
+          "computedColor": "rgb(185, 28, 28)",
+          "winner": ".alert（赤）"
+        }
+      ]
+    },
+    "webkit": {
+      "version": "26.5",
+      "cases": [
+        {
+          "id": "id-vs-class",
+          "label": "id の指定と class の指定（class を後に書く）",
+          "computedColor": "rgb(29, 78, 216)",
+          "winner": "#notice / インライン（青）"
+        },
+        {
+          "id": "class-vs-class",
+          "label": "class どうし（後に書いたほうが勝つか）",
+          "computedColor": "rgb(185, 28, 28)",
+          "winner": ".alert（赤）"
+        },
+        {
+          "id": "class-order-reversed",
+          "label": "class どうし・記述順を入れ替える",
+          "computedColor": "rgb(29, 78, 216)",
+          "winner": "#notice / インライン（青）"
+        },
+        {
+          "id": "important-on-class",
+          "label": "id の指定に対して class 側に !important を付ける",
+          "computedColor": "rgb(185, 28, 28)",
+          "winner": ".alert（赤）"
+        },
+        {
+          "id": "inline-vs-important",
+          "label": "インラインの style 属性と、class 側の !important",
+          "computedColor": "rgb(185, 28, 28)",
+          "winner": ".alert（赤）"
+        }
+      ]
+    }
+  },
+  "measuredAt": "2026-07-28T10:07:41.766Z",
+  "note": "判定は getComputedStyle の実値。規則の暗記ではなく観察で決める"
+}

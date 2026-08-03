@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>定義をページ末尾に置く</title>
+</head>
+<body>
+  <h1>定義をページ末尾に置く</h1>
+
+  <my-list id="target">
+    <ul>
+      <li>りんご</li>
+      <li>みかん</li>
+      <li>ぶどう</li>
+    </ul>
+  </my-list>
+
+<script>
+  class MyList extends HTMLElement {
+    connectedCallback() {
+      // 解析が終わってから昇格するため子要素が見える
+      this.count();
+    }
+    count() {
+      this.dataset.counted = String(this.querySelectorAll('li').length);
+    }
+  }
+  customElements.define('my-list', MyList);
+</script>
+</body>
+</html>

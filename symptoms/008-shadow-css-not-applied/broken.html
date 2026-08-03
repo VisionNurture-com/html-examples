@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Shadow DOM に外側の CSS が届かない</title>
+<style>
+  /* ページ側のスタイル。見出しは緑、枠は太い線にしたい */
+  .label { color: green; font-weight: bold }
+  .frame { border: 4px solid green; padding: 1rem }
+</style>
+</head>
+<body>
+  <h1>外側の CSS が中に届かない</h1>
+
+  <!-- ページ側の .label / .frame と同じクラス名を、部品の中でも使っている -->
+  <my-card id="target">お知らせ</my-card>
+
+  <p class="label">この行はページ側の CSS が当たる（比較用）</p>
+
+<script>
+  class MyCard extends HTMLElement {
+    connectedCallback() {
+      const root = this.attachShadow({ mode: 'open' });
+      root.innerHTML = `
+        <div class="frame">
+          <span class="label"><slot></slot></span>
+        </div>`;
+    }
+  }
+  customElements.define('my-card', MyCard);
+</script>
+</body>
+</html>

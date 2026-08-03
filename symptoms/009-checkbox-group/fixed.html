@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>チェックボックスが全部必須になる（fixed）</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+fieldset { border: 1px solid #999; padding: 1rem; inline-size: 20rem; }
+button { margin-block-start: 1rem; padding: 0.4rem 1.2rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>アンケート</h1>
+<form method="post">
+  <fieldset>
+    <legend>興味のある分野（1 つ以上）</legend>
+    <label><input type="checkbox" name="topic" value="html"> HTML</label>
+    <label><input type="checkbox" name="topic" value="css"> CSS</label>
+    <label><input type="checkbox" name="topic" value="js"> JavaScript</label>
+  </fieldset>
+  <button type="submit">送信する</button>
+</form>
+<script>
+const boxes = [...document.querySelectorAll('input[name="topic"]')];
+// 代表 1 個にだけ required を付け外しする。全部に付けると全選択必須になる。
+const sync = () => {
+  const chosen = boxes.some((box) => box.checked);
+  boxes[0].required = !chosen;
+  boxes[0].setCustomValidity(chosen ? '' : '1 つ以上選んでください');
+};
+boxes.forEach((box) => box.addEventListener('change', sync));
+sync();
+</script>
+</main>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "measuredAt": "2026-07-26T09:59:20.312Z",
+  "platform": "windows-via-wsl-interop",
+  "binaries": {
+    "node": "/mnt/c/Program Files/nodejs/node.exe",
+    "git": "<WIN_HOME>/hx-win/.win-runner/gitwin.sh"
+  },
+  "versions": {},
+  "counts": {
+    "broken": 11,
+    "fixed": 0,
+    "parserError": 1
+  },
+  "hook": {
+    "exitWithBrokenHtml": 1,
+    "commitsAfterBrokenAttempt": 1,
+    "exitWithNoVerify": 0,
+    "commitsAfterNoVerify": 2
+  },
+  "raw": {
+    "hookLog": "exit_broken=1\ncount_after_broken=1\nexit_bypass=0\ncount_after_bypass=2"
+  }
+}

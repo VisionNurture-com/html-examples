@@ -1,0 +1,34 @@
+{
+  "tool": "tools/measure-keyboard.mjs",
+  "engine": "firefox",
+  "records": [
+    {
+      "file": "compare/009-native-vs-js-validation/a-native.html",
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "hasSubmitButton": true,
+      "focusOrder": [
+        "input[type=text]#name",
+        "input[type=email]#email",
+        "input[type=tel]#tel",
+        "button[type=submit]"
+      ],
+      "submitEventOnEnterWhenInvalid": 0,
+      "submitEventOnEnterWhenValid": 1
+    },
+    {
+      "file": "compare/009-native-vs-js-validation/b-js.html",
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "hasSubmitButton": true,
+      "focusOrder": [
+        "input[type=text]#name",
+        "input[type=email]#email",
+        "input[type=tel]#tel",
+        "button[type=submit]"
+      ],
+      "submitEventOnEnterWhenInvalid": 1,
+      "submitEventOnEnterWhenValid": 1
+    }
+  ]
+}

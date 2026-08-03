@@ -1,0 +1,134 @@
+{
+  "scenario": "打ち消されておらず計算値にも反映されているのに、見た目が変わらない指定",
+  "engines": {
+    "chromium": {
+      "version": "151.0.7922.34",
+      "cases": [
+        {
+          "id": "sticky-in-overflow-hidden",
+          "label": "親に overflow: hidden がある要素の position: sticky",
+          "expectation": "止まらない（採用はされている）",
+          "computed": "sticky",
+          "topAfterScroll": -400,
+          "applied": true,
+          "visibleEffect": false,
+          "declaringRuleCount": 1
+        },
+        {
+          "id": "sticky-control",
+          "label": "同じ指定・親の overflow を外した対照",
+          "expectation": "止まる",
+          "computed": "sticky",
+          "topAfterScroll": 0,
+          "applied": true,
+          "visibleEffect": true,
+          "declaringRuleCount": 1
+        },
+        {
+          "id": "zindex-on-static",
+          "label": "位置指定のない要素に z-index: 999",
+          "expectation": "重なり順は変わらない（採用はされている）",
+          "computed": "999",
+          "frontElementId": "b",
+          "applied": true,
+          "visibleEffect": false,
+          "declaringRuleCount": 1
+        },
+        {
+          "id": "zindex-control",
+          "label": "同じ指定・position: relative を足した対照",
+          "expectation": "重なり順が変わる",
+          "computed": "999",
+          "frontElementId": "a",
+          "applied": true,
+          "visibleEffect": true,
+          "declaringRuleCount": 1
+        }
+      ]
+    },
+    "firefox": {
+      "version": "153.0",
+      "cases": [
+        {
+          "id": "sticky-in-overflow-hidden",
+          "label": "親に overflow: hidden がある要素の position: sticky",
+          "expectation": "止まらない（採用はされている）",
+          "computed": "sticky",
+          "topAfterScroll": -400,
+          "applied": true,
+          "visibleEffect": false
+        },
+        {
+          "id": "sticky-control",
+          "label": "同じ指定・親の overflow を外した対照",
+          "expectation": "止まる",
+          "computed": "sticky",
+          "topAfterScroll": 0,
+          "applied": true,
+          "visibleEffect": true
+        },
+        {
+          "id": "zindex-on-static",
+          "label": "位置指定のない要素に z-index: 999",
+          "expectation": "重なり順は変わらない（採用はされている）",
+          "computed": "999",
+          "frontElementId": "b",
+          "applied": true,
+          "visibleEffect": false
+        },
+        {
+          "id": "zindex-control",
+          "label": "同じ指定・position: relative を足した対照",
+          "expectation": "重なり順が変わる",
+          "computed": "999",
+          "frontElementId": "a",
+          "applied": true,
+          "visibleEffect": true
+        }
+      ]
+    },
+    "webkit": {
+      "version": "26.5",
+      "cases": [
+        {
+          "id": "sticky-in-overflow-hidden",
+          "label": "親に overflow: hidden がある要素の position: sticky",
+          "expectation": "止まらない（採用はされている）",
+          "computed": "sticky",
+          "topAfterScroll": -400,
+          "applied": true,
+          "visibleEffect": false
+        },
+        {
+          "id": "sticky-control",
+          "label": "同じ指定・親の overflow を外した対照",
+          "expectation": "止まる",
+          "computed": "sticky",
+          "topAfterScroll": 0,
+          "applied": true,
+          "visibleEffect": true
+        },
+        {
+          "id": "zindex-on-static",
+          "label": "位置指定のない要素に z-index: 999",
+          "expectation": "重なり順は変わらない（採用はされている）",
+          "computed": "999",
+          "frontElementId": "b",
+          "applied": true,
+          "visibleEffect": false
+        },
+        {
+          "id": "zindex-control",
+          "label": "同じ指定・position: relative を足した対照",
+          "expectation": "重なり順が変わる",
+          "computed": "999",
+          "frontElementId": "a",
+          "applied": true,
+          "visibleEffect": true
+        }
+      ]
+    }
+  },
+  "measuredAt": "2026-07-28T11:28:11.766Z",
+  "note": "applied = getComputedStyle が指定どおりの値を返したか / visibleEffect = 描画結果が変わったか。declaringRuleCount は Chromium の CDP で数えた「当該プロパティを宣言しているルールの件数」で、1 なら打ち消す相手が存在しない（開発者ツールで打ち消し線が付かない）ことを意味する。"
+}

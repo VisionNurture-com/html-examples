@@ -1,0 +1,323 @@
+{
+  "measuredAt": "2026-07-27T08:21:30.804Z",
+  "tool": "playwright chromium + サーバ側スロットリング + PerformanceObserver",
+  "conditions": {
+    "throttle": {
+      "latencyMs": 150,
+      "bytesPerSecond": 209715,
+      "chunkMs": 20
+    },
+    "cpuThrottlingRate": 4,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "runs": 5
+  },
+  "note": [
+    "Lighthouse は使用しない（simulate 法は遅延読み込み画像の CLS を取りこぼすため）",
+    "CDP の Network.emulateNetworkConditions も使用しない（本環境では画像が LCP 候補として記録されなくなるため）"
+  ],
+  "results": [
+    {
+      "id": "simple-A",
+      "label": "競合なし A — 属性なし（baseline）",
+      "file": "compare/007-loading-vs-fetchpriority/simple/a-baseline.html",
+      "runs": 5,
+      "lcpMedianMs": 4196,
+      "lcpSamplesMs": [
+        4208,
+        4224,
+        4196,
+        4184,
+        4184
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "img[src=../images/hero.jpg]",
+      "lcpUrl": "http://127.0.0.1:52943/compare/007-loading-vs-fetchpriority/images/hero.jpg",
+      "shiftCountMedian": 0
+    },
+    {
+      "id": "simple-B",
+      "label": "競合なし B — 主役に fetchpriority=\"high\"",
+      "file": "compare/007-loading-vs-fetchpriority/simple/b-fetchpriority.html",
+      "runs": 5,
+      "lcpMedianMs": 4180,
+      "lcpSamplesMs": [
+        4172,
+        4208,
+        4180,
+        4188,
+        4176
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "img[src=../images/hero.jpg]",
+      "lcpUrl": "http://127.0.0.1:52943/compare/007-loading-vs-fetchpriority/images/hero.jpg",
+      "shiftCountMedian": 0
+    },
+    {
+      "id": "simple-C",
+      "label": "競合なし C — 4 枚すべてに fetchpriority=\"high\"",
+      "file": "compare/007-loading-vs-fetchpriority/simple/c-fetchpriority-multi.html",
+      "runs": 5,
+      "lcpMedianMs": 4212,
+      "lcpSamplesMs": [
+        4224,
+        4180,
+        4192,
+        4220,
+        4212
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "img[src=../images/hero.jpg]",
+      "lcpUrl": "http://127.0.0.1:52943/compare/007-loading-vs-fetchpriority/images/hero.jpg",
+      "shiftCountMedian": 0
+    },
+    {
+      "id": "simple-D",
+      "label": "競合なし D — link rel=\"preload\"",
+      "file": "compare/007-loading-vs-fetchpriority/simple/d-preload.html",
+      "runs": 5,
+      "lcpMedianMs": 4204,
+      "lcpSamplesMs": [
+        4224,
+        4208,
+        4200,
+        4204,
+        4176
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "img[src=../images/hero.jpg]",
+      "lcpUrl": "http://127.0.0.1:52943/compare/007-loading-vs-fetchpriority/images/hero.jpg",
+      "shiftCountMedian": 0
+    },
+    {
+      "id": "simple-E",
+      "label": "競合なし E — 全画像に loading=\"lazy\"",
+      "file": "compare/007-loading-vs-fetchpriority/simple/e-lazy-all.html",
+      "runs": 5,
+      "lcpMedianMs": 312,
+      "lcpSamplesMs": [
+        192,
+        272,
+        312,
+        328,
+        416
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "h1",
+      "lcpUrl": null,
+      "shiftCountMedian": 0
+    },
+    {
+      "id": "heavy-A",
+      "label": "競合あり A — 属性なし（baseline）",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/a-baseline.html",
+      "runs": 5,
+      "lcpMedianMs": 5520,
+      "lcpSamplesMs": [
+        13648,
+        5520,
+        5504,
+        5520,
+        5516
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "img[src=../images/hero.jpg]",
+      "lcpUrl": "http://127.0.0.1:52943/compare/007-loading-vs-fetchpriority/images/hero.jpg",
+      "shiftCountMedian": 0
+    },
+    {
+      "id": "heavy-B",
+      "label": "競合あり B — 主役に fetchpriority=\"high\"",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/b-fetchpriority.html",
+      "runs": 5,
+      "lcpMedianMs": 5512,
+      "lcpSamplesMs": [
+        5512,
+        5508,
+        5508,
+        5512,
+        5516
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "img[src=../images/hero.jpg]",
+      "lcpUrl": "http://127.0.0.1:52943/compare/007-loading-vs-fetchpriority/images/hero.jpg",
+      "shiftCountMedian": 0
+    },
+    {
+      "id": "heavy-C",
+      "label": "競合あり C — 4 枚すべてに fetchpriority=\"high\"",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/c-fetchpriority-multi.html",
+      "runs": 5,
+      "lcpMedianMs": 5516,
+      "lcpSamplesMs": [
+        5512,
+        5532,
+        5512,
+        5528,
+        5516
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "img[src=../images/hero.jpg]",
+      "lcpUrl": "http://127.0.0.1:52943/compare/007-loading-vs-fetchpriority/images/hero.jpg",
+      "shiftCountMedian": 0
+    },
+    {
+      "id": "heavy-D",
+      "label": "競合あり D — link rel=\"preload\"",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/d-preload.html",
+      "runs": 5,
+      "lcpMedianMs": 5532,
+      "lcpSamplesMs": [
+        5532,
+        5520,
+        5512,
+        5556,
+        5624
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "img[src=../images/hero.jpg]",
+      "lcpUrl": "http://127.0.0.1:52943/compare/007-loading-vs-fetchpriority/images/hero.jpg",
+      "shiftCountMedian": 0
+    },
+    {
+      "id": "heavy-E",
+      "label": "競合あり E — 全画像に loading=\"lazy\"",
+      "file": "compare/007-loading-vs-fetchpriority/heavy/e-lazy-all.html",
+      "runs": 5,
+      "lcpMedianMs": 3220,
+      "lcpSamplesMs": [
+        1680,
+        2856,
+        3220,
+        3304,
+        3384
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "h1",
+      "lcpUrl": null,
+      "shiftCountMedian": 0
+    },
+    {
+      "id": "S3-broken",
+      "label": "症状 3 broken（width/height なし）",
+      "file": "symptoms/007-layout-shift/broken.html",
+      "runs": 5,
+      "lcpMedianMs": 2432,
+      "lcpSamplesMs": [
+        4928,
+        2432,
+        2448,
+        2420,
+        2420
+      ],
+      "clsMedian": 0.0167,
+      "clsSamples": [
+        0.0167,
+        0.0167,
+        0.0167,
+        0.0167,
+        0.0167
+      ],
+      "lcpElement": "img[src=images/hero.jpg]",
+      "lcpUrl": "http://127.0.0.1:52943/symptoms/007-layout-shift/images/hero.jpg",
+      "shiftCountMedian": 1
+    },
+    {
+      "id": "S3-fixed",
+      "label": "症状 3 fixed（width/height あり）",
+      "file": "symptoms/007-layout-shift/fixed.html",
+      "runs": 5,
+      "lcpMedianMs": 2444,
+      "lcpSamplesMs": [
+        2444,
+        2448,
+        2440,
+        2456,
+        2424
+      ],
+      "clsMedian": 0,
+      "clsSamples": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lcpElement": "img[src=images/hero.jpg]",
+      "lcpUrl": "http://127.0.0.1:52943/symptoms/007-layout-shift/images/hero.jpg",
+      "shiftCountMedian": 0
+    }
+  ]
+}

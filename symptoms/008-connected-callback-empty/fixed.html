@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>解析が終わってから数える</title>
+</head>
+<body>
+  <h1>件数が正しく数えられる</h1>
+
+  <my-list id="target">
+    <ul>
+      <li>りんご</li>
+      <li>みかん</li>
+      <li>ぶどう</li>
+    </ul>
+  </my-list>
+
+  <p>data-counted の値: <output id="out"></output></p>
+
+<script>
+  // 定義をページの末尾へ置く。<li> の解析が終わったあとで昇格するため中身が見える
+  class MyList extends HTMLElement {
+    connectedCallback() {
+      const count = this.querySelectorAll('li').length;
+      this.dataset.counted = String(count);
+    }
+  }
+  customElements.define('my-list', MyList);
+
+  document.getElementById('out').textContent =
+    document.getElementById('target').dataset.counted;
+</script>
+</body>
+</html>

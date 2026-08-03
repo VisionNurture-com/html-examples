@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>チェックボックスのエラーを読み上げに乗せる（fixed + a11y）</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+fieldset { border: 1px solid #999; padding: 1rem; inline-size: 20rem; }
+.error { color: #c00; }
+button { margin-block-start: 1rem; padding: 0.4rem 1.2rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>アンケート</h1>
+<form id="survey" method="post">
+  <fieldset>
+    <legend>興味のある分野（1 つ以上）</legend>
+    <label><input type="checkbox" name="topic" value="html" aria-describedby="topic-error"> HTML</label>
+    <label><input type="checkbox" name="topic" value="css" aria-describedby="topic-error"> CSS</label>
+    <label><input type="checkbox" name="topic" value="js" aria-describedby="topic-error"> JavaScript</label>
+  </fieldset>
+  <!-- 吹き出しは閉じると消える。消えないエラー文を置き、aria-live で挿入を読み上げに乗せる -->
+  <p class="error" id="topic-error" aria-live="polite"></p>
+  <button type="submit">送信する</button>
+</form>
+<script>
+const boxes = [...document.querySelectorAll('input[name="topic"]')];
+const error = document.getElementById('topic-error');
+const sync = () => {
+  const chosen = boxes.some((box) => box.checked);
+  boxes[0].required = !chosen;
+  boxes[0].setCustomValidity(chosen ? '' : '1 つ以上選んでください');
+  // 選び直したら即座に消す。残すと解決済みのエラーを読み上げてしまう
+  if (chosen) error.textContent = '';
+};
+boxes.forEach((box) => box.addEventListener('change', sync));
+// invalid は送信が止められた時だけ発火する。ここで初めて文字を入れる
+boxes[0].addEventListener('invalid', () => {
+  error.textContent = '1 つ以上選んでください';
+});
+sync();
+</script>
+</main>
+</body>
+</html>

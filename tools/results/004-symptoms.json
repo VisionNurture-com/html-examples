@@ -1,0 +1,123 @@
+{
+  "measuredAt": "2026-08-02T06:25:27.967Z",
+  "root": "symptoms/004-modal-not-closing",
+  "engines": {
+    "chromium": {
+      "version": "151.0.7922.34",
+      "targets": [
+        {
+          "file": "broken.html",
+          "label": "症状（閉じない）",
+          "kind": "custom",
+          "hasScrollLockRule": null,
+          "openedOk": true,
+          "scrollBeforeWheel": 0,
+          "scrollAfterWheel": 600,
+          "backgroundScrolls": true,
+          "escCloses": false,
+          "outsideClickCloses": false,
+          "openerFocusedBeforeOpen": true,
+          "openedByKeyboard": true,
+          "closedByKeyboard": false,
+          "focusAfterCloseKeyboard": "open",
+          "focusReturnedToOpener": null
+        },
+        {
+          "file": "fixed.html",
+          "label": "修正版（closedby + overflow 固定）",
+          "kind": "dialog",
+          "hasScrollLockRule": "body:has(dialog[open]) { overflow: hidden; }",
+          "openedOk": true,
+          "scrollBeforeWheel": 0,
+          "scrollAfterWheel": 0,
+          "backgroundScrolls": false,
+          "escCloses": true,
+          "outsideClickCloses": true,
+          "openerFocusedBeforeOpen": true,
+          "openedByKeyboard": true,
+          "closedByKeyboard": true,
+          "focusAfterCloseKeyboard": "open",
+          "focusReturnedToOpener": true
+        }
+      ]
+    },
+    "firefox": {
+      "version": "153.0",
+      "targets": [
+        {
+          "file": "broken.html",
+          "label": "症状（閉じない）",
+          "kind": "custom",
+          "hasScrollLockRule": null,
+          "openedOk": true,
+          "scrollBeforeWheel": 0,
+          "scrollAfterWheel": 600,
+          "backgroundScrolls": true,
+          "escCloses": false,
+          "outsideClickCloses": false,
+          "openerFocusedBeforeOpen": true,
+          "openedByKeyboard": true,
+          "closedByKeyboard": false,
+          "focusAfterCloseKeyboard": "open",
+          "focusReturnedToOpener": null
+        },
+        {
+          "file": "fixed.html",
+          "label": "修正版（closedby + overflow 固定）",
+          "kind": "dialog",
+          "hasScrollLockRule": "body:has(dialog[open]) { overflow: hidden; }",
+          "openedOk": true,
+          "scrollBeforeWheel": 0,
+          "scrollAfterWheel": 0,
+          "backgroundScrolls": false,
+          "escCloses": true,
+          "outsideClickCloses": true,
+          "openerFocusedBeforeOpen": true,
+          "openedByKeyboard": true,
+          "closedByKeyboard": true,
+          "focusAfterCloseKeyboard": "open",
+          "focusReturnedToOpener": true
+        }
+      ]
+    },
+    "webkit": {
+      "version": "26.5",
+      "targets": [
+        {
+          "file": "broken.html",
+          "label": "症状（閉じない）",
+          "kind": "custom",
+          "hasScrollLockRule": null,
+          "openedOk": true,
+          "scrollBeforeWheel": 0,
+          "scrollAfterWheel": 600,
+          "backgroundScrolls": true,
+          "escCloses": false,
+          "outsideClickCloses": false,
+          "openerFocusedBeforeOpen": true,
+          "openedByKeyboard": true,
+          "closedByKeyboard": false,
+          "focusAfterCloseKeyboard": "open",
+          "focusReturnedToOpener": null
+        },
+        {
+          "file": "fixed.html",
+          "label": "修正版（closedby + overflow 固定）",
+          "kind": "dialog",
+          "hasScrollLockRule": "body:has(dialog[open]) { overflow: hidden; }",
+          "openedOk": true,
+          "scrollBeforeWheel": 0,
+          "scrollAfterWheel": 0,
+          "backgroundScrolls": false,
+          "escCloses": true,
+          "outsideClickCloses": true,
+          "openerFocusedBeforeOpen": true,
+          "openedByKeyboard": true,
+          "closedByKeyboard": true,
+          "focusAfterCloseKeyboard": "open",
+          "focusReturnedToOpener": true
+        }
+      ]
+    }
+  }
+}

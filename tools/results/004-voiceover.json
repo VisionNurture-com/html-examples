@@ -1,0 +1,113 @@
+{
+  "measuredAt": "2026-08-02",
+  "method": "AppleScript（content of last phrase）で逐語取得。VO カーソルの移動は Ctrl+Opt+右矢印（key code 124）を System Events から Safari プロセスへ送出",
+  "environment": {
+    "os": "macOS 26.5.2 (25F84)",
+    "browser": "Safari 26.5.2",
+    "screenReader": "VoiceOver（macOS 同梱・英語音声・システム UI 言語は英語）",
+    "note": "役割語が英語で返るのはシステムの UI 言語に従うため"
+  },
+  "preconditions": {
+    "voiceOverAppleScript": "許可済（実際に逐語が返ったことで positively 確認）",
+    "safariAppleEventsJs": "許可済（VoiceOver の読み上げでも 'Allow JavaScript from Apple Events checked checkbox' を独立に確認）",
+    "accessibility": "/usr/bin/osascript と Visual Studio Code を登録済（keystroke が通ることで確認）",
+    "dictationShortcut": "fn へ変更済（modifier 値 0x800000）"
+  },
+  "targets": [
+    {
+      "file": "compare/004-close-control/b-dialog.html",
+      "impl": "dialog + showModal()",
+      "phrases": [
+        "[コンテンツへ] Safari dialog（showModal の既定） window OK button has keyboard focus",
+        "[開いた直後] Safari dialog（showModal の既定） window OK button has keyboard focus",
+        "[VO→] やめる button",
+        "[VO→] やめる button",
+        "[VO→] やめる button",
+        "[VO→] やめる button",
+        "[VO→] やめる button",
+        "[VO→] やめる button"
+      ],
+      "cursorLeftDialog": false,
+      "reachedBackgroundLink": false,
+      "note": "OK button → やめる button で 1 回動いたあと、6 回送っても進まない。ダイアログの末尾で止まっている"
+    },
+    {
+      "file": "compare/004-close-control/a-custom.html",
+      "impl": "自作 div（role=dialog + aria-modal=true）",
+      "phrases": [
+        "[開いた直後] You are currently on a button, inside of web content. ...",
+        "[VO→] 確認 web dialog with 2 items",
+        "[VO→] link ページ末尾へ",
+        "[VO→] You are currently on a selectable text, inside of web content. ...",
+        "[VO→] 末尾",
+        "[VO→] 末尾",
+        "[VO→] 末尾",
+        "[VO→] 末尾",
+        "[VO→] 末尾"
+      ],
+      "cursorLeftDialog": true,
+      "reachedBackgroundLink": true,
+      "note": "背面の #after リンク（ページ末尾へ）と #end 段落（末尾）へ到達している"
+    },
+    {
+      "file": "compare/004-close-control/c-closedby-any.html",
+      "impl": "dialog closedby=\"any\" + showModal()",
+      "phrases": [
+        "[interact 直後] In dialog closedby=any web content 開く button",
+        "[VO→] 確認 web dialog with 2 items",
+        "[VO→ ×7〜9 いずれも] 確認 web dialog with 2 items"
+      ],
+      "cursorLeftDialog": false,
+      "reachedBackgroundLink": false,
+      "runs": 2,
+      "runsIdentical": true,
+      "note": "ダイアログ群から先へ進まない。b-dialog と途中経過が違って見えるのは走査の開始位置の差（b はキーボード焦点があった OK から、c は 開く ボタンから始まった）。背面へ出ないという結論は両者で一致する"
+    },
+    {
+      "file": "compare/004-close-control/d-details.html",
+      "impl": "details（open 属性）",
+      "phrases": [
+        "[interact 直後] In details（開閉表示） web content 開く expanded summary",
+        "[VO→] OK button",
+        "[VO→] やめる button",
+        "[VO→] link ページ末尾へ",
+        "[VO→] 末尾"
+      ],
+      "cursorLeftDialog": true,
+      "reachedBackgroundLink": true,
+      "runs": 2,
+      "runsIdentical": true,
+      "note": "背面の #after リンクと #end 段落へ到達する。モーダルではないため当然の結果だが、同じキー送出で進んだことが c / b の「止まった」の対照になる"
+    },
+    {
+      "file": "compare/004-close-control/e-popover.html",
+      "impl": "popover=\"auto\"（light dismiss）",
+      "phrases": [
+        "[interact 直後] In popover（light dismiss） web content 開く expanded button",
+        "[VO→] 確認",
+        "[VO→] OK button",
+        "[VO→] やめる expanded button",
+        "[VO→] link ページ末尾へ",
+        "[VO→] 末尾"
+      ],
+      "cursorLeftDialog": true,
+      "reachedBackgroundLink": true,
+      "runs": 2,
+      "runsIdentical": true,
+      "note": "外側クリックで閉じる点は closedby=\"any\" と同じだが、読み上げの読む場所は背面へ出る。popover は背面を不活性にしない"
+    }
+  ],
+  "finding": "aria-modal=\"true\" を手で書いた自作モーダルでは VoiceOver のカーソルが背面へ出る。showModal() で開いた <dialog> では出ない。対照実験により「VO キーが届いていないから止まった」ではないことを確認済み（自作 div では同じキー送出で背面まで進んだ）。",
+  "limits": [
+    "Windows の NVDA / JAWS は環境がなく測っていない",
+    "VoiceOver の日本語役割語は測っていない（システム UI 言語の切替が必要）",
+    "VO カーソルの移動は Ctrl+Opt+右矢印のみ。ロータや他の移動手段は測っていない",
+    "Safari のみ。実機 Chrome + VoiceOver の組み合わせは測っていない"
+  ],
+  "addendum": {
+    "measuredAt": "2026-08-02（追測）",
+    "scope": "5 実装のうち未測定だった c / d / e を追加し、比較表に読み上げの列を足せる状態にした",
+    "control": "同一セッション内で d / e が背面まで進んだことにより、c / b の停止が「キー未達」ではないことを確認済み",
+    "finding": "背面へ出ないのは showModal() 系（b / c）のみ。popover と details は背面が読める。外側クリックで閉じる点で同じに見える closedby=\"any\" と popover が、読み上げでは逆の性質を持つ。自動検査の点数は 5 実装すべて 95 点でこの差を見ていない"
+  }
+}

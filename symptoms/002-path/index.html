@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>リンク先にたどり着かないページ</title>
+  </head>
+  <body>
+    <h1>お知らせ</h1>
+
+    <ul>
+      <!-- ① 相対パス: このページから見た位置。実ファイルは pages/notice.html にある -->
+      <li><a id="relative" href="pages/notice.html">10 月のお知らせ（相対）</a></li>
+
+      <!-- ② ルート相対パス: サイトの先頭から見た位置 -->
+      <li><a id="root-relative" href="/pages/notice.html">10 月のお知らせ（ルート相対）</a></li>
+
+      <!-- ③ ここが原因: 自分のいる階層を数え間違えている。pages/ の中にはもう一段ない -->
+      <li><a id="wrong" href="pages/notice/index.html">10 月のお知らせ（階層を数え間違えた）</a></li>
+
+      <!-- ④ 別タブで開く指定。遷移していないように見える典型 -->
+      <li><a id="blank" href="pages/notice.html" target="_blank" rel="noopener">10 月のお知らせ（別タブ）</a></li>
+    </ul>
+  </body>
+</html>

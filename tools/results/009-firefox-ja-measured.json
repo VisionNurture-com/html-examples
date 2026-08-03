@@ -1,0 +1,27 @@
+{
+  "engine": "firefox",
+  "browserVersion": "153.0",
+  "buildId": "20260722115600",
+  "uiLocaleRequested": "ja",
+  "method": "Playwright 同梱 Firefox の omni.ja 内 chrome/en-US/locale/en-US/global/dom/dom.properties を公式 ja langpack（153.0）の同名ファイルへ差し替え、launchPersistentContext で描画して取得",
+  "why_this_method": "chrome レジストリのロケール解決が app locale（navigator.language=ja）に追随せず en-US を解決し続けたため、リソース側を入れ替えて『Firefox がどのファイルから文言を読むか』と『ja 値の実体』を同時に確定させた",
+  "proves": [
+    "文言の出所は omni.ja 内 chrome/{locale}/locale/{locale}/global/dom/dom.properties である",
+    "res/locale/dom/dom.properties は使われていない（差し替えても変化なし）",
+    "公式 ja langpack の値が実際の描画文言と一致する"
+  ],
+  "does_not_prove": [
+    "英語ビルド + ja langpack の利用者に日本語で出るか（Playwright 同梱ビルドでは langpack が有効化されず未検証）"
+  ],
+  "messages": {
+    "valueMissing": "このフィールドは入力必須です。",
+    "typeMismatchEmail": "メールアドレスを入力してください。",
+    "typeMismatchUrl": "URL を入力してください。",
+    "patternMismatch": "入力された値がフィールドに指定された書式と異なります。",
+    "rangeUnderflow": "10 以上の値を選択してください。",
+    "rangeOverflow": "5 以下の値を選択してください。",
+    "checkboxMissing": "チェックボックスにチェックを入れてください。",
+    "radioMissing": "いずれかのオプションを選択してください。",
+    "selectMissing": "リストから項目を選択してください。"
+  }
+}

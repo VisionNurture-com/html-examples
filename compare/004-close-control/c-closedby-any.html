@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>dialog closedby=any</title>
+<style>
+  body { margin: 0; padding: 1rem; height: 300vh }
+  dialog { border: 2px solid #333; padding: 1rem }
+</style>
+</head>
+<body>
+  <button type="button" id="open">開く</button>
+  <!-- closedby="any" を書くと、外側のクリックでも閉じる（対応していないブラウザではこの指定が読まれない） -->
+  <dialog id="box" closedby="any" aria-label="確認">
+    <button type="button" id="ok">OK</button>
+    <button type="button" id="ng">やめる</button>
+  </dialog>
+  <!-- モーダルより後ろに置く。ここへ Tab が届くかどうかが「後ろのページへ抜けたか」の見どころになる -->
+  <a href="#end" id="after">ページ末尾へ</a>
+  <p id="end">末尾</p>
+<script>
+  const box = document.getElementById('box');
+  document.getElementById('open').onclick = () => box.showModal();
+  // 外側クリックを拾う処理は書いていない。閉じ方はタグの中に書いている
+  document.getElementById('ng').onclick = () => box.close();
+</script>
+</body>
+</html>

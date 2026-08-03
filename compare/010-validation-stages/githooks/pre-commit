@@ -1,0 +1,13 @@
+#!/bin/sh
+# コミットしようとしている HTML だけを検証する。
+# 全ファイルを毎回見ると待ち時間が伸び、フックを外したくなるため。
+set -eu
+
+files=$(git diff --cached --name-only --diff-filter=ACM -- '*.html')
+if [ -z "$files" ]; then
+  exit 0
+fi
+
+# --no-install: 未インストール時に取得へ行かせない（オフラインでも挙動を変えない）
+# shellcheck disable=SC2086
+npx --no-install html-validate --config tools/.htmlvalidate.json $files

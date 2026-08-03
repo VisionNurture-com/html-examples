@@ -1,0 +1,110 @@
+{
+  "measuredAt": "2026-07-25T10:42:13.114Z",
+  "records": [
+    {
+      "engine": "chromium",
+      "browserVersion": "151.0.7922.34",
+      "target": "compare/009-native-vs-js-validation/a-native.html",
+      "stages": {
+        "initial": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": false,
+          "userValid": false,
+          "borderColor": "rgb(118, 118, 118)"
+        },
+        "afterInput": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": false,
+          "userValid": false,
+          "borderColor": "rgb(118, 118, 118)"
+        },
+        "afterBlur": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": true,
+          "userValid": false,
+          "borderColor": "rgb(204, 0, 0)"
+        },
+        "afterSubmitAttempt": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": true,
+          "userValid": false,
+          "borderColor": "rgb(204, 0, 0)"
+        }
+      }
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "153.0",
+      "target": "compare/009-native-vs-js-validation/a-native.html",
+      "stages": {
+        "initial": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": false,
+          "userValid": false,
+          "borderColor": "rgb(143, 143, 157)"
+        },
+        "afterInput": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": false,
+          "userValid": false,
+          "borderColor": "rgb(143, 143, 157)"
+        },
+        "afterBlur": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": true,
+          "userValid": false,
+          "borderColor": "rgb(204, 0, 0)"
+        },
+        "afterSubmitAttempt": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": true,
+          "userValid": false,
+          "borderColor": "rgb(204, 0, 0)"
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "target": "compare/009-native-vs-js-validation/a-native.html",
+      "stages": {
+        "initial": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": false,
+          "userValid": false,
+          "borderColor": "rgb(128, 128, 128)"
+        },
+        "afterInput": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": false,
+          "userValid": false,
+          "borderColor": "rgb(128, 128, 128)"
+        },
+        "afterBlur": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": true,
+          "userValid": false,
+          "borderColor": "rgb(204, 0, 0)"
+        },
+        "afterSubmitAttempt": {
+          "invalid": true,
+          "valid": false,
+          "userInvalid": true,
+          "userValid": false,
+          "borderColor": "rgb(204, 0, 0)"
+        }
+      }
+    }
+  ]
+}

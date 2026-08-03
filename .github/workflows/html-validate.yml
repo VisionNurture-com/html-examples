@@ -1,0 +1,42 @@
+name: html-validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - uses: actions/setup-node@v7.0.0
+        with:
+          # .mise.toml で固定している版に合わせる（ローカルと CI で結果を分けないため）
+          node-version: 24.18.0
+          cache: npm
+
+      # --ignore-scripts: html-validate の検証にブラウザ本体は要らない。
+      # playwright の postinstall を走らせると数分待つことになるため外す。
+      - name: 依存をインストールする
+        run: npm ci --ignore-scripts
+
+      # このリポジトリは「壊れた HTML」を教材として意図的に置いている。
+      # broken.html と、送信ボタンを持たない実装例（requestsubmit）は検証が失敗するのが正しい。
+      # xargs に渡すのは、シェルによって変数の単語分割の扱いが違うため。
+      # 一覧を 1 引数として渡してしまう書き方は、手元で検算できない。
+      - name: 妥当なサンプルを検証する
+        run: |
+          git ls-files '*.html' | grep -Ev '(broken|requestsubmit)\.html$' > /tmp/html-files.txt
+          cat /tmp/html-files.txt
+          xargs npx html-validate --config tools/.htmlvalidate.json < /tmp/html-files.txt
+
+      # 壊れたページで実際に落ちることを確かめる。
+      # この確認がないと「CI が止める」と書けない（検証が無効化されていても気づけない）。
+      - name: 壊れたサンプルで失敗することを確かめる
+        run: |
+          if npx html-validate --config tools/.htmlvalidate.json symptoms/010-markup-errors/broken.html; then
+            echo '壊れたページなのに検証が成功した。検証が効いていない' >&2
+            exit 1
+          fi
+          echo '意図どおり失敗した'

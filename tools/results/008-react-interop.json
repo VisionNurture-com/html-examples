@@ -1,0 +1,41 @@
+{
+  "measuredAt": "2026-08-02T23:25:07.607Z",
+  "react": "19.2.8",
+  "vite": "8.2.0",
+  "note": "early = connectedCallback 直後（setTimeout 0）に発火 / late = 250 ms 後に発火",
+  "engines": {
+    "chromium": {
+      "version": "151.0.7922.34",
+      "received": {
+        "viaProperty": "Array(3)",
+        "viaAttribute": null
+      },
+      "hasItemsAttribute": false,
+      "itemsAttributeValue": null,
+      "earlyEventSeen": "false",
+      "lateEventSeen": "true"
+    },
+    "firefox": {
+      "version": "153.0",
+      "received": {
+        "viaProperty": "Array(3)",
+        "viaAttribute": null
+      },
+      "hasItemsAttribute": false,
+      "itemsAttributeValue": null,
+      "earlyEventSeen": "false",
+      "lateEventSeen": "true"
+    },
+    "webkit": {
+      "version": "26.5",
+      "received": {
+        "viaProperty": "Array(3)",
+        "viaAttribute": null
+      },
+      "hasItemsAttribute": false,
+      "itemsAttributeValue": null,
+      "earlyEventSeen": "false",
+      "lateEventSeen": "true"
+    }
+  }
+}

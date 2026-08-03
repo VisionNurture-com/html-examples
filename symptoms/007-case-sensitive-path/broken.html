@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ローカルでは出るのにサーバで出ない（broken）</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.7; }
+img { max-inline-size: 100%; block-size: auto; }
+</style>
+</head>
+<body>
+<main>
+<h1>今月の特集</h1>
+<!-- ここが原因: 実ファイル名は Hero-Photo.jpg。macOS と Windows の既定は
+     大文字小文字を区別しないため手元では出るが、Linux のサーバでは別名として 404 になる -->
+<img src="images/hero-photo.jpg" alt="特集記事のイメージ" width="1600" height="900">
+<p>手元のブラウザで開くと表示されます。同じファイルをサーバへ上げると表示されません。</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,278 @@
+{
+  "mode": "content-type",
+  "brandColor": "rgb(29, 78, 216)",
+  "engines": {
+    "chromium": {
+      "version": "151.0.7922.34",
+      "cases": [
+        {
+          "id": 1,
+          "label": "中身 CSS / Content-Type: text/css（対照）",
+          "contentType": "text/css",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(29, 78, 216)",
+          "applied": true,
+          "consoleMessages": []
+        },
+        {
+          "id": 2,
+          "label": "中身 CSS / Content-Type: text/css / nosniff あり",
+          "contentType": "text/css",
+          "nosniff": true,
+          "httpStatus": 200,
+          "computedColor": "rgb(29, 78, 216)",
+          "applied": true,
+          "consoleMessages": []
+        },
+        {
+          "id": 3,
+          "label": "中身 CSS / Content-Type: text/plain",
+          "contentType": "text/plain",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": []
+        },
+        {
+          "id": 4,
+          "label": "中身 CSS / Content-Type: text/plain / nosniff あり",
+          "contentType": "text/plain",
+          "nosniff": true,
+          "httpStatus": null,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": [
+            {
+              "type": "error",
+              "text": "Refused to apply style from 'http://127.0.0.1:53109/style.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "label": "中身 CSS / Content-Type: application/octet-stream",
+          "contentType": "application/octet-stream",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": []
+        },
+        {
+          "id": 6,
+          "label": "中身 CSS / Content-Type なし",
+          "contentType": "(なし)",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(29, 78, 216)",
+          "applied": true,
+          "consoleMessages": []
+        },
+        {
+          "id": 7,
+          "label": "中身 CSS / Content-Type: text/html",
+          "contentType": "text/html",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": []
+        }
+      ]
+    },
+    "firefox": {
+      "version": "153.0",
+      "cases": [
+        {
+          "id": 1,
+          "label": "中身 CSS / Content-Type: text/css（対照）",
+          "contentType": "text/css",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(29, 78, 216)",
+          "applied": true,
+          "consoleMessages": []
+        },
+        {
+          "id": 2,
+          "label": "中身 CSS / Content-Type: text/css / nosniff あり",
+          "contentType": "text/css",
+          "nosniff": true,
+          "httpStatus": 200,
+          "computedColor": "rgb(29, 78, 216)",
+          "applied": true,
+          "consoleMessages": []
+        },
+        {
+          "id": 3,
+          "label": "中身 CSS / Content-Type: text/plain",
+          "contentType": "text/plain",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": [
+            {
+              "type": "error",
+              "text": "[JavaScript Error: \"The stylesheet http://127.0.0.1:53121/style.css was not loaded because its MIME type, “text/plain”, is not “text/css”.\" {file: \"http://127.0.0.1:53121/page\" line: 0}]"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "label": "中身 CSS / Content-Type: text/plain / nosniff あり",
+          "contentType": "text/plain",
+          "nosniff": true,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": [
+            {
+              "type": "error",
+              "text": "[JavaScript Error: \"The resource from “http://127.0.0.1:53123/style.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff).\" {file: \"http://127.0.0.1:53123/page\" line: 0}]"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "label": "中身 CSS / Content-Type: application/octet-stream",
+          "contentType": "application/octet-stream",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": [
+            {
+              "type": "error",
+              "text": "[JavaScript Error: \"The stylesheet http://127.0.0.1:53125/style.css was not loaded because its MIME type, “application/octet-stream”, is not “text/css”.\" {file: \"http://127.0.0.1:53125/page\" line: 0}]"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "label": "中身 CSS / Content-Type なし",
+          "contentType": "(なし)",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(29, 78, 216)",
+          "applied": true,
+          "consoleMessages": []
+        },
+        {
+          "id": 7,
+          "label": "中身 CSS / Content-Type: text/html",
+          "contentType": "text/html",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": [
+            {
+              "type": "error",
+              "text": "[JavaScript Error: \"The stylesheet http://127.0.0.1:53129/style.css was not loaded because its MIME type, “text/html”, is not “text/css”.\" {file: \"http://127.0.0.1:53129/page\" line: 0}]"
+            }
+          ]
+        }
+      ]
+    },
+    "webkit": {
+      "version": "26.5",
+      "cases": [
+        {
+          "id": 1,
+          "label": "中身 CSS / Content-Type: text/css（対照）",
+          "contentType": "text/css",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(29, 78, 216)",
+          "applied": true,
+          "consoleMessages": []
+        },
+        {
+          "id": 2,
+          "label": "中身 CSS / Content-Type: text/css / nosniff あり",
+          "contentType": "text/css",
+          "nosniff": true,
+          "httpStatus": 200,
+          "computedColor": "rgb(29, 78, 216)",
+          "applied": true,
+          "consoleMessages": []
+        },
+        {
+          "id": 3,
+          "label": "中身 CSS / Content-Type: text/plain",
+          "contentType": "text/plain",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": [
+            {
+              "type": "error",
+              "text": "Did not parse stylesheet at 'http://127.0.0.1:53135/style.css' because non CSS MIME types are not allowed in strict mode."
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "label": "中身 CSS / Content-Type: text/plain / nosniff あり",
+          "contentType": "text/plain",
+          "nosniff": true,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": [
+            {
+              "type": "error",
+              "text": "Did not parse stylesheet at 'http://127.0.0.1:53137/style.css' because non CSS MIME types are not allowed in strict mode."
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "label": "中身 CSS / Content-Type: application/octet-stream",
+          "contentType": "application/octet-stream",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": [
+            {
+              "type": "error",
+              "text": "Did not parse stylesheet at 'http://127.0.0.1:53139/style.css' because non CSS MIME types are not allowed in strict mode."
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "label": "中身 CSS / Content-Type なし",
+          "contentType": "(なし)",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(29, 78, 216)",
+          "applied": true,
+          "consoleMessages": []
+        },
+        {
+          "id": 7,
+          "label": "中身 CSS / Content-Type: text/html",
+          "contentType": "text/html",
+          "nosniff": false,
+          "httpStatus": 200,
+          "computedColor": "rgb(0, 0, 0)",
+          "applied": false,
+          "consoleMessages": [
+            {
+              "type": "error",
+              "text": "Did not parse stylesheet at 'http://127.0.0.1:53143/style.css' because non CSS MIME types are not allowed in strict mode."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "measuredAt": "2026-07-28T11:28:36.615Z",
+  "note": "判定は getComputedStyle の実値。キャッシュの再取得はサーバが数えたリクエスト数を正本とする。"
+}

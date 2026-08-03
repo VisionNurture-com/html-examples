@@ -1,0 +1,5 @@
+node_modules/
+.playwright-mcp/
+*.log
+compare/008-wc-vs-react/b-react/dist/
+compare/008-react-interop/dist/

@@ -1,0 +1,65 @@
+{
+  "measuredAt": "2026-08-02",
+  "method": "実機 Safari で題材を開き、実行時に計測用スクリプトを注入（題材ファイルは変更しない）。ユーザーが実際のマウスで ①「開く」→ ② ダイアログの外側 の順にクリックし、クリックから 1200ms 後に開閉状態を読む",
+  "whyManual": "合成イベントでは light dismiss が発火しない。前セッションで 4 手法（固定座標 / 原点算出 / 合成クリック / PointerEvent）すべて着弾せず、実際のマウス操作以外に測る手段がないことを確認済み",
+  "environment": {
+    "os": "macOS 26.5.2 (25F84)",
+    "browser": "Safari 26.5.2",
+    "url": "file://（http:// では未確認）"
+  },
+  "targets": [
+    {
+      "file": "compare/004-close-control/b-dialog.html",
+      "impl": "dialog + showModal()",
+      "clicks": ["open", "box"],
+      "outsideTarget": "box",
+      "point": { "x": 577, "y": 658 },
+      "dialogRect": { "left": 602, "top": 414, "right": 722, "bottom": 474 },
+      "pointOutsideRect": true,
+      "closedByOutsideClick": false
+    },
+    {
+      "file": "compare/004-close-control/c-closedby-any.html",
+      "impl": "dialog closedby=\"any\" + showModal()",
+      "clicks": ["open", "box"],
+      "outsideTarget": "box",
+      "point": { "x": 551, "y": 689 },
+      "dialogRect": { "left": 602, "top": 414, "right": 722, "bottom": 474 },
+      "pointOutsideRect": true,
+      "closedByOutsideClick": false,
+      "note": "Safari は closedby を解釈しないため、closedby=\"any\" を書いても外側クリックでは閉じない"
+    },
+    {
+      "file": "compare/004-close-control/f-closedby-fallback.html",
+      "impl": "dialog closedby=\"any\" + click フォールバック（e.target === box なら close）",
+      "clicks": ["open", "box"],
+      "outsideTarget": "box",
+      "point": null,
+      "pointOutsideRect": null,
+      "closedByOutsideClick": true,
+      "note": "座標は記録していないが、この題材は余白を内側の div へ寄せてあり、dialog 自身は padding を持たない。したがって e.target === box は背面で確定する"
+    },
+    {
+      "file": "compare/004-close-control/e-popover.html",
+      "impl": "popover=\"auto\"（light dismiss）",
+      "clicks": ["open", "BODY"],
+      "outsideTarget": "BODY",
+      "point": null,
+      "pointOutsideRect": null,
+      "closedByOutsideClick": true,
+      "note": "e.target が BODY のため、popover の外であることは対象要素だけで確定する"
+    }
+  ],
+  "finding": "実機 Safari では showModal() も closedby=\"any\" も外側クリックで閉じない。closedby が解釈されないブラウザでも、click イベントで e.target === dialog を見て close() を呼ぶ 1 行を足せば、外側クリックで閉じる同じ操作感になる。popover=\"auto\" の light dismiss は Safari でも動く",
+  "pitfalls": [
+    "🔴 e.target === dialog だけでは「外側」と断定できない。余白をダイアログ自身に持たせた作り（b / c のように dialog { padding: 1rem }）では、内側の余白を押しても e.target は dialog になる。クリック座標が dialog の矩形の外かどうかで判定する",
+    "計測用の帯をページ最上部へ固定すると、本文先頭の「開く」ボタンを覆って操作できなくなる。body へ padding-top を足して逃がす",
+    "同じ URL を再指定しても読み込み直されないことがある。about:blank を挟んでから対象 URL を指定する"
+  ],
+  "limits": [
+    "b / c は座標つきで確定。f / e は対象要素だけで確定させており座標は記録していない",
+    "自作 div（a-custom）と details（d-details）の実機外側クリックは未測定（自動測定では両方とも閉じない）",
+    "file:// でのみ測定。http:// での再確認は未実施",
+    "実機 Chrome の外側クリックは未測定"
+  ]
+}

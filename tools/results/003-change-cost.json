@@ -1,0 +1,117 @@
+{
+  "scenario": "3 ページのサイトで基準色を 1 色変える",
+  "oldColor": "#1d4ed8",
+  "newColor": "#b91c1c",
+  "expectedRgb": {
+    "old": "rgb(29, 78, 216)",
+    "new": "rgb(185, 28, 28)"
+  },
+  "engine": {
+    "name": "chromium",
+    "version": "151.0.7922.34"
+  },
+  "changeCost": [
+    {
+      "method": "external",
+      "pages": 3,
+      "filesTouched": 1,
+      "occurrences": 3,
+      "totalBytes": 1458,
+      "detail": [
+        {
+          "file": "external/about.html",
+          "occurrences": 0,
+          "bytes": 433
+        },
+        {
+          "file": "external/contact.html",
+          "occurrences": 0,
+          "bytes": 415
+        },
+        {
+          "file": "external/css/site.css",
+          "occurrences": 3,
+          "bytes": 180
+        },
+        {
+          "file": "external/index.html",
+          "occurrences": 0,
+          "bytes": 430
+        }
+      ]
+    },
+    {
+      "method": "internal",
+      "pages": 3,
+      "filesTouched": 3,
+      "occurrences": 9,
+      "totalBytes": 1821,
+      "detail": [
+        {
+          "file": "internal/about.html",
+          "occurrences": 3,
+          "bytes": 614
+        },
+        {
+          "file": "internal/contact.html",
+          "occurrences": 3,
+          "bytes": 596
+        },
+        {
+          "file": "internal/index.html",
+          "occurrences": 3,
+          "bytes": 611
+        }
+      ]
+    },
+    {
+      "method": "inline",
+      "pages": 3,
+      "filesTouched": 3,
+      "occurrences": 9,
+      "totalBytes": 1758,
+      "detail": [
+        {
+          "file": "inline/about.html",
+          "occurrences": 3,
+          "bytes": 593
+        },
+        {
+          "file": "inline/contact.html",
+          "occurrences": 3,
+          "bytes": 575
+        },
+        {
+          "file": "inline/index.html",
+          "occurrences": 3,
+          "bytes": 590
+        }
+      ]
+    }
+  ],
+  "reachesReader": [
+    {
+      "method": "external",
+      "before": "rgb(29, 78, 216)",
+      "afterReload": "rgb(29, 78, 216)",
+      "reachedReader": false,
+      "note": "CSS は max-age=600 / HTML は no-store で配信。読者は変更前に一度ページを見ている"
+    },
+    {
+      "method": "internal",
+      "before": "rgb(29, 78, 216)",
+      "afterReload": "rgb(185, 28, 28)",
+      "reachedReader": true,
+      "note": "CSS は max-age=600 / HTML は no-store で配信。読者は変更前に一度ページを見ている"
+    },
+    {
+      "method": "inline",
+      "before": "rgb(29, 78, 216)",
+      "afterReload": "rgb(185, 28, 28)",
+      "reachedReader": true,
+      "note": "CSS は max-age=600 / HTML は no-store で配信。読者は変更前に一度ページを見ている"
+    }
+  ],
+  "measuredAt": "2026-07-28T09:54:24.370Z",
+  "note": "主指標は「開くファイル数」と「変更が読者に届くか」。合計バイト数は併記のみで選択理由に使わない"
+}

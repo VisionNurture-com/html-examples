@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>connectedCallback で中身が空になる</title>
+<script>
+  // 定義がページの解析より先に走る。開始タグを読んだ時点で connectedCallback が呼ばれる
+  class MyList extends HTMLElement {
+    connectedCallback() {
+      // この時点では <li> はまだ解析されていない
+      const count = this.querySelectorAll('li').length;
+      this.dataset.counted = String(count);
+    }
+  }
+  customElements.define('my-list', MyList);
+</script>
+</head>
+<body>
+  <h1>数えたはずの件数が 0 になる</h1>
+
+  <my-list id="target">
+    <ul>
+      <li>りんご</li>
+      <li>みかん</li>
+      <li>ぶどう</li>
+    </ul>
+  </my-list>
+
+  <p>data-counted の値: <output id="out"></output></p>
+
+<script>
+  document.getElementById('out').textContent =
+    document.getElementById('target').dataset.counted;
+</script>
+</body>
+</html>
