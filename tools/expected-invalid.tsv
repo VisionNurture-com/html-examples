@@ -1,0 +1,27 @@
+# 意図的に妥当でない HTML の一覧。
+#
+# このリポジトリは「壊れた HTML」を教材として置いている。broken.html のように名前で
+# 見分けられるものだけを除外していると、compare/ に置いた「わざと直していない側」が
+# 妥当なサンプルの検証に混ざってしまう。
+#
+# ここに載せたファイルは「妥当なサンプルを検証する」から外れる代わりに、
+# **検証が実際に失敗すること**と**失敗する規則が下の期待どおりであること**を CI が確かめる。
+# 題材を直したのに一覧から外し忘れる、という逆向きの腐り方も検出できる。
+#
+# 形式: パス <TAB> 期待する html-validate の rule（カンマ区切り・昇順） <TAB> なぜ妥当でないか
+compare/001-charset-bom/decl-no_save-utf-8-bom.html	no-utf8-bom	BOM 付きで保存した側。BOM の有無で表示がどう変わるかを比べる題材
+compare/001-charset-bom/decl-yes_save-utf-8-bom.html	no-utf8-bom	宣言あり + BOM 付き。同上
+compare/001-charset-matrix/decl-yes_save-euc-jp.html	attribute-allowed-values	charset に euc-jp を宣言した側。文字化けの再現に必要
+compare/001-charset-matrix/decl-yes_save-shift_jis.html	attribute-allowed-values	charset に shift_jis を宣言した側。同上
+compare/002-a-vs-button-vs-div/index.html	prefer-native-element	div に role="button" を付けた比較対象。a / button / div を並べる題材
+compare/003-external-vs-internal-vs-inline/inline/about.html	no-inline-style	インライン style で書いた側。外部 / 内部 / インラインを比べる題材
+compare/003-external-vs-internal-vs-inline/inline/contact.html	no-inline-style	同上
+compare/003-external-vs-internal-vs-inline/inline/index.html	no-inline-style	同上
+compare/005-aria-stages/index.html	prefer-native-element	role="button" の段階を並べた比較。ネイティブ要素へ戻す前の状態が要る
+compare/006-counting-basis/a-base.html	wcag/h37	検出件数の数え方を比べる基準ページ。alt 欠落は数える対象そのもの
+compare/006-counting-basis/b-elements-x10.html	wcag/h37	同じ違反を 10 要素に増やした側。件数の伸び方を見る
+compare/006-counting-basis/c-kinds-x4.html	no-implicit-button-type,no-inline-style,text-content,wcag/h37	違反の種類を 4 つに増やした側
+compare/006-counting-basis/e-component-x3.html	wcag/h37	同じ部品を 3 回使った側
+compare/006-counting-basis/g-manual-checks.html	prefer-native-element,wcag/h32	自動検査が 0 件でも人が見ると問題がある例
+symptoms/002-no-action/button-href.html	no-implicit-button-type	送信ボタンの置き方を比べる題材
+symptoms/002-no-action/button-in-form.html	no-implicit-button-type	同上

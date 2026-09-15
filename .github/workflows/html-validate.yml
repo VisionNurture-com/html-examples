@@ -23,14 +23,23 @@ jobs:
         run: npm ci --ignore-scripts
 
       # このリポジトリは「壊れた HTML」を教材として意図的に置いている。
-      # broken.html と、送信ボタンを持たない実装例（requestsubmit）は検証が失敗するのが正しい。
+      # broken.html と、送信ボタンを持たない実装例（requestsubmit）は名前で見分けられるが、
+      # compare/ に置いた「わざと直していない側」は名前では見分けられない。
+      # それらは tools/expected-invalid.tsv に明示し、ここから外す。
       # xargs に渡すのは、シェルによって変数の単語分割の扱いが違うため。
       # 一覧を 1 引数として渡してしまう書き方は、手元で検算できない。
       - name: 妥当なサンプルを検証する
         run: |
-          git ls-files '*.html' | grep -Ev '(broken|requestsubmit)\.html$' > /tmp/html-files.txt
+          grep -Ev '^#|^$' tools/expected-invalid.tsv | cut -f1 | sort > /tmp/expected-invalid.txt
+          git ls-files '*.html' | grep -Ev '(broken|requestsubmit)\.html$' | sort \
+            | comm -23 - /tmp/expected-invalid.txt > /tmp/html-files.txt
           cat /tmp/html-files.txt
           xargs npx html-validate --config tools/.htmlvalidate.json < /tmp/html-files.txt
+
+      # 除外した側が「本当に妥当でない」ことを確かめる。
+      # 一覧に載せただけで検証から消せてしまうと、題材を直したあとも外し忘れに気づけない。
+      - name: 意図的に妥当でないサンプルが失敗することを確かめる
+        run: node tools/check-expected-invalid.mjs
 
       # 壊れたページで実際に落ちることを確かめる。
       # この確認がないと「CI が止める」と書けない（検証が無効化されていても気づけない）。
