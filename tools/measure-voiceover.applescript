@@ -43,11 +43,19 @@
 --     （音声を Kyoko に変えるだけでは変わらない・005 で確定）。
 -- ──────────────────────────────────────────────────────────────
 
-property pageURL : "file://<REPO>/compare/005-aria-stages/index.html"
+-- 既定の対象ページはリポジトリ相対で持ち、実行時に絶対パスへ解決する。
+-- 絶対パスを直書きすると、実行したマシンのホームディレクトリ名がそのまま残る。
+-- 🔴 リポジトリのルートで実行すること（引数で URL を渡す場合は下の argv が優先される）。
+property pageRelativePath : "compare/005-aria-stages/index.html"
+
+on defaultPageURL()
+	set repoRoot to do shell script "pwd"
+	return "file://" & repoRoot & "/" & pageRelativePath
+end defaultPageURL
 
 on run argv
 	set stepCount to 22
-	set targetURL to pageURL
+	set targetURL to defaultPageURL()
 	-- 引数は順不同で受ける（数値 = 走査ステップ数 / file: か http で始まる文字列 = 対象ページ）
 	repeat with a in argv
 		set av to a as text
