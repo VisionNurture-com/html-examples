@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-node@v7.0.0
         with:
           # .mise.toml で固定している版に合わせる（ローカルと CI で結果を分けないため）
-          node-version: 24.18.0
+          node-version: 24.19.0
           cache: npm
 
       # --ignore-scripts: html-validate の検証にブラウザ本体は要らない。
