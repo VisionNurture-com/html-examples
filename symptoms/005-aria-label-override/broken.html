@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>見えている文字で探せないボタン</title>
+  </head>
+  <body>
+    <main>
+      <h1>申し込みの確認</h1>
+      <!-- ここが原因: aria-label が見えている文字「申し込む」を上書きする。
+           画面には「申し込む」と出るが、支援技術に渡る名前は「送信」になる -->
+      <button type="button" aria-label="送信">申し込む</button>
+    </main>
+  </body>
+</html>
