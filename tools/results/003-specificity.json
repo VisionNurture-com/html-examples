@@ -6,7 +6,7 @@
   },
   "engines": {
     "chromium": {
-      "version": "151.0.7922.34",
+      "version": "153.0.8010.12",
       "cases": [
         {
           "id": "id-vs-class",
@@ -41,7 +41,7 @@
       ]
     },
     "firefox": {
-      "version": "153.0",
+      "version": "155.0",
       "cases": [
         {
           "id": "id-vs-class",
@@ -76,7 +76,7 @@
       ]
     },
     "webkit": {
-      "version": "26.5",
+      "version": "26.6",
       "cases": [
         {
           "id": "id-vs-class",
@@ -111,6 +111,6 @@
       ]
     }
   },
-  "measuredAt": "2026-07-28T10:07:41.766Z",
+  "measuredAt": "2026-10-07T05:15:51.876Z",
   "note": "判定は getComputedStyle の実値。規則の暗記ではなく観察で決める"
 }

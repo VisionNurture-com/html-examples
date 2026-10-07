@@ -2,7 +2,7 @@
   "mode": "cache",
   "engines": {
     "chromium": {
-      "version": "151.0.7922.34",
+      "version": "153.0.8010.12",
       "scenarios": [
         {
           "id": "same-url",
@@ -35,7 +35,7 @@
       ]
     },
     "firefox": {
-      "version": "153.0",
+      "version": "155.0",
       "scenarios": [
         {
           "id": "same-url",
@@ -68,15 +68,15 @@
       ]
     },
     "webkit": {
-      "version": "26.5",
+      "version": "26.6",
       "scenarios": [
         {
           "id": "same-url",
           "label": "同じ URL を 2 回読む（max-age=600）",
           "serverHits": 1,
           "firstLoad": {
-            "transferSize": 332,
-            "encodedBodySize": 32
+            "transferSize": 334,
+            "encodedBodySize": 34
           },
           "secondLoad": {
             "transferSize": 0,
@@ -89,18 +89,18 @@
           "label": "2 回目だけ URL を変える（?v=2）",
           "serverHits": 2,
           "firstLoad": {
-            "transferSize": 332,
-            "encodedBodySize": 32
+            "transferSize": 334,
+            "encodedBodySize": 34
           },
           "secondLoad": {
-            "transferSize": 332,
-            "encodedBodySize": 32
+            "transferSize": 334,
+            "encodedBodySize": 34
           },
           "appliedAfterSecond": true
         }
       ]
     }
   },
-  "measuredAt": "2026-07-28T09:53:37.037Z",
+  "measuredAt": "2026-10-07T05:15:50.452Z",
   "note": "判定は getComputedStyle の実値。キャッシュの再取得はサーバが数えたリクエスト数を正本とする。"
 }

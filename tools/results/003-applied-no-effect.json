@@ -2,7 +2,7 @@
   "scenario": "打ち消されておらず計算値にも反映されているのに、見た目が変わらない指定",
   "engines": {
     "chromium": {
-      "version": "151.0.7922.34",
+      "version": "153.0.8010.12",
       "cases": [
         {
           "id": "sticky-in-overflow-hidden",
@@ -47,7 +47,7 @@
       ]
     },
     "firefox": {
-      "version": "153.0",
+      "version": "155.0",
       "cases": [
         {
           "id": "sticky-in-overflow-hidden",
@@ -88,7 +88,7 @@
       ]
     },
     "webkit": {
-      "version": "26.5",
+      "version": "26.6",
       "cases": [
         {
           "id": "sticky-in-overflow-hidden",
@@ -129,6 +129,6 @@
       ]
     }
   },
-  "measuredAt": "2026-07-28T11:28:11.766Z",
+  "measuredAt": "2026-10-07T05:15:53.442Z",
   "note": "applied = getComputedStyle が指定どおりの値を返したか / visibleEffect = 描画結果が変わったか。declaringRuleCount は Chromium の CDP で数えた「当該プロパティを宣言しているルールの件数」で、1 なら打ち消す相手が存在しない（開発者ツールで打ち消し線が付かない）ことを意味する。"
 }

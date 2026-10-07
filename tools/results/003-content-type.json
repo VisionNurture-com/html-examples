@@ -3,7 +3,7 @@
   "brandColor": "rgb(29, 78, 216)",
   "engines": {
     "chromium": {
-      "version": "151.0.7922.34",
+      "version": "153.0.8010.12",
       "cases": [
         {
           "id": 1,
@@ -46,7 +46,7 @@
           "consoleMessages": [
             {
               "type": "error",
-              "text": "Refused to apply style from 'http://127.0.0.1:53109/style.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+              "text": "Refused to apply style from 'http://127.0.0.1:35013/style.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
             }
           ]
         },
@@ -83,7 +83,7 @@
       ]
     },
     "firefox": {
-      "version": "153.0",
+      "version": "155.0",
       "cases": [
         {
           "id": 1,
@@ -116,7 +116,7 @@
           "consoleMessages": [
             {
               "type": "error",
-              "text": "[JavaScript Error: \"The stylesheet http://127.0.0.1:53121/style.css was not loaded because its MIME type, “text/plain”, is not “text/css”.\" {file: \"http://127.0.0.1:53121/page\" line: 0}]"
+              "text": "[JavaScript Error: \"The stylesheet http://127.0.0.1:39287/style.css was not loaded because its MIME type, “text/plain”, is not “text/css”.\" {file: \"http://127.0.0.1:39287/page\" line: 0}]"
             }
           ]
         },
@@ -131,7 +131,7 @@
           "consoleMessages": [
             {
               "type": "error",
-              "text": "[JavaScript Error: \"The resource from “http://127.0.0.1:53123/style.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff).\" {file: \"http://127.0.0.1:53123/page\" line: 0}]"
+              "text": "[JavaScript Error: \"The resource from “http://127.0.0.1:40153/style.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff).\" {file: \"http://127.0.0.1:40153/page\" line: 0}]"
             }
           ]
         },
@@ -146,7 +146,7 @@
           "consoleMessages": [
             {
               "type": "error",
-              "text": "[JavaScript Error: \"The stylesheet http://127.0.0.1:53125/style.css was not loaded because its MIME type, “application/octet-stream”, is not “text/css”.\" {file: \"http://127.0.0.1:53125/page\" line: 0}]"
+              "text": "[JavaScript Error: \"The stylesheet http://127.0.0.1:44531/style.css was not loaded because its MIME type, “application/octet-stream”, is not “text/css”.\" {file: \"http://127.0.0.1:44531/page\" line: 0}]"
             }
           ]
         },
@@ -171,14 +171,14 @@
           "consoleMessages": [
             {
               "type": "error",
-              "text": "[JavaScript Error: \"The stylesheet http://127.0.0.1:53129/style.css was not loaded because its MIME type, “text/html”, is not “text/css”.\" {file: \"http://127.0.0.1:53129/page\" line: 0}]"
+              "text": "[JavaScript Error: \"The stylesheet http://127.0.0.1:46709/style.css was not loaded because its MIME type, “text/html”, is not “text/css”.\" {file: \"http://127.0.0.1:46709/page\" line: 0}]"
             }
           ]
         }
       ]
     },
     "webkit": {
-      "version": "26.5",
+      "version": "26.6",
       "cases": [
         {
           "id": 1,
@@ -211,7 +211,7 @@
           "consoleMessages": [
             {
               "type": "error",
-              "text": "Did not parse stylesheet at 'http://127.0.0.1:53135/style.css' because non CSS MIME types are not allowed in strict mode."
+              "text": "Did not parse stylesheet at 'http://127.0.0.1:43849/style.css' because non CSS MIME types are not allowed in strict mode."
             }
           ]
         },
@@ -226,7 +226,7 @@
           "consoleMessages": [
             {
               "type": "error",
-              "text": "Did not parse stylesheet at 'http://127.0.0.1:53137/style.css' because non CSS MIME types are not allowed in strict mode."
+              "text": "Did not parse stylesheet at 'http://127.0.0.1:44939/style.css' because non CSS MIME types are not allowed in strict mode."
             }
           ]
         },
@@ -241,7 +241,7 @@
           "consoleMessages": [
             {
               "type": "error",
-              "text": "Did not parse stylesheet at 'http://127.0.0.1:53139/style.css' because non CSS MIME types are not allowed in strict mode."
+              "text": "Did not parse stylesheet at 'http://127.0.0.1:34511/style.css' because non CSS MIME types are not allowed in strict mode."
             }
           ]
         },
@@ -266,13 +266,13 @@
           "consoleMessages": [
             {
               "type": "error",
-              "text": "Did not parse stylesheet at 'http://127.0.0.1:53143/style.css' because non CSS MIME types are not allowed in strict mode."
+              "text": "Did not parse stylesheet at 'http://127.0.0.1:45797/style.css' because non CSS MIME types are not allowed in strict mode."
             }
           ]
         }
       ]
     }
   },
-  "measuredAt": "2026-07-28T11:28:36.615Z",
+  "measuredAt": "2026-10-07T05:15:48.577Z",
   "note": "判定は getComputedStyle の実値。キャッシュの再取得はサーバが数えたリクエスト数を正本とする。"
 }

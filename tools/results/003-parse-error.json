@@ -3,7 +3,7 @@
   "expectedColor": "rgb(185, 28, 28)",
   "engines": {
     "chromium": {
-      "version": "151.0.7922.34",
+      "version": "153.0.8010.12",
       "cases": [
         {
           "id": "baseline",
@@ -98,7 +98,7 @@
       ]
     },
     "firefox": {
-      "version": "153.0",
+      "version": "155.0",
       "cases": [
         {
           "id": "baseline",
@@ -193,7 +193,7 @@
       ]
     },
     "webkit": {
-      "version": "26.5",
+      "version": "26.6",
       "cases": [
         {
           "id": "baseline",
@@ -288,6 +288,6 @@
       ]
     }
   },
-  "measuredAt": "2026-07-28T11:27:54.562Z",
+  "measuredAt": "2026-10-07T05:15:54.716Z",
   "note": "判定は getComputedStyle の実値。oneColorApplied / oneFontSizeApplied は書き間違いのあるルール自身の 2 宣言、twoColorApplied は後続ルールが生き残ったかを表す。"
 }
